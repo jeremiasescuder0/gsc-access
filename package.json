@@ -1,0 +1,21 @@
+{
+  "name": "gsc-ai-tool",
+  "version": "0.1.0",
+  "description": "Google Search Console + Gemini AI analysis tool",
+  "main": "analyze-gemini.js",
+  "scripts": {
+    "auth": "node auth.js",
+    "test-connection": "node test.js",
+    "analyze": "node analyze-gemini.js"
+  },
+  "keywords": ["seo", "google-search-console", "gemini", "ai"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.91.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.4.5",
+    "googleapis": "^171.4.0",
+    "open": "^11.0.0"
+  }
+}

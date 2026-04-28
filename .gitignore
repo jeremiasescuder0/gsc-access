@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Secrets — NEVER commit these
+.env
+oauth.json
+token.json
+
+# OS / Editor
+.DS_Store
+*.log
+.vscode/
+.claude/
