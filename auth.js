@@ -19,10 +19,14 @@ const oauth2Client = new google.auth.OAuth2(
 const url = oauth2Client.generateAuthUrl({
   access_type: "offline",
   prompt: "consent",
-  scope: ["https://www.googleapis.com/auth/webmasters.readonly"],
+  scope: [
+    "https://www.googleapis.com/auth/webmasters.readonly",
+    "https://www.googleapis.com/auth/adwords",
+  ],
 });
 
-console.log("\n🔗 Abrí este link en tu navegador:\n");
+console.log("\n⚠️  Vas a ver dos pantallas de permisos: aceptá AMBOS (Search Console y Google Ads).\n");
+console.log("🔗 Abrí este link en tu navegador:\n");
 console.log(url);
 
 http

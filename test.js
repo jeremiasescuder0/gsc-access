@@ -1,27 +1,13 @@
 require("dotenv").config();
 const { google } = require("googleapis");
-const fs = require("fs");
+const { getOAuthClient } = require("./oauth-client");
 
-const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI, GSC_SITE_URL } = process.env;
-
-if (!fs.existsSync("token.json")) {
-  console.error("❌ No se encontró token.json. Corré primero: node auth.js");
-  process.exit(1);
-}
-
-const token = JSON.parse(fs.readFileSync("token.json"));
-
-const oauth2Client = new google.auth.OAuth2(
-  GOOGLE_CLIENT_ID,
-  GOOGLE_CLIENT_SECRET,
-  GOOGLE_REDIRECT_URI
-);
-
-oauth2Client.setCredentials(token);
-
-const searchconsole = google.searchconsole({ version: "v1", auth: oauth2Client });
+const { GSC_SITE_URL } = process.env;
 
 async function run() {
+  const auth = await getOAuthClient();
+  const searchconsole = google.searchconsole({ version: "v1", auth });
+
   const res = await searchconsole.searchanalytics.query({
     siteUrl: GSC_SITE_URL,
     requestBody: {
@@ -33,4 +19,7 @@ async function run() {
   console.log(res.data);
 }
 
-run();
+run().catch((err) => {
+  console.error("❌", err.message);
+  process.exit(1);
+});

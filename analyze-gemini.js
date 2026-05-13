@@ -1,30 +1,22 @@
 require("dotenv").config();
 const { google } = require("googleapis");
-const fs = require("fs");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { getOAuthClient } = require("./oauth-client");
 
-const { GEMINI_API_KEY, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI, GSC_SITE_URL } = process.env;
+const { GEMINI_API_KEY, GSC_SITE_URL } = process.env;
 
-if (!GEMINI_API_KEY || !GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
-  console.error("❌ Faltan variables de entorno. Revisá tu .env");
-  process.exit(1);
-}
-
-if (!fs.existsSync("token.json")) {
-  console.error("❌ No se encontró token.json. Corré primero: node auth.js");
+if (!GEMINI_API_KEY) {
+  console.error("❌ Falta GEMINI_API_KEY en .env");
   process.exit(1);
 }
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-
-const token = JSON.parse(fs.readFileSync("token.json"));
-const oauth2Client = new google.auth.OAuth2(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI);
-oauth2Client.setCredentials(token);
-
-const searchconsole = google.searchconsole({ version: "v1", auth: oauth2Client });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 async function run() {
+  const auth = await getOAuthClient();
+  const searchconsole = google.searchconsole({ version: "v1", auth });
+
   const res = await searchconsole.searchanalytics.query({
     siteUrl: GSC_SITE_URL,
     requestBody: {
@@ -63,4 +55,7 @@ ${JSON.stringify(formatted, null, 2)}
   console.log(text);
 }
 
-run();
+run().catch((err) => {
+  console.error("❌", err.message);
+  process.exit(1);
+});

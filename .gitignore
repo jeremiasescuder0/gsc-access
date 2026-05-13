@@ -6,6 +6,10 @@ node_modules/
 oauth.json
 token.json
 
+# Reportes generados
+report-ads-*.json
+report-ads-*.html
+
 # OS / Editor
 .DS_Store
 *.log

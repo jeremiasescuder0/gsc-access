@@ -1,0 +1,211 @@
+{
+  "generatedAt": "2026-04-29T15:30:00.000Z",
+  "accountsCount": 2,
+  "accounts": [
+    {
+      "account": "Dynamic Mobile Tire",
+      "accountId": "4096249317",
+      "currency": "USD",
+      "campaigns": [
+        {
+          "name": "Search - Tires Phoenix",
+          "channelType": "SEARCH",
+          "impressions": 45230,
+          "clicks": 1820,
+          "cost": 2840.5,
+          "conversions": 42,
+          "conversionsValue": 8400,
+          "ctr": 0.0402,
+          "avgCpc": 1.56,
+          "searchImpressionShare": 0.68,
+          "roas": 295.7
+        },
+        {
+          "name": "Performance Max - Service",
+          "channelType": "PERFORMANCE_MAX",
+          "impressions": 78400,
+          "clicks": 980,
+          "cost": 1420.3,
+          "conversions": 18,
+          "conversionsValue": 2700,
+          "ctr": 0.0125,
+          "avgCpc": 1.45,
+          "searchImpressionShare": null,
+          "roas": 190.1
+        },
+        {
+          "name": "Display - Retargeting",
+          "channelType": "DISPLAY",
+          "impressions": 124000,
+          "clicks": 410,
+          "cost": 380.2,
+          "conversions": 3,
+          "conversionsValue": 450,
+          "ctr": 0.0033,
+          "avgCpc": 0.93,
+          "searchImpressionShare": null,
+          "roas": 118.4
+        }
+      ],
+      "searchTerms": [
+        {
+          "searchTerm": "mobile tire repair phoenix",
+          "status": "ADDED",
+          "campaign": "Search - Tires Phoenix",
+          "impressions": 4200,
+          "clicks": 320,
+          "cost": 480,
+          "conversions": 12,
+          "ctr": 0.0762
+        },
+        {
+          "searchTerm": "free tire fix",
+          "status": "NONE",
+          "campaign": "Search - Tires Phoenix",
+          "impressions": 1800,
+          "clicks": 95,
+          "cost": 142,
+          "conversions": 0,
+          "ctr": 0.0528
+        },
+        {
+          "searchTerm": "24 hour tire change",
+          "status": "ADDED",
+          "campaign": "Search - Tires Phoenix",
+          "impressions": 2100,
+          "clicks": 180,
+          "cost": 260,
+          "conversions": 8,
+          "ctr": 0.0857
+        }
+      ],
+      "adGroups": [
+        {
+          "name": "Tires - Phoenix Metro",
+          "campaign": "Search - Tires Phoenix",
+          "impressions": 28000,
+          "clicks": 1200,
+          "cost": 1840,
+          "conversions": 28,
+          "ctr": 0.0429,
+          "avgCpc": 1.53
+        },
+        {
+          "name": "Service - General",
+          "campaign": "Performance Max - Service",
+          "impressions": 78400,
+          "clicks": 980,
+          "cost": 1420.3,
+          "conversions": 18,
+          "ctr": 0.0125,
+          "avgCpc": 1.45
+        }
+      ],
+      "conversions": [
+        {
+          "name": "Phone call",
+          "category": "PHONE_CALL_LEAD",
+          "conversions": 38,
+          "conversionsValue": 7600,
+          "valuePerConversion": 200,
+          "allConversions": 45
+        },
+        {
+          "name": "Form submit",
+          "category": "SUBMIT_LEAD_FORM",
+          "conversions": 25,
+          "conversionsValue": 3950,
+          "valuePerConversion": 158,
+          "allConversions": 28
+        }
+      ],
+      "analysis": {
+        "performance": "1. RESUMEN EJECUTIVO\nLa cuenta tuvo un gasto total de $4,640 en los últimos 30 días, con 63 conversiones y un ROAS general de 247%. Performance sólida pero con oportunidades claras de optimización.\n\n2. CAMPAÑAS TOP PERFORMERS\n- **Search - Tires Phoenix**: ROAS de 295%, CTR 4.02%, 42 conversiones. Es la campaña ancla, con buen impression share (68%).\n- **Performance Max - Service**: ROAS 190%, mantiene rentabilidad aunque por debajo del search.\n\n3. CAMPAÑAS CON PROBLEMAS\n- **Display - Retargeting**: ROAS 118%, apenas rentable. CTR de 0.33% es bajísimo incluso para display. 3 conversiones en 30 días no justifican el budget asignado.\n\n4. GRUPOS A OPTIMIZAR\n- **Service - General** dentro de Pmax: CTR 1.25% con 18 conv. Hay espacio para mejor segmentación.\n\n5. RECOMENDACIONES DE PRESUPUESTO\nReducir Display Retargeting un 50% y reasignar a Search Phoenix, que está limitado por impression share (32% perdido).\n\n6. PRÓXIMOS 3 PASOS PRIORITARIOS\n- Pausar o reducir budget de Display Retargeting.\n- Aumentar budget de Search Phoenix en 20% para capturar más impression share.\n- Negativizar 'free tire fix' en Search Phoenix (95 clicks, 0 conv).",
+        "anomalies": "ANOMALÍA #1\n- Tipo: SEARCH_TERM_IRRELEVANTE\n- Elemento afectado: 'free tire fix' en Search - Tires Phoenix\n- Métrica observada: 95 clicks, 0 conversiones, $142 gastados\n- Umbral esperado: al menos 1-2 conversiones con ese volumen\n- Impacto: medio\n- Acción concreta: Agregar 'free' como keyword negativa a nivel campaña.\n\nANOMALÍA #2\n- Tipo: CTR_BAJO\n- Elemento afectado: Display - Retargeting\n- Métrica observada: CTR 0.33%\n- Umbral esperado: mínimo 0.5-1% para retargeting\n- Impacto: alto\n- Acción concreta: Refrescar creatividades, hace meses que están las mismas. Probar nuevos formatos.\n\nANOMALÍA #3\n- Tipo: IMPRESSION_SHARE_BAJO\n- Elemento afectado: Search - Tires Phoenix\n- Métrica observada: 68% (perdiendo 32%)\n- Umbral esperado: 80%+ en una campaña core con buen ROAS\n- Impacto: alto\n- Acción concreta: Aumentar budget diario en 20-30% para no perder impressions con esa rentabilidad."
+      }
+    },
+    {
+      "account": "Mesa Family Physicians",
+      "accountId": "8142017742",
+      "currency": "USD",
+      "campaigns": [
+        {
+          "name": "Search - Family Doctor",
+          "channelType": "SEARCH",
+          "impressions": 12400,
+          "clicks": 380,
+          "cost": 920.4,
+          "conversions": 22,
+          "conversionsValue": 4400,
+          "ctr": 0.0306,
+          "avgCpc": 2.42,
+          "searchImpressionShare": 0.82,
+          "roas": 478.1
+        }
+      ],
+      "searchTerms": [
+        {
+          "searchTerm": "family doctor mesa az",
+          "status": "ADDED",
+          "campaign": "Search - Family Doctor",
+          "impressions": 2800,
+          "clicks": 180,
+          "cost": 410,
+          "conversions": 14,
+          "ctr": 0.0643
+        }
+      ],
+      "adGroups": [
+        {
+          "name": "Family Practice - Mesa",
+          "campaign": "Search - Family Doctor",
+          "impressions": 12400,
+          "clicks": 380,
+          "cost": 920.4,
+          "conversions": 22,
+          "ctr": 0.0306,
+          "avgCpc": 2.42
+        }
+      ],
+      "conversions": [
+        {
+          "name": "Appointment booked",
+          "category": "BOOK_APPOINTMENT",
+          "conversions": 22,
+          "conversionsValue": 4400,
+          "valuePerConversion": 200,
+          "allConversions": 25
+        }
+      ],
+      "analysis": {
+        "performance": "1. RESUMEN EJECUTIVO\nCuenta saludable. ROAS de 478% con $920 invertidos y 22 turnos agendados. La campaña corre lean y funciona.\n\n2. CAMPAÑAS TOP PERFORMERS\n- **Search - Family Doctor**: la única campaña activa, con números excelentes. CTR 3.06%, conversion rate ~5.8%.\n\n3. CAMPAÑAS CON PROBLEMAS\nNinguna identificada en este período.\n\n4. GRUPOS A OPTIMIZAR\nEl único ad group rinde bien. Podría dividirse por tipo de servicio (pediatría, geriatría) para refinar copy.\n\n5. RECOMENDACIONES DE PRESUPUESTO\nEscalar 30-40%. La cuenta está captando solo el 82% del search impression share — hay margen para más volumen sin sacrificar eficiencia.\n\n6. PRÓXIMOS 3 PASOS PRIORITARIOS\n- Aumentar budget mensual ~$300.\n- Crear ad groups por servicio para mejorar relevancia.\n- Sumar campaña de retargeting con un budget chico para capturar visitas sin agendar.",
+        "anomalies": "Sin anomalías detectadas"
+      }
+    }
+  ],
+  "crossAccount": {
+    "summary": [
+      {
+        "account": "Dynamic Mobile Tire",
+        "accountId": "4096249317",
+        "currency": "USD",
+        "totalCost": 4641,
+        "totalConversions": 63,
+        "totalClicks": 3210,
+        "avgCtr": 0.0131,
+        "topCampaign": "Search - Tires Phoenix"
+      },
+      {
+        "account": "Mesa Family Physicians",
+        "accountId": "8142017742",
+        "currency": "USD",
+        "totalCost": 920.4,
+        "totalConversions": 22,
+        "totalClicks": 380,
+        "avgCtr": 0.0306,
+        "topCampaign": "Search - Family Doctor"
+      }
+    ],
+    "analysis": "1. RANKING POR EFICIENCIA\n1) Mesa Family Physicians — ROAS 478%, CTR 3.06%, modelo lean.\n2) Dynamic Mobile Tire — ROAS 247% promedio, mix de campañas con dispersión.\n\n2. CUENTA CON MEJOR PERFORMANCE\nMesa Family Physicians. Replicabilidad: estructura simple, una campaña ancla bien armada, sin dispersión de budget.\n\n3. CUENTA QUE MÁS NECESITA ATENCIÓN\nDynamic Mobile Tire — la campaña Display está sangrando budget y la Search Phoenix está limitada por presupuesto.\n\n4. PATRONES CROSS-ACCOUNT\n- Las cuentas Search puras superan ampliamente a las que mezclan Display/Pmax.\n- Las dos cuentas tienen impression share entre 68-82%, hay margen para escalar.\n\n5. OPORTUNIDADES DE ESCALA\nMesa Family puede escalar 30-40% con confianza. Dynamic Mobile puede escalar Search ~20% si se libera budget de Display.\n\n6. SUGERENCIA DE BUDGET REALLOCATION\nReasignar el 50% del budget de Display Retargeting de Dynamic Mobile (~$190) a Search Phoenix de la misma cuenta. En paralelo, aumentar Mesa Family $300 con presupuesto incremental, no reasignado."
+  }
+}

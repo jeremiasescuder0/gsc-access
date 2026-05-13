@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reporte Ads · 29/4/2026</title>
+  <style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0a0a0c;
+    --bg-elev: #131318;
+    --bg-elev-2: #1b1b22;
+    --bg-hover: #20202a;
+    --border: #26262f;
+    --border-strong: #3a3a45;
+    --text: #ececf0;
+    --text-dim: #9596a3;
+    --text-muted: #66666f;
+    --accent: #8a73ff;
+    --accent-bg: rgba(138, 115, 255, 0.12);
+    --good: #3ddc97;
+    --good-bg: rgba(61, 220, 151, 0.12);
+    --warn: #f9b256;
+    --warn-bg: rgba(249, 178, 86, 0.12);
+    --bad: #ff6e6e;
+    --bad-bg: rgba(255, 110, 110, 0.12);
+    --info: #5ab9ff;
+    --info-bg: rgba(90, 185, 255, 0.12);
+    --muted: #767682;
+    --muted-bg: rgba(118, 118, 130, 0.1);
+    --shadow: 0 1px 0 rgba(255,255,255,0.02), 0 8px 28px rgba(0,0,0,0.45);
+  }
+
+  :root[data-theme="light"] {
+    --bg: #f7f7f9;
+    --bg-elev: #ffffff;
+    --bg-elev-2: #f1f1f4;
+    --bg-hover: #ebebef;
+    --border: #e3e3e8;
+    --border-strong: #c8c8d0;
+    --text: #1a1a22;
+    --text-dim: #5e5e6a;
+    --text-muted: #888893;
+    --accent: #6845e0;
+    --accent-bg: rgba(104, 69, 224, 0.10);
+    --good: #1c8c5b;
+    --good-bg: rgba(28, 140, 91, 0.10);
+    --warn: #b67200;
+    --warn-bg: rgba(182, 114, 0, 0.12);
+    --bad: #c83838;
+    --bad-bg: rgba(200, 56, 56, 0.10);
+    --info: #2476c7;
+    --info-bg: rgba(36, 118, 199, 0.10);
+    --muted: #7a7a85;
+    --muted-bg: rgba(122, 122, 133, 0.10);
+    --shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 24px rgba(0,0,0,0.06);
+  }
+
+  /* TOPBAR */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: saturate(140%) blur(12px);
+    -webkit-backdrop-filter: saturate(140%) blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  :root[data-theme="light"] .topbar { background: rgba(247,247,249,0.85); }
+  .topbar-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .logo {
+    color: var(--accent);
+    font-size: 22px;
+    line-height: 1;
+    transform: translateY(2px);
+  }
+  .brand h1 { font-size: 17px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+  .brand .subtitle { color: var(--text-dim); font-size: 13px; }
+  .actions { display: flex; gap: 8px; align-items: center; }
+  .icon-btn {
+    background: var(--bg-elev);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .icon-btn:hover { background: var(--bg-hover); border-color: var(--border-strong); }
+
+  main { max-width: 1400px; margin: 0 auto; padding: 32px; }
+
+  /* HERO */
+  .hero {
+    margin-bottom: 40px;
+  }
+  .hero-meta { display: flex; gap: 12px; margin-bottom: 8px; color: var(--text-dim); font-size: 13px; }
+  .hero-period {
+    background: var(--accent-bg);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .hero h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 24px;
+    letter-spacing: -0.02em;
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .kpi {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    transition: border-color .15s, transform .15s;
+  }
+  .kpi:hover { border-color: var(--border-strong); }
+  .kpi-label {
+    display: block;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .kpi-value {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    display: block;
+  }
+  .warn-note {
+    display: inline-block;
+    margin-left: 6px;
+    background: var(--warn-bg);
+    color: var(--warn);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ACCOUNT NAV */
+  .account-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+  }
+  .nav-label { color: var(--text-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color .15s, background .15s;
+  }
+  .nav-chip:hover { border-color: var(--accent); background: var(--accent-bg); color: var(--accent); }
+  .nav-chip .chip-cost { color: var(--text-dim); font-size: 12px; }
+  .nav-chip:hover .chip-cost { color: var(--accent); }
+
+  /* SECTION HEADERS */
+  .section-header {
+    margin-bottom: 16px;
+  }
+  .section-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .section-header p { margin: 0; color: var(--text-dim); }
+
+  /* CROSS ACCOUNT */
+  .cross-account {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 40px;
+  }
+  .cross-summary { margin-bottom: 28px; }
+  .cross-summary h3, .ai-block h3 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin: 0 0 12px;
+  }
+
+  /* ACCOUNTS LIST */
+  .accounts-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+  .accounts-section h2 .count {
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-left: 8px;
+  }
+
+  .account {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    transition: border-color .15s;
+    overflow: hidden;
+  }
+  .account[open] { border-color: var(--border-strong); }
+  .account > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    user-select: none;
+  }
+  .account > summary::-webkit-details-marker { display: none; }
+  .account > summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 12px;
+    color: var(--text-dim);
+    transition: transform .2s;
+    font-size: 11px;
+  }
+  .account[open] > summary::before { transform: rotate(90deg); }
+  .account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .account-name { display: inline-flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .account-name h3 { font-size: 18px; font-weight: 600; margin: 0; letter-spacing: -0.01em; display: inline; }
+  .account-id { color: var(--text-muted); font-size: 12px; font-family: ui-monospace, monospace; }
+  .account-kpis { display: flex; gap: 18px; flex-wrap: wrap; }
+  .account-kpis > span {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.2;
+  }
+  .account-kpis > span > strong { font-size: 14px; font-weight: 600; }
+  .account-kpis > span > em {
+    font-style: normal;
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  .account-body { border-top: 1px solid var(--border); padding: 24px 22px; }
+  .block { margin-bottom: 28px; }
+  .block:last-child { margin-bottom: 0; }
+  .block h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .block-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: var(--bg-elev-2);
+    font-size: 12px;
+  }
+  .block-anomalies h4 .block-icon { color: var(--warn); background: var(--warn-bg); }
+  .block-performance h4 .block-icon { color: var(--accent); background: var(--accent-bg); }
+  .block-tables h4 .block-icon { color: var(--info); background: var(--info-bg); }
+
+  /* AI PROSE */
+  .ai-prose, .ai-block .ai-prose {
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .ai-prose h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 18px 0 8px;
+  }
+  .ai-prose h4:first-child { margin-top: 0; }
+  .ai-prose p { margin: 0 0 10px; color: var(--text); }
+  .ai-prose p:last-child { margin-bottom: 0; }
+  .ai-prose ul { margin: 4px 0 12px; padding-left: 20px; }
+  .ai-prose li { margin-bottom: 4px; }
+  .ai-prose strong { color: var(--text); }
+  .ai-prose code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    background: var(--bg-hover);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  .ai-prose .empty { color: var(--text-muted); font-style: italic; }
+
+  /* ANOMALIES */
+  .no-anomalies {
+    background: var(--good-bg);
+    color: var(--good);
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--good);
+    border-color: color-mix(in srgb, var(--good) 30%, transparent);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .no-anomalies .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--good);
+  }
+
+  .anomaly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 12px;
+  }
+  .anomaly-card {
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--warn);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .anomaly-card.border-bad { border-left-color: var(--bad); }
+  .anomaly-card.border-warn { border-left-color: var(--warn); }
+  .anomaly-card.border-info { border-left-color: var(--info); }
+  .anomaly-card header { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .anomaly-num {
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-left: auto;
+  }
+  .anomaly-card dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 13px; }
+  .anomaly-card dt { color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; align-self: center; }
+  .anomaly-card dd { margin: 0; color: var(--text); }
+  .anomaly-card .action {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    font-size: 13px;
+  }
+  .anomaly-card .action span {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 6px;
+  }
+  .anomaly-fallback { background: var(--bg-elev-2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge-bad { background: var(--bad-bg); color: var(--bad); }
+  .badge-warn { background: var(--warn-bg); color: var(--warn); }
+  .badge-info { background: var(--info-bg); color: var(--info); }
+  .badge-impact-bad { background: var(--bad-bg); color: var(--bad); }
+  .badge-impact-warn { background: var(--warn-bg); color: var(--warn); }
+  .badge-impact-info { background: var(--info-bg); color: var(--info); }
+  .badge-impact-muted { background: var(--muted-bg); color: var(--muted); }
+
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    background: transparent;
+    color: var(--text-dim);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color .15s, border-color .15s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-btn .count {
+    background: var(--bg-elev-2);
+    color: var(--text-dim);
+    padding: 1px 7px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .tab-btn.active .count { background: var(--accent-bg); color: var(--accent); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* TABLES */
+  .table-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .table-filter {
+    align-self: flex-start;
+    width: 280px;
+    max-width: 100%;
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  .table-filter:focus { outline: none; border-color: var(--accent); }
+  .table-scroll { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .data-table th {
+    background: var(--bg-elev-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .data-table th.right { text-align: right; }
+  .data-table th.sortable { cursor: pointer; user-select: none; }
+  .data-table th.sortable:hover { color: var(--text); }
+  .data-table th.sort-asc::after { content: " ↑"; color: var(--accent); }
+  .data-table th.sort-desc::after { content: " ↓"; color: var(--accent); }
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: var(--bg-hover); }
+  .data-table td.right { text-align: right; font-variant-numeric: tabular-nums; }
+  .data-table td.left { text-align: left; }
+  .table-note { color: var(--text-muted); font-size: 11px; margin: 0; padding-left: 4px; }
+  .empty-table { color: var(--text-muted); font-style: italic; padding: 20px; text-align: center; background: var(--bg-elev-2); border: 1px dashed var(--border); border-radius: 8px; }
+
+  /* METRIC PILLS */
+  .metric { font-weight: 600; }
+  .metric-good, .kpi-value.metric-good, .account-kpis .metric-good > strong { color: var(--good); }
+  .metric-warn, .kpi-value.metric-warn, .account-kpis .metric-warn > strong { color: var(--warn); }
+  .metric-bad, .kpi-value.metric-bad, .account-kpis .metric-bad > strong { color: var(--bad); }
+  .metric-muted, .account-kpis .metric-muted > strong { color: var(--text-muted); }
+
+  /* CHIPS */
+  .chip {
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ERRORS */
+  .error-banner {
+    background: var(--bad-bg);
+    border: 1px solid var(--bad);
+    border-color: color-mix(in srgb, var(--bad) 35%, transparent);
+    color: var(--bad);
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px 32px;
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+  }
+  footer a { color: var(--text-dim); text-decoration: none; }
+
+  /* PRINT */
+  @media print {
+    .topbar, .actions, .table-filter, .account-nav, .icon-btn { display: none !important; }
+    body { background: white; color: black; }
+    .account, .cross-account, .kpi { break-inside: avoid; }
+    details { page-break-inside: avoid; }
+    .account[open] > summary::before, .account > summary::before { display: none; }
+    details > div { display: block !important; }
+    .tab-panel { display: block !important; page-break-before: auto; margin-bottom: 20px; }
+    .tabs { display: none; }
+  }
+
+  /* MOBILE */
+  @media (max-width: 720px) {
+    main, .topbar-content { padding-left: 16px; padding-right: 16px; }
+    .account-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .account-kpis { gap: 14px; }
+    .hero h2 { font-size: 22px; }
+    .kpi-value { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+    <header class="topbar">
+      <div class="topbar-content">
+        <div class="brand">
+          <span class="logo">●</span>
+          <h1>GSC Access</h1>
+          <span class="subtitle">Reporte Google Ads · 29/4/2026</span>
+        </div>
+        <div class="actions">
+          <button id="expand-all" class="icon-btn">Expandir todo</button>
+          <button id="theme-toggle" class="icon-btn" title="Cambiar tema">☀</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      
+    <section class="hero">
+      <div class="hero-meta">
+        <span class="hero-date">29 de abril de 2026, 12:30 p. m.</span>
+        <span class="hero-period">Últimos 30 días</span>
+      </div>
+      <h2>Resumen del portfolio</h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <span class="kpi-label">Cuentas activas</span>
+          <strong class="kpi-value">2</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Inversión total </span>
+          <strong class="kpi-value">US$ 5.561,40</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Conversiones</span>
+          <strong class="kpi-value">85</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Clicks</span>
+          <strong class="kpi-value">3.590</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Impresiones</span>
+          <strong class="kpi-value">260.030</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">CTR promedio</span>
+          <strong class="kpi-value metric-warn">1.38%</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">ROAS promedio</span>
+          <strong class="kpi-value metric-good">287%</strong>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Valor de conv.</span>
+          <strong class="kpi-value">US$ 15.950,00</strong>
+        </div>
+      </div>
+    </section>
+  
+      <nav class="account-nav"><span class="nav-label">Saltar a:</span><a href="#acc-4096249317" class="nav-chip">
+        <span class="chip-name">Dynamic Mobile Tire</span>
+        <span class="chip-cost">US$ 4.641,00</span>
+      </a><a href="#acc-8142017742" class="nav-chip">
+        <span class="chip-name">Mesa Family Physicians</span>
+        <span class="chip-cost">US$ 920,40</span>
+      </a></nav>
+      
+    <section class="cross-account">
+      <header class="section-header">
+        <h2>Análisis cross-account</h2>
+        <p>Comparativa entre las 2 cuentas del MCC</p>
+      </header>
+      <div class="cross-summary">
+        <h3>Resumen agregado por cuenta</h3>
+        
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="account">Cuenta</th><th class="left sortable" data-key="currency">Moneda</th><th class="right sortable" data-key="totalCost">Gasto</th><th class="right sortable" data-key="totalClicks">Clicks</th><th class="right sortable" data-key="totalConversions">Conv.</th><th class="right sortable" data-key="avgCtr">CTR</th><th class="left sortable" data-key="topCampaign">Top campaña</th></tr></thead>
+          <tbody><tr><td class="left">Dynamic Mobile Tire</td><td class="left">USD</td><td class="right">US$ 4.641,00</td><td class="right">3.210</td><td class="right">63.0</td><td class="right"><span class="metric metric-warn">1.31%</span></td><td class="left">Search - Tires Phoenix</td></tr><tr><td class="left">Mesa Family Physicians</td><td class="left">USD</td><td class="right">US$ 920,40</td><td class="right">380</td><td class="right">22.0</td><td class="right"><span class="metric metric-good">3.06%</span></td><td class="left">Search - Family Doctor</td></tr></tbody>
+        </table>
+      </div>
+      
+    </div>
+  
+      </div>
+      <div class="ai-block">
+        <h3>Insights de Gemini</h3>
+        <div class="ai-prose"><h4>1. RANKING POR EFICIENCIA</h4><h4>1) Mesa Family Physicians — ROAS 478%, CTR 3.06%, modelo lean.</h4><h4>2) Dynamic Mobile Tire — ROAS 247% promedio, mix de campañas con dispersión.</h4><h4>2. CUENTA CON MEJOR PERFORMANCE</h4><p>Mesa Family Physicians. Replicabilidad: estructura simple, una campaña ancla bien armada, sin dispersión de budget.</p><h4>3. CUENTA QUE MÁS NECESITA ATENCIÓN</h4><p>Dynamic Mobile Tire — la campaña Display está sangrando budget y la Search Phoenix está limitada por presupuesto.</p><h4>4. PATRONES CROSS-ACCOUNT</h4><ul><li>Las cuentas Search puras superan ampliamente a las que mezclan Display/Pmax.</li><li>Las dos cuentas tienen impression share entre 68-82%, hay margen para escalar.</li></ul><h4>5. OPORTUNIDADES DE ESCALA</h4><p>Mesa Family puede escalar 30-40% con confianza. Dynamic Mobile puede escalar Search ~20% si se libera budget de Display.</p><h4>6. SUGERENCIA DE BUDGET REALLOCATION</h4><p>Reasignar el 50% del budget de Display Retargeting de Dynamic Mobile (~$190) a Search Phoenix de la misma cuenta. En paralelo, aumentar Mesa Family $300 con presupuesto incremental, no reasignado.</p></div>
+      </div>
+    </section>
+  
+      <section class="accounts-section">
+        <h2>Cuentas <span class="count">(2)</span></h2>
+        
+    <details class="account" open id="acc-4096249317">
+      <summary>
+        <div class="account-header">
+          <div class="account-name">
+            <h3>Dynamic Mobile Tire</h3>
+            <span class="account-id">4096249317 · USD</span>
+          </div>
+          <div class="account-kpis">
+            <span><strong>US$ 4.641,00</strong><em>gasto</em></span>
+            <span><strong>63</strong><em>conv.</em></span>
+            <span class="metric-good"><strong>249%</strong><em>ROAS</em></span>
+            <span class="metric-warn"><strong>1.3%</strong><em>CTR</em></span>
+            <span><strong>US$ 73,67</strong><em>CPA</em></span>
+          </div>
+        </div>
+      </summary>
+
+      <div class="account-body">
+        <div class="block block-anomalies">
+          <h4><span class="block-icon">⚠</span> Anomalías detectadas</h4>
+          <div class="anomaly-grid">
+      <article class="anomaly-card border-warn">
+        <header>
+          <span class="badge badge-warn">Search term irrelevante</span>
+          <span class="badge badge-impact-warn">Impacto medio</span>
+          <span class="anomaly-num">ANOMALÍA #1</span>
+        </header>
+        <dl>
+          <dt>Elemento</dt><dd>&#39;free tire fix&#39; en Search - Tires Phoenix</dd>
+          <dt>Observado</dt><dd>95 clicks, 0 conversiones, $142 gastados</dd>
+          <dt>Esperado</dt><dd>al menos 1-2 conversiones con ese volumen</dd>
+        </dl>
+        <div class="action"><span>Acción:</span> Agregar &#39;free&#39; como keyword negativa a nivel campaña.</div>
+      </article>
+    
+      <article class="anomaly-card border-warn">
+        <header>
+          <span class="badge badge-warn">CTR bajo</span>
+          <span class="badge badge-impact-bad">Impacto alto</span>
+          <span class="anomaly-num">ANOMALÍA #2</span>
+        </header>
+        <dl>
+          <dt>Elemento</dt><dd>Display - Retargeting</dd>
+          <dt>Observado</dt><dd>CTR 0.33%</dd>
+          <dt>Esperado</dt><dd>mínimo 0.5-1% para retargeting</dd>
+        </dl>
+        <div class="action"><span>Acción:</span> Refrescar creatividades, hace meses que están las mismas. Probar nuevos formatos.</div>
+      </article>
+    
+      <article class="anomaly-card border-warn">
+        <header>
+          <span class="badge badge-warn">Impression share bajo</span>
+          <span class="badge badge-impact-bad">Impacto alto</span>
+          <span class="anomaly-num">ANOMALÍA #3</span>
+        </header>
+        <dl>
+          <dt>Elemento</dt><dd>Search - Tires Phoenix</dd>
+          <dt>Observado</dt><dd>68% (perdiendo 32%)</dd>
+          <dt>Esperado</dt><dd>80%+ en una campaña core con buen ROAS</dd>
+        </dl>
+        <div class="action"><span>Acción:</span> Aumentar budget diario en 20-30% para no perder impressions con esa rentabilidad.</div>
+      </article>
+    </div>
+        </div>
+
+        <div class="block block-performance">
+          <h4><span class="block-icon">▤</span> Análisis de performance</h4>
+          <div class="ai-prose"><h4>1. RESUMEN EJECUTIVO</h4><p>La cuenta tuvo un gasto total de $4,640 en los últimos 30 días, con 63 conversiones y un ROAS general de 247%. Performance sólida pero con oportunidades claras de optimización.</p><h4>2. CAMPAÑAS TOP PERFORMERS</h4><ul><li><strong>Search - Tires Phoenix</strong>: ROAS de 295%, CTR 4.02%, 42 conversiones. Es la campaña ancla, con buen impression share (68%).</li><li><strong>Performance Max - Service</strong>: ROAS 190%, mantiene rentabilidad aunque por debajo del search.</li></ul><h4>3. CAMPAÑAS CON PROBLEMAS</h4><ul><li><strong>Display - Retargeting</strong>: ROAS 118%, apenas rentable. CTR de 0.33% es bajísimo incluso para display. 3 conversiones en 30 días no justifican el budget asignado.</li></ul><h4>4. GRUPOS A OPTIMIZAR</h4><ul><li><strong>Service - General</strong> dentro de Pmax: CTR 1.25% con 18 conv. Hay espacio para mejor segmentación.</li></ul><h4>5. RECOMENDACIONES DE PRESUPUESTO</h4><p>Reducir Display Retargeting un 50% y reasignar a Search Phoenix, que está limitado por impression share (32% perdido).</p><h4>6. PRÓXIMOS 3 PASOS PRIORITARIOS</h4><ul><li>Pausar o reducir budget de Display Retargeting.</li><li>Aumentar budget de Search Phoenix en 20% para capturar más impression share.</li><li>Negativizar &#39;free tire fix&#39; en Search Phoenix (95 clicks, 0 conv).</li></ul></div>
+        </div>
+
+        <div class="block block-tables">
+          <h4><span class="block-icon">▦</span> Datos crudos</h4>
+          <div class="tabs" id="tabs-4096249317">
+            <button class="tab-btn active" data-target="tabs-4096249317-camp">Campañas <span class="count">3</span></button>
+            <button class="tab-btn" data-target="tabs-4096249317-st">Search terms <span class="count">3</span></button>
+            <button class="tab-btn" data-target="tabs-4096249317-ag">Ad groups <span class="count">2</span></button>
+            <button class="tab-btn" data-target="tabs-4096249317-conv">Conversiones <span class="count">2</span></button>
+          </div>
+          <div class="tab-panel active" id="tabs-4096249317-camp">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="name">Campaña</th><th class="left sortable" data-key="channelType">Tipo</th><th class="right sortable" data-key="impressions">Impr.</th><th class="right sortable" data-key="clicks">Clicks</th><th class="right sortable" data-key="ctr">CTR</th><th class="right sortable" data-key="cost">Costo</th><th class="right sortable" data-key="avgCpc">CPC promedio</th><th class="right sortable" data-key="conversions">Conv.</th><th class="right sortable" data-key="conversionsValue">Valor conv.</th><th class="right sortable" data-key="roas">ROAS</th><th class="right sortable" data-key="searchImpressionShare">Impr. share</th></tr></thead>
+          <tbody><tr><td class="left">Search - Tires Phoenix</td><td class="left"><span class="chip">SEARCH</span></td><td class="right">45.230</td><td class="right">1.820</td><td class="right"><span class="metric metric-good">4.02%</span></td><td class="right">US$ 2.840,50</td><td class="right">US$ 1,56</td><td class="right">42.0</td><td class="right">US$ 8.400,00</td><td class="right"><span class="metric metric-good">296%</span></td><td class="right">68.0%</td></tr><tr><td class="left">Performance Max - Service</td><td class="left"><span class="chip">PERFORMANCE_MAX</span></td><td class="right">78.400</td><td class="right">980</td><td class="right"><span class="metric metric-warn">1.25%</span></td><td class="right">US$ 1.420,30</td><td class="right">US$ 1,45</td><td class="right">18.0</td><td class="right">US$ 2.700,00</td><td class="right"><span class="metric metric-warn">190%</span></td><td class="right">—</td></tr><tr><td class="left">Display - Retargeting</td><td class="left"><span class="chip">DISPLAY</span></td><td class="right">124.000</td><td class="right">410</td><td class="right"><span class="metric metric-bad">0.33%</span></td><td class="right">US$ 380,20</td><td class="right">US$ 0,93</td><td class="right">3.0</td><td class="right">US$ 450,00</td><td class="right"><span class="metric metric-warn">118%</span></td><td class="right">—</td></tr></tbody>
+        </table>
+      </div>
+      <p class="table-note">Top 20 campañas ordenadas por costo (últimos 30 días).</p>
+    </div>
+  </div>
+          <div class="tab-panel" id="tabs-4096249317-st">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="searchTerm">Search term</th><th class="left sortable" data-key="campaign">Campaña</th><th class="left sortable" data-key="status">Status</th><th class="right sortable" data-key="impressions">Impr.</th><th class="right sortable" data-key="clicks">Clicks</th><th class="right sortable" data-key="ctr">CTR</th><th class="right sortable" data-key="cost">Costo</th><th class="right sortable" data-key="conversions">Conv.</th></tr></thead>
+          <tbody><tr><td class="left">mobile tire repair phoenix</td><td class="left">Search - Tires Phoenix</td><td class="left"><span class="chip">ADDED</span></td><td class="right">4.200</td><td class="right">320</td><td class="right"><span class="metric metric-good">7.62%</span></td><td class="right">US$ 480,00</td><td class="right">12.0</td></tr><tr><td class="left">free tire fix</td><td class="left">Search - Tires Phoenix</td><td class="left"><span class="chip">NONE</span></td><td class="right">1.800</td><td class="right">95</td><td class="right"><span class="metric metric-good">5.28%</span></td><td class="right">US$ 142,00</td><td class="right">0.0</td></tr><tr><td class="left">24 hour tire change</td><td class="left">Search - Tires Phoenix</td><td class="left"><span class="chip">ADDED</span></td><td class="right">2.100</td><td class="right">180</td><td class="right"><span class="metric metric-good">8.57%</span></td><td class="right">US$ 260,00</td><td class="right">8.0</td></tr></tbody>
+        </table>
+      </div>
+      <p class="table-note">Top 30 search terms con más de 10 impresiones.</p>
+    </div>
+  </div>
+          <div class="tab-panel" id="tabs-4096249317-ag">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="name">Ad group</th><th class="left sortable" data-key="campaign">Campaña</th><th class="right sortable" data-key="impressions">Impr.</th><th class="right sortable" data-key="clicks">Clicks</th><th class="right sortable" data-key="ctr">CTR</th><th class="right sortable" data-key="cost">Costo</th><th class="right sortable" data-key="avgCpc">CPC promedio</th><th class="right sortable" data-key="conversions">Conv.</th></tr></thead>
+          <tbody><tr><td class="left">Tires - Phoenix Metro</td><td class="left">Search - Tires Phoenix</td><td class="right">28.000</td><td class="right">1.200</td><td class="right"><span class="metric metric-good">4.29%</span></td><td class="right">US$ 1.840,00</td><td class="right">US$ 1,53</td><td class="right">28.0</td></tr><tr><td class="left">Service - General</td><td class="left">Performance Max - Service</td><td class="right">78.400</td><td class="right">980</td><td class="right"><span class="metric metric-warn">1.25%</span></td><td class="right">US$ 1.420,30</td><td class="right">US$ 1,45</td><td class="right">18.0</td></tr></tbody>
+        </table>
+      </div>
+      <p class="table-note">Top 20 ad groups por costo.</p>
+    </div>
+  </div>
+          <div class="tab-panel" id="tabs-4096249317-conv">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="name">Acción de conversión</th><th class="left sortable" data-key="category">Categoría</th><th class="right sortable" data-key="conversions">Conv.</th><th class="right sortable" data-key="allConversions">All conv.</th><th class="right sortable" data-key="conversionsValue">Valor</th><th class="right sortable" data-key="valuePerConversion">Valor / conv.</th></tr></thead>
+          <tbody><tr><td class="left">Phone call</td><td class="left"><span class="chip">PHONE_CALL_LEAD</span></td><td class="right">38.0</td><td class="right">45.0</td><td class="right">US$ 7.600,00</td><td class="right">US$ 200,00</td></tr><tr><td class="left">Form submit</td><td class="left"><span class="chip">SUBMIT_LEAD_FORM</span></td><td class="right">25.0</td><td class="right">28.0</td><td class="right">US$ 3.950,00</td><td class="right">US$ 158,00</td></tr></tbody>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+        </div>
+      </div>
+    </details>
+  
+    <details class="account"  id="acc-8142017742">
+      <summary>
+        <div class="account-header">
+          <div class="account-name">
+            <h3>Mesa Family Physicians</h3>
+            <span class="account-id">8142017742 · USD</span>
+          </div>
+          <div class="account-kpis">
+            <span><strong>US$ 920,40</strong><em>gasto</em></span>
+            <span><strong>22</strong><em>conv.</em></span>
+            <span class="metric-good"><strong>478%</strong><em>ROAS</em></span>
+            <span class="metric-good"><strong>3.1%</strong><em>CTR</em></span>
+            <span><strong>US$ 41,84</strong><em>CPA</em></span>
+          </div>
+        </div>
+      </summary>
+
+      <div class="account-body">
+        <div class="block block-anomalies">
+          <h4><span class="block-icon">⚠</span> Anomalías detectadas</h4>
+          <div class="no-anomalies"><span class="dot"></span> Sin anomalías detectadas en los últimos 30 días.</div>
+        </div>
+
+        <div class="block block-performance">
+          <h4><span class="block-icon">▤</span> Análisis de performance</h4>
+          <div class="ai-prose"><h4>1. RESUMEN EJECUTIVO</h4><p>Cuenta saludable. ROAS de 478% con $920 invertidos y 22 turnos agendados. La campaña corre lean y funciona.</p><h4>2. CAMPAÑAS TOP PERFORMERS</h4><ul><li><strong>Search - Family Doctor</strong>: la única campaña activa, con números excelentes. CTR 3.06%, conversion rate ~5.8%.</li></ul><h4>3. CAMPAÑAS CON PROBLEMAS</h4><p>Ninguna identificada en este período.</p><h4>4. GRUPOS A OPTIMIZAR</h4><p>El único ad group rinde bien. Podría dividirse por tipo de servicio (pediatría, geriatría) para refinar copy.</p><h4>5. RECOMENDACIONES DE PRESUPUESTO</h4><p>Escalar 30-40%. La cuenta está captando solo el 82% del search impression share — hay margen para más volumen sin sacrificar eficiencia.</p><h4>6. PRÓXIMOS 3 PASOS PRIORITARIOS</h4><ul><li>Aumentar budget mensual ~$300.</li><li>Crear ad groups por servicio para mejorar relevancia.</li><li>Sumar campaña de retargeting con un budget chico para capturar visitas sin agendar.</li></ul></div>
+        </div>
+
+        <div class="block block-tables">
+          <h4><span class="block-icon">▦</span> Datos crudos</h4>
+          <div class="tabs" id="tabs-8142017742">
+            <button class="tab-btn active" data-target="tabs-8142017742-camp">Campañas <span class="count">1</span></button>
+            <button class="tab-btn" data-target="tabs-8142017742-st">Search terms <span class="count">1</span></button>
+            <button class="tab-btn" data-target="tabs-8142017742-ag">Ad groups <span class="count">1</span></button>
+            <button class="tab-btn" data-target="tabs-8142017742-conv">Conversiones <span class="count">1</span></button>
+          </div>
+          <div class="tab-panel active" id="tabs-8142017742-camp">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="name">Campaña</th><th class="left sortable" data-key="channelType">Tipo</th><th class="right sortable" data-key="impressions">Impr.</th><th class="right sortable" data-key="clicks">Clicks</th><th class="right sortable" data-key="ctr">CTR</th><th class="right sortable" data-key="cost">Costo</th><th class="right sortable" data-key="avgCpc">CPC promedio</th><th class="right sortable" data-key="conversions">Conv.</th><th class="right sortable" data-key="conversionsValue">Valor conv.</th><th class="right sortable" data-key="roas">ROAS</th><th class="right sortable" data-key="searchImpressionShare">Impr. share</th></tr></thead>
+          <tbody><tr><td class="left">Search - Family Doctor</td><td class="left"><span class="chip">SEARCH</span></td><td class="right">12.400</td><td class="right">380</td><td class="right"><span class="metric metric-good">3.06%</span></td><td class="right">US$ 920,40</td><td class="right">US$ 2,42</td><td class="right">22.0</td><td class="right">US$ 4.400,00</td><td class="right"><span class="metric metric-good">478%</span></td><td class="right">82.0%</td></tr></tbody>
+        </table>
+      </div>
+      <p class="table-note">Top 20 campañas ordenadas por costo (últimos 30 días).</p>
+    </div>
+  </div>
+          <div class="tab-panel" id="tabs-8142017742-st">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="searchTerm">Search term</th><th class="left sortable" data-key="campaign">Campaña</th><th class="left sortable" data-key="status">Status</th><th class="right sortable" data-key="impressions">Impr.</th><th class="right sortable" data-key="clicks">Clicks</th><th class="right sortable" data-key="ctr">CTR</th><th class="right sortable" data-key="cost">Costo</th><th class="right sortable" data-key="conversions">Conv.</th></tr></thead>
+          <tbody><tr><td class="left">family doctor mesa az</td><td class="left">Search - Family Doctor</td><td class="left"><span class="chip">ADDED</span></td><td class="right">2.800</td><td class="right">180</td><td class="right"><span class="metric metric-good">6.43%</span></td><td class="right">US$ 410,00</td><td class="right">14.0</td></tr></tbody>
+        </table>
+      </div>
+      <p class="table-note">Top 30 search terms con más de 10 impresiones.</p>
+    </div>
+  </div>
+          <div class="tab-panel" id="tabs-8142017742-ag">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="name">Ad group</th><th class="left sortable" data-key="campaign">Campaña</th><th class="right sortable" data-key="impressions">Impr.</th><th class="right sortable" data-key="clicks">Clicks</th><th class="right sortable" data-key="ctr">CTR</th><th class="right sortable" data-key="cost">Costo</th><th class="right sortable" data-key="avgCpc">CPC promedio</th><th class="right sortable" data-key="conversions">Conv.</th></tr></thead>
+          <tbody><tr><td class="left">Family Practice - Mesa</td><td class="left">Search - Family Doctor</td><td class="right">12.400</td><td class="right">380</td><td class="right"><span class="metric metric-good">3.06%</span></td><td class="right">US$ 920,40</td><td class="right">US$ 2,42</td><td class="right">22.0</td></tr></tbody>
+        </table>
+      </div>
+      <p class="table-note">Top 20 ad groups por costo.</p>
+    </div>
+  </div>
+          <div class="tab-panel" id="tabs-8142017742-conv">
+    <div class="table-wrap">
+      <input type="search" class="table-filter" placeholder="Filtrar..." aria-label="Filtrar tabla">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th class="left sortable" data-key="name">Acción de conversión</th><th class="left sortable" data-key="category">Categoría</th><th class="right sortable" data-key="conversions">Conv.</th><th class="right sortable" data-key="allConversions">All conv.</th><th class="right sortable" data-key="conversionsValue">Valor</th><th class="right sortable" data-key="valuePerConversion">Valor / conv.</th></tr></thead>
+          <tbody><tr><td class="left">Appointment booked</td><td class="left"><span class="chip">BOOK_APPOINTMENT</span></td><td class="right">22.0</td><td class="right">25.0</td><td class="right">US$ 4.400,00</td><td class="right">US$ 200,00</td></tr></tbody>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+        </div>
+      </div>
+    </details>
+  
+      </section>
+    </main>
+    <footer>
+      Generado por <strong>gsc-access</strong> · 2026-04-29T15:30:00.000Z
+    </footer>
+  
+<script>
+  (function() {
+    // Theme toggle
+    const root = document.documentElement;
+    const stored = localStorage.getItem('gsc-theme');
+    if (stored) root.setAttribute('data-theme', stored);
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('gsc-theme', next);
+      document.getElementById('theme-toggle').textContent = next === 'dark' ? '☀' : '☾';
+    });
+    const initialIcon = root.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) themeBtn.textContent = initialIcon;
+
+    // Tabs
+    document.querySelectorAll('.tabs').forEach(group => {
+      group.addEventListener('click', e => {
+        const btn = e.target.closest('.tab-btn');
+        if (!btn) return;
+        const target = btn.getAttribute('data-target');
+        group.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+        const container = group.parentElement;
+        container.querySelectorAll(':scope > .tab-panel').forEach(p => {
+          p.classList.toggle('active', p.id === target);
+        });
+      });
+    });
+
+    // Table filter
+    document.querySelectorAll('.table-filter').forEach(input => {
+      input.addEventListener('input', () => {
+        const q = input.value.toLowerCase();
+        const tbody = input.closest('.table-wrap').querySelector('tbody');
+        if (!tbody) return;
+        tbody.querySelectorAll('tr').forEach(tr => {
+          tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+        });
+      });
+    });
+
+    // Sort tables
+    document.querySelectorAll('.data-table').forEach(table => {
+      const headers = table.querySelectorAll('th.sortable');
+      headers.forEach((th, idx) => {
+        th.addEventListener('click', () => {
+          const tbody = table.tBodies[0];
+          const rows = Array.from(tbody.rows);
+          const isAsc = th.classList.contains('sort-asc');
+          headers.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+          th.classList.add(isAsc ? 'sort-desc' : 'sort-asc');
+          rows.sort((a, b) => {
+            const aText = a.cells[idx]?.innerText.trim() || '';
+            const bText = b.cells[idx]?.innerText.trim() || '';
+            const aNum = parseFloat(aText.replace(/[^\d.\-]/g, ''));
+            const bNum = parseFloat(bText.replace(/[^\d.\-]/g, ''));
+            const isNum = !isNaN(aNum) && !isNaN(bNum);
+            if (isNum) return isAsc ? aNum - bNum : bNum - aNum;
+            return isAsc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+          });
+          rows.forEach(r => tbody.appendChild(r));
+        });
+      });
+    });
+
+    // Expand/collapse all
+    document.getElementById('expand-all')?.addEventListener('click', () => {
+      const allOpen = [...document.querySelectorAll('details.account')].every(d => d.open);
+      document.querySelectorAll('details.account').forEach(d => d.open = !allOpen);
+      document.getElementById('expand-all').textContent = !allOpen ? 'Colapsar todo' : 'Expandir todo';
+    });
+  })();
+</script>
+</body>
+</html>
