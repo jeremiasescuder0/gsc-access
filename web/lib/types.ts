@@ -67,6 +67,30 @@ export type Geo = {
   roas: number;
 };
 
+export type AssetGroup = {
+  id: string | null;
+  name: string | null;
+  status: string | number | null;
+  finalUrls: string[];
+  impressions: number;
+  clicks: number;
+  cost: number;
+  conversions: number;
+  conversionsValue: number;
+  ctr: number;
+};
+
+export type Asset = {
+  assetId: string | null;
+  fieldType: string | number | null;
+  assetGroupId: string | null;
+  assetGroupName: string | null;
+  text: string | null;
+  imageUrl: string | null;
+  youtubeId: string | null;
+  callToAction: string | null;
+};
+
 export type CampaignDetail = {
   campaign: CampaignMeta | null;
   adGroups: AdGroup[];
@@ -74,6 +98,8 @@ export type CampaignDetail = {
   keywords: Keyword[];
   geo: Geo[];
   searchTerms: SearchTerm[];
+  assetGroups: AssetGroup[];
+  assets: Asset[];
 };
 
 export type SearchTerm = {

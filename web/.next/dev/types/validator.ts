@@ -128,6 +128,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/api/organic/[siteUrl]/ads-keywords/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/organic/[siteUrl]/ads-keywords">> = Specific
+  const handler = {} as typeof import("../../../app/api/organic/[siteUrl]/ads-keywords/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/api/organic/[siteUrl]/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/organic/[siteUrl]">> = Specific

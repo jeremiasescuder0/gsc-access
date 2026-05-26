@@ -1,20 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import { Search, FileText, Target, BookOpen } from "lucide-react";
+import { Search, FileText, Target, BookOpen, Lightbulb } from "lucide-react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import type { SitePerformance } from "@/lib/gsc-types";
+import { classifyContentOpportunities } from "@/lib/content-opportunities";
 import { QueriesTable } from "./QueriesTable";
 import { PagesTable } from "./PagesTable";
 import { OpportunitiesTable } from "./OpportunitiesTable";
+import { ContentOpportunitiesTable } from "./ContentOpportunitiesTable";
 
-type Tab = "queries" | "pages" | "opportunities" | "blog";
+type Tab = "queries" | "pages" | "opportunities" | "blog" | "contenido";
 
 const TABS: { id: Tab; label: string; icon: typeof Search }[] = [
   { id: "queries", label: "Queries", icon: Search },
   { id: "pages", label: "Páginas", icon: FileText },
   { id: "opportunities", label: "Oportunidades", icon: Target },
   { id: "blog", label: "Blog", icon: BookOpen },
+  { id: "contenido", label: "Contenido", icon: Lightbulb },
 ];
 
 export function OrganicTabs({ data }: { data: SitePerformance }) {
@@ -22,11 +25,15 @@ export function OrganicTabs({ data }: { data: SitePerformance }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  const contentOps = classifyContentOpportunities(data);
+  const contentTotal = contentOps.blogTopics.length + contentOps.quickWins.length + contentOps.lowCtr.length;
+
   const counts: Record<Tab, number> = {
     queries: data.queries.length,
     pages: data.pages.length,
     opportunities: data.opportunities.length,
     blog: data.blogPages.length,
+    contenido: contentTotal,
   };
 
   const [active, setActive] = useState<Tab>("queries");
@@ -76,6 +83,7 @@ export function OrganicTabs({ data }: { data: SitePerformance }) {
         {active === "opportunities" && (
           <OpportunitiesTable opportunities={data.opportunities} />
         )}
+        {active === "contenido" && <ContentOpportunitiesTable data={data} />}
         {active === "blog" && (
           <div className="space-y-3">
             <div className="flex items-center gap-2">

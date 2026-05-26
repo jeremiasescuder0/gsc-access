@@ -20,10 +20,10 @@ function assertEnv() {
   }
 }
 
-function getDateRange() {
+function getDateRange(days = 30) {
   const end = new Date();
   const start = new Date();
-  start.setDate(start.getDate() - 30);
+  start.setDate(start.getDate() - days);
   const fmt = (d) => d.toISOString().slice(0, 10);
   return { startDate: fmt(start), endDate: fmt(end) };
 }
@@ -80,6 +80,53 @@ function formatAdGroups(rows) {
   }));
 }
 
+function formatAssetGroups(rows) {
+  return rows.map((r) => ({
+    id: r.asset_group?.id ? String(r.asset_group.id) : null,
+    name: r.asset_group?.name || null,
+    status: r.asset_group?.status || null,
+    finalUrls: r.asset_group?.final_urls || [],
+    impressions: Number(r.metrics?.impressions) || 0,
+    clicks: Number(r.metrics?.clicks) || 0,
+    cost: microsToUnits(r.metrics?.cost_micros),
+    conversions: Number(r.metrics?.conversions) || 0,
+    conversionsValue: Number(r.metrics?.conversions_value) || 0,
+    ctr: Number(r.metrics?.ctr) || 0,
+  }));
+}
+
+function formatAssets(rows) {
+  return rows
+    .map((r) => {
+      const asset = r.asset;
+      const fieldType = r.asset_group_asset?.field_type || null;
+      const assetGroupId = r.asset_group?.id ? String(r.asset_group.id) : null;
+      const assetGroupName = r.asset_group?.name || null;
+
+      let text = null;
+      let imageUrl = null;
+      let youtubeId = null;
+      let callToAction = null;
+
+      if (asset?.text_asset?.text) text = asset.text_asset.text;
+      if (asset?.image_asset?.full_size?.url) imageUrl = asset.image_asset.full_size.url;
+      if (asset?.youtube_video_asset?.youtube_video_id) youtubeId = asset.youtube_video_asset.youtube_video_id;
+      if (asset?.call_to_action_asset?.call_to_action) callToAction = asset.call_to_action_asset.call_to_action;
+
+      return {
+        assetId: asset?.id ? String(asset.id) : null,
+        fieldType,
+        assetGroupId,
+        assetGroupName,
+        text,
+        imageUrl,
+        youtubeId,
+        callToAction,
+      };
+    })
+    .filter((a) => a.text || a.imageUrl || a.youtubeId || a.callToAction);
+}
+
 function formatConversions(rows) {
   return rows.map((r) => {
     const conversions = Number(r.metrics?.conversions) || 0;
@@ -94,6 +141,13 @@ function formatConversions(rows) {
     };
   });
 }
+
+// Cuentas inactivas — excluidas del análisis
+const EXCLUDED_CUSTOMER_IDS = new Set([
+  "2090233509", // Rolling Green Inc
+  "2689550398", // Squeegee Clean 360
+  "7644774978", // Superior Equipment 2
+]);
 
 async function fetchAllAccountsData() {
   assertEnv();
@@ -207,6 +261,11 @@ async function fetchAllAccountsData() {
     const childId = String(row.customer_client?.id);
     const accountName = row.customer_client?.descriptive_name || childId;
     const currency = row.customer_client?.currency_code || null;
+
+    if (EXCLUDED_CUSTOMER_IDS.has(childId)) {
+      console.log(`⏭  Saltando cuenta inactiva: ${accountName} (${childId})`);
+      continue;
+    }
 
     try {
       const customer = client.Customer({
@@ -504,9 +563,45 @@ async function fetchCampaignDetail(customerId, campaignId) {
     LIMIT 50
   `;
 
-  const [metaRows, adGroupsRaw, adsRaw, keywordsRaw, geoRaw, searchTermsRaw] = await Promise.all([
+  const assetGroupsQuery = `
+    SELECT
+      asset_group.id,
+      asset_group.name,
+      asset_group.status,
+      asset_group.final_urls,
+      metrics.impressions,
+      metrics.clicks,
+      metrics.cost_micros,
+      metrics.conversions,
+      metrics.conversions_value,
+      metrics.ctr
+    FROM asset_group
+    WHERE ${campaignFilter} AND ${dateFilter}
+    ORDER BY metrics.cost_micros DESC
+    LIMIT 20
+  `;
+
+  const assetsQuery = `
+    SELECT
+      asset_group_asset.field_type,
+      asset_group.id,
+      asset_group.name,
+      asset.id,
+      asset.text_asset.text,
+      asset.image_asset.full_size.url,
+      asset.youtube_video_asset.youtube_video_id,
+      asset.call_to_action_asset.call_to_action
+    FROM asset_group_asset
+    WHERE ${campaignFilter}
+    LIMIT 200
+  `;
+
+  const [metaRows, adGroupsRaw, adsRaw, keywordsRaw, geoRaw, searchTermsRaw, assetGroupsRaw, assetsRaw] = await Promise.all([
     customer.query(campaignMetaQuery),
-    customer.query(adGroupsQuery),
+    customer.query(adGroupsQuery).catch((err) => {
+      console.warn(`⚠️  adGroups query falló: ${describeAdsError(err)}`);
+      return [];
+    }),
     customer.query(adsQuery).catch((err) => {
       console.warn(`⚠️  ads query falló: ${describeAdsError(err)}`);
       return [];
@@ -519,7 +614,18 @@ async function fetchCampaignDetail(customerId, campaignId) {
       console.warn(`⚠️  geo query falló: ${describeAdsError(err)}`);
       return [];
     }),
-    customer.query(searchTermsQuery),
+    customer.query(searchTermsQuery).catch((err) => {
+      console.warn(`⚠️  searchTerms query falló: ${describeAdsError(err)}`);
+      return [];
+    }),
+    customer.query(assetGroupsQuery).catch((err) => {
+      console.warn(`⚠️  assetGroups query falló: ${describeAdsError(err)}`);
+      return [];
+    }),
+    customer.query(assetsQuery).catch((err) => {
+      console.warn(`⚠️  assets query falló: ${describeAdsError(err)}`);
+      return [];
+    }),
   ]);
 
   const metaRow = metaRows[0] || null;
@@ -557,7 +663,56 @@ async function fetchCampaignDetail(customerId, campaignId) {
     keywords: formatKeywords(keywordsRaw),
     geo: formatGeo(geoRaw, geoNameById),
     searchTerms: formatSearchTerms(searchTermsRaw),
+    assetGroups: formatAssetGroups(assetGroupsRaw),
+    assets: formatAssets(assetsRaw),
   };
 }
 
-module.exports = { fetchAllAccountsData, fetchCampaignDetail };
+// Fetch liviano de search terms para un customer ID — usado por keyword-opportunities
+async function fetchAccountSearchTerms(customerId) {
+  assertEnv();
+  await getOAuthClient();
+  const refreshToken = getRefreshToken();
+
+  const client = new GoogleAdsApi({
+    client_id: GOOGLE_CLIENT_ID,
+    client_secret: GOOGLE_CLIENT_SECRET,
+    developer_token: GOOGLE_ADS_DEVELOPER_TOKEN,
+  });
+
+  const customer = client.Customer({
+    customer_id: String(customerId),
+    login_customer_id: GOOGLE_ADS_MCC_ID,
+    refresh_token: refreshToken,
+  });
+
+  // Intentamos 90 días para tener más cobertura en cuentas de bajo volumen
+  const { startDate, endDate } = getDateRange(90);
+  console.log(`[ads-fetch] fetchAccountSearchTerms(${customerId}) → ${startDate} a ${endDate}`);
+
+  const rows = await customer.query(`
+    SELECT
+      search_term_view.search_term,
+      metrics.impressions,
+      metrics.clicks,
+      metrics.cost_micros,
+      metrics.conversions
+    FROM search_term_view
+    WHERE segments.date BETWEEN '${startDate}' AND '${endDate}'
+      AND metrics.impressions >= 1
+    ORDER BY metrics.impressions DESC
+    LIMIT 200
+  `);
+
+  console.log(`[ads-fetch] fetchAccountSearchTerms(${customerId}) → ${rows.length} filas devueltas`);
+
+  return rows.map((r) => ({
+    searchTerm: r.search_term_view?.search_term || "",
+    impressions: Number(r.metrics?.impressions) || 0,
+    clicks: Number(r.metrics?.clicks) || 0,
+    cost: microsToUnits(r.metrics?.cost_micros),
+    conversions: Number(r.metrics?.conversions) || 0,
+  })).filter((r) => r.searchTerm.length > 2);
+}
+
+module.exports = { fetchAllAccountsData, fetchCampaignDetail, fetchAccountSearchTerms };

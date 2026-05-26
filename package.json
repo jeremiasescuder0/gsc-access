@@ -8,6 +8,8 @@
     "test-connection": "node test.js",
     "analyze": "node analyze-gemini.js",
     "analyze-ads": "node analyze-ads-gemini.js",
+    "opportunities": "node keyword-opportunities.js",
+    "blog-audit": "node blog-audit.js",
     "report": "node build-report.js",
     "dev": "cd web && npm run dev",
     "web:build": "cd web && npm run build",

@@ -85,10 +85,10 @@ export default async function CampaignDetailPage({
             campaignId={campaignId}
             contextLabel={`${account.account} → ${c.name}`}
             suggestions={[
-              "¿Qué headlines están pinneados y cuáles convendría rotar?",
-              "Identificá keywords con costo alto y 0 conversiones.",
-              "¿Qué ubicaciones geográficas conviene excluir o ampliar?",
-              "¿Hay search terms que sumaría como negativas?",
+              "Auditá los headlines de cada anuncio: ¿cuáles son débiles, genéricos o muy similares entre sí? Sugerí 3 reemplazos concretos.",
+              "¿Las descriptions cubren los beneficios clave del negocio o son genéricas? Reescribí la peor.",
+              "Identificá keywords con costo alto y 0 conversiones que habría que pausar.",
+              "¿Hay search terms irrelevantes que sumarías como negativas para cortar gasto?",
             ]}
           />
         </div>

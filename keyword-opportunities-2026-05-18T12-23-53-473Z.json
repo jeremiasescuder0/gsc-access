@@ -1,0 +1,2381 @@
+{
+  "generatedAt": "2026-05-18T12:23:53.473Z",
+  "days": 30,
+  "results": [
+    {
+      "siteUrl": "sc-domain:dynamicmobiletire.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [],
+        "quickWins": [
+          {
+            "query": "dynamic mobile",
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 4.777777777777778,
+            "previous": {
+              "query": "dynamic mobile",
+              "clicks": 0,
+              "impressions": 16,
+              "ctr": 0,
+              "position": 38.0625
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -7,
+              "ctr": 0,
+              "position": -33.28472222222222
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "can i get tires installed at my home by mobile technicians in rural areas?",
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 5.333333333333333,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "flat tire repair come to me",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 10,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "land rover tire service el dorado hills",
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 2.5,
+            "previous": {
+              "query": "land rover tire service el dorado hills",
+              "clicks": 0,
+              "impressions": 5,
+              "ctr": 0,
+              "position": 1.4
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -1,
+              "ctr": 0,
+              "position": 1.1
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "mobile",
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 2,
+            "previous": {
+              "query": "mobile",
+              "clicks": 0,
+              "impressions": 1,
+              "ctr": 0,
+              "position": 4
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 3,
+              "ctr": 0,
+              "position": -2
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "dynamic",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 2.5,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "dynamic speed mobile tire",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 9.5,
+            "previous": {
+              "query": "dynamic speed mobile tire",
+              "clicks": 0,
+              "impressions": 5,
+              "ctr": 0,
+              "position": 7.8
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -3,
+              "ctr": 0,
+              "position": 1.7000000000000002
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "jaguar tire service el dorado hills",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 10,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "44 mickey thompson tires",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 9,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "are there any tire shops that provide mobile installation services at home or work?",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 9,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [],
+        "siteCtr": 0.035443037974683546
+      },
+      "analysis": "¡Excelente iniciativa al analizar los datos de Google Search Console para optimizar la estrategia de contenido! A continuación, mi análisis y recomendaciones como estratega de contenido SEO para blogs de negocios:\n\n---\n\n**RESUMEN DE OPORTUNIDADES**\nEl sitio web dynamicmobiletire.com muestra una base de contenido existente con un gran potencial de mejora. A pesar de lograr buenas posiciones (2-10) para varias búsquedas relevantes en los últimos 30 días, la tasa de clics (CTR) es nula en la mayoría de estos casos, lo que sugiere que los títulos y meta descripciones actuales no son lo suficientemente atractivos o relevantes para la intención del usuario. No se detectaron oportunidades de contenido nuevas con alta exposición en este periodo, lo que nos empuja a buscar nichos más específicos a partir de las \"Quick Wins\".\n\n**BLOG TOPICS RECOMENDADOS (top 3, dada la escasez de \"Queries sin Blog\")**\nDado que la sección \"QUERIES SIN BLOG\" está vacía, hemos identificado las siguientes oportunidades para nuevos artículos a partir de las queries más descriptivas y de nicho presentes en las \"QUICK WINS\", que sugieren una necesidad de contenido más profundo que una simple optimización de título.\n\n-   **Título sugerido:** Instalación de Neumáticos a Domicilio en Áreas Rurales: ¿Es Posible y Cómo Funciona?\n    -   **Keyword principal:** can i get tires installed at my home by mobile technicians in rural areas?\n    -   **Impresiones actuales:** 6\n    -   **Dificultad estimada:** Baja (la query ya posiciona en 5.3, indicando cierta relevancia, pero el CTR 0% muestra que el contenido actual no satisface plenamente la intención).\n    -   **Ángulo editorial:** Guía completa que aborda las preocupaciones y soluciones para el servicio de neumáticos móvil en zonas rurales, destacando la conveniencia y el alcance del servicio.\n\n-   **Título sugerido:** Servicio de Neumáticos Móvil para Vehículos de Lujo en El Dorado Hills (Land Rover, Jaguar y más)\n    -   **Keyword principal:** land rover tire service el dorado hills (justificando la necesidad de servicio especializado)\n    -   **Impresiones actuales:** 6 (4 para Land Rover + 2 para Jaguar)\n    -   **Dificultad estimada:** Baja (las queries ya posicionan en 2.5 y 10, lo que indica una oportunidad clara con contenido específico).\n    -   **Ángulo editorial:** Resaltar la especialización, el cuidado y la conveniencia del servicio a domicilio para vehículos de alta gama en una ubicación específica.\n\n-   **Título sugerido:** ¿Necesitas Reparación de Pinchazos a Domicilio? Cómo Funciona Nuestro Servicio Móvil\n    -   **Keyword principal:** flat tire repair come to me\n    -   **Impresiones actuales:** 5\n    -   **Dificultad estimada:** Baja (la query está en posición 10, con visibilidad pero sin clicks, ideal para un contenido que resuelva la intención de conveniencia).\n    -   **Ángulo editorial:** Centrado en la inmediatez, el proceso paso a paso y los beneficios de un servicio de reparación de pinchazos móvil que se desplaza al cliente.\n\n**QUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)**\nEstas queries ya tienen una buena posición y el problema radica en un CTR del 0%, lo que sugiere una oportunidad inmediata al optimizar los metadatos.\n\n-   **Query:** dynamic mobile\n    -   **Problema:** Es una búsqueda de marca/negocio. El CTR 0% indica que la página que rankea (probablemente la homepage o una página \"Acerca de Nosotros\") no está comunicando claramente la identidad o propuesta de valor de \"Dynamic Mobile Tire\" en su título o descripción.\n    -   **Acción:** Optimizar el *title tag* y *meta description* de la página principal para incluir \"Dynamic Mobile Tire | Tu Servicio de Neumáticos a Domicilio Rápido y Profesional\" y una descripción que resalte los beneficios clave y la conveniencia de la marca.\n\n-   **Query:** mobile\n    -   **Problema:** Query muy amplia que indica interés en un servicio \"móvil\". La posición 2 es excelente, pero el 0% CTR es una gran pérdida. La página que rankea (probablemente la homepage o una página de servicios clave) no está comunicando claramente que ofrece servicios *móviles* o no es lo suficientemente atractiva.\n    -   **Acción:** Refinar el *title tag* de la página principal o la página de servicios clave para captar la intención de servicio móvil, por ejemplo: \"Servicio de Neumáticos Móvil: Reparación y Sustitución a Domicilio\" y una descripción que enfatice la facilidad y el ahorro de tiempo.\n\n-   **Query:** flat tire repair come to me\n    -   **Problema:** Intención clara de conveniencia. La página que rankea (posiblemente un post de blog existente sobre neumáticos pinchados) no enfatiza la naturaleza \"a domicilio\" del servicio en su título/descripción.\n    -   **Acción:** Modificar el *title tag* de la página relevante a algo como \"Reparación de Pinchazos a Domicilio: ¡Vamos a Ti! | Servicio Móvil\" y la *meta description* para destacar la conveniencia y la prontitud del servicio que se desplaza hacia el cliente.\n\n**ALERTA CTR BAJO**\nNo se identificaron queries con alta exposición y CTR bajo (menos del 2%) en el período analizado.\n\n**PRÓXIMOS PASOS**\n\n1.  **Optimización Urgente de Títulos y Meta Descripciones (Impacto Inmediato):** Revisar y reescribir los *title tags* y *meta descriptions* de las páginas que rankean en posiciones 2-10 con 0% de CTR, especialmente para búsquedas de marca y de servicios clave como la reparación de pinchazos a domicilio. Esto es la acción más rápida para aumentar el CTR y el tráfico orgánico cualificado.\n\n2.  **Desarrollo de Contenido de Nicho Estratégico (Impacto a Corto/Medio Plazo):** Crear los nuevos artículos de blog identificados para cubrir servicios específicos como la instalación de neumáticos en áreas rurales y el servicio para vehículos de lujo en El Dorado Hills. Estos contenidos posicionarán a Dynamic Mobile Tire como un experto, abordarán directamente consultas de nicho y atraerán tráfico altamente cualificado.\n\n3.  **Auditoría de Contenido y Palabras Clave Ampliada (Impacto a Largo Plazo):** Realizar una auditoría de contenido más exhaustiva del blog y una investigación de palabras clave utilizando un período de datos de Google Search Console más extenso (ej. 90 o 180 días) y herramientas de investigación de palabras clave. Esto ayudará a descubrir más oportunidades de contenido, identificar lagunas estratégicas y refinar la estrategia para aumentar la autoridad del dominio y el tráfico orgánico de forma sostenida."
+    },
+    {
+      "siteUrl": "sc-domain:gomezbrothersracing.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [],
+        "quickWins": [
+          {
+            "query": "gomez brothers",
+            "clicks": 6,
+            "impressions": 188,
+            "ctr": 0.031914893617021274,
+            "position": 4.382978723404255,
+            "previous": {
+              "query": "gomez brothers",
+              "clicks": 1,
+              "impressions": 165,
+              "ctr": 0.006060606060606061,
+              "position": 3.6606060606060606
+            },
+            "delta": {
+              "clicks": 5,
+              "impressions": 23,
+              "ctr": 0.025854287556415213,
+              "position": 0.7223726627981946
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "marcos gomez",
+            "clicks": 4,
+            "impressions": 117,
+            "ctr": 0.03418803418803419,
+            "position": 5.769230769230769,
+            "previous": {
+              "query": "marcos gomez",
+              "clicks": 0,
+              "impressions": 74,
+              "ctr": 0,
+              "position": 5.135135135135135
+            },
+            "delta": {
+              "clicks": 4,
+              "impressions": 43,
+              "ctr": 0.03418803418803419,
+              "position": 0.6340956340956341
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "raul gomez",
+            "clicks": 1,
+            "impressions": 97,
+            "ctr": 0.010309278350515464,
+            "position": 7.701030927835052,
+            "previous": {
+              "query": "raul gomez",
+              "clicks": 0,
+              "impressions": 83,
+              "ctr": 0,
+              "position": 5.650602409638554
+            },
+            "delta": {
+              "clicks": 1,
+              "impressions": 14,
+              "ctr": 0.010309278350515464,
+              "position": 2.0504285181964974
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "gomez brother",
+            "clicks": 0,
+            "impressions": 49,
+            "ctr": 0,
+            "position": 4.204081632653061,
+            "previous": {
+              "query": "gomez brother",
+              "clicks": 0,
+              "impressions": 25,
+              "ctr": 0,
+              "position": 1.32
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 24,
+              "ctr": 0,
+              "position": 2.8840816326530607
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "gomez racing",
+            "clicks": 1,
+            "impressions": 38,
+            "ctr": 0.02631578947368421,
+            "position": 4.289473684210526,
+            "previous": {
+              "query": "gomez racing",
+              "clicks": 3,
+              "impressions": 19,
+              "ctr": 0.15789473684210525,
+              "position": 5.578947368421052
+            },
+            "delta": {
+              "clicks": -2,
+              "impressions": 19,
+              "ctr": -0.13157894736842105,
+              "position": -1.2894736842105265
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "gomez car",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 5.333333333333333,
+            "previous": {
+              "query": "gomez car",
+              "clicks": 0,
+              "impressions": 3,
+              "ctr": 0,
+              "position": 4
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 0,
+              "ctr": 0,
+              "position": 1.333333333333333
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "raul racing",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 4.333333333333334,
+            "previous": {
+              "query": "raul racing",
+              "clicks": 0,
+              "impressions": 1,
+              "ctr": 0,
+              "position": 10
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 2,
+              "ctr": 0,
+              "position": -5.666666666666666
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "darin gomez",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 9.5,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "raúl gómez",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 5.5,
+            "previous": {
+              "query": "raúl gómez",
+              "clicks": 0,
+              "impressions": 3,
+              "ctr": 0,
+              "position": 18.666666666666668
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -1,
+              "ctr": 0,
+              "position": -13.166666666666668
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "bones brothers racing",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 10,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [],
+        "siteCtr": 0.05934718100890208
+      },
+      "analysis": "Como estratega de contenido SEO para blogs de negocios, he analizado los datos proporcionados para gomezbrothersracing.com.\n\nRESUMEN DE OPORTUNIDADES\nEl sitio gomezbrothersracing.com no cuenta actualmente con un blog, lo que representa una oportunidad masiva para capitalizar el interés de búsqueda existente. Aunque el CTR promedio del sitio es del 5.93%, las consultas que ya generan impresiones relacionadas con la marca y sus figuras clave (\"Gomez Brothers\", \"Marcos Gomez\", \"Raul Gomez\") tienen un CTR significativamente bajo, indicando que las páginas actuales no satisfacen la intención de búsqueda o no invitan al clic. Esto es una señal clara para desarrollar contenido de blog específico que atraiga y eduque a esta audiencia.\n\nBLOG TOPICS RECOMENDADOS (top 5)\n\n1.  Título sugerido: La Historia Detrás de Gomez Brothers Racing: Pasión, Velocidad y Legado\n    *   Keyword principal: gomez brothers\n    *   Impresiones actuales: 188\n    *   Dificultad estimada: Baja (ya se posiciona en 4.4, hay una base sólida de interés)\n    *   Ángulo editorial: Narrativo e histórico, presentando la fundación y evolución del equipo o marca.\n\n2.  Título sugerido: Marcos Gomez en la Pista: Trayectoria, Logros y Futuro en el Racing\n    *   Keyword principal: marcos gomez\n    *   Impresiones actuales: 117\n    *   Dificultad estimada: Baja (posición 5.8, con contenido específico se puede mejorar fácilmente)\n    *   Ángulo editorial: Biográfico y de perfil profesional, destacando su carrera y visión.\n\n3.  Título sugerido: Conoce a Raul Gomez: Piloto Clave y Estrategias Ganadoras en Gomez Brothers Racing\n    *   Keyword principal: raul gomez\n    *   Impresiones actuales: 97\n    *   Dificultad estimada: Media (posición 7.7, se necesita un contenido robusto para escalar)\n    *   Ángulo editorial: Biográfico y técnico, explorando su rol y contribuciones específicas.\n\n4.  Título sugerido: Más Allá de la Pista: Qué Significa Ser un \"Gomez Brother\" en el Mundo del Racing\n    *   Keyword principal: gomez brother\n    *   Impresiones actuales: 49\n    *   Dificultad estimada: Baja (posición 4.2 con 0% CTR, una pieza de contenido relevante capturaría todo el tráfico)\n    *   Ángulo editorial: Inspiracional y de marca, centrado en la identidad y valores de los hermanos.\n\n5.  Título sugerido: Gomez Racing: Innovación, Rendimiento y Cómo Alcanzamos la Excelencia\n    *   Keyword principal: gomez racing\n    *   Impresiones actuales: 38\n    *   Dificultad estimada: Baja (posición 4.3, una oportunidad para reforzar la marca global)\n    *   Ángulo editorial: Corporativo y de diferenciación, explicando la propuesta de valor del equipo/marca.\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)\nDado que no existen páginas de blog, la \"optimización\" aquí se refiere a la creación de títulos y meta descripciones impactantes para los *nuevos artículos de blog* que se crearán para estas consultas, con el fin de capitalizar las impresiones ya existentes y el bajo CTR.\n\n1.  Query: gomez brothers\n    *   Problema: CTR del 3.19% en posición 4.4, lo que indica que el contenido actual no atrae lo suficiente o no responde a la intención de \"conocer más sobre ellos\".\n    *   Acción:\n        *   Título sugerido: Gomez Brothers Racing: Historia, Éxitos y el Futuro de Nuestra Pasión por la Velocidad\n        *   Meta Description: Descubre la fascinante trayectoria de Gomez Brothers Racing, sus mayores logros y la visión que impulsa a nuestros pilotos hacia cada victoria. ¡Conoce a la familia detrás de la velocidad!\n\n2.  Query: marcos gomez\n    *   Problema: CTR del 3.42% en posición 5.8, sugiriendo que los usuarios buscan un perfil más detallado o noticias específicas de Marcos Gomez.\n    *   Acción:\n        *   Título sugerido: Marcos Gomez: Perfil del Piloto Estrella de Gomez Brothers Racing | Logros y Entrevistas\n        *   Meta Description: Adéntrate en la carrera de Marcos Gomez, el talentoso piloto de Gomez Brothers Racing. Conoce sus récords, estrategias y cómo se prepara para cada desafío en la pista.\n\n3.  Query: raul gomez\n    *   Problema: CTR del 1.03% en posición 7.7, un valor extremadamente bajo que muestra una desconexión total entre la búsqueda y la oferta actual. Los usuarios buscan activamente información sobre Raul Gomez.\n    *   Acción:\n        *   Título sugerido: Raul Gomez: El Corazón Estratégico de Gomez Brothers Racing | Conoce su Impacto en el Equipo\n        *   Meta Description: Exploramos la figura de Raul Gomez, su vital papel en Gomez Brothers Racing y las decisiones que han marcado nuestro camino al éxito. Descubre su influencia y legado.\n\nALERTA CTR BAJO\nNo se detectaron queries en la categoría de \"CTR Bajo con Alta Exposición\" en los datos proporcionados para páginas de blog existentes, lo cual es consistente con la ausencia de un blog.\n\nPRÓXIMOS PASOS\n\n1.  **Implementación de la Estrategia de Contenido del Blog**: Comenzar la redacción y publicación de los 3-5 artículos de blog recomendados, priorizando aquellos con mayor potencial de impresiones (\"gomez brothers\", \"marcos gomez\", \"raul gomez\"). Es fundamental que el contenido sea de alta calidad, responda a la intención de búsqueda y esté optimizado con los títulos y meta descripciones sugeridos.\n2.  **Configuración de la Infraestructura del Blog**: Si el sitio no cuenta con una sección de blog, es crucial establecerla. Esto implica elegir una plataforma (WordPress, integrado en el CMS actual, etc.), definir la estructura de URL amigable para SEO (ej. gomezbrothersracing.com/blog/titulo-articulo) y asegurarse de que sea indexable y mobile-friendly.\n3.  **Monitoreo y Optimización Continua**: Una vez publicados los artículos, monitorear su rendimiento en Google Search Console. Analizar el CTR, la posición y las nuevas consultas para identificar oportunidades de mejora (actualización de contenido, nuevos artículos, optimización de snippets)."
+    },
+    {
+      "siteUrl": "sc-domain:rgtreecare.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [
+          {
+            "query": "land clearing services",
+            "clicks": 1,
+            "impressions": 97,
+            "ctr": 0.010309278350515464,
+            "position": 47.16494845360825,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          },
+          {
+            "query": "burning tree stumps",
+            "clicks": 1,
+            "impressions": 43,
+            "ctr": 0.023255813953488372,
+            "position": 12.395348837209303,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          }
+        ],
+        "quickWins": [
+          {
+            "query": "hedge trimmer",
+            "clicks": 1,
+            "impressions": 400,
+            "ctr": 0.0025,
+            "position": 6.0475,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "how fast do tree roots grow back if you cut them",
+            "clicks": 2,
+            "impressions": 172,
+            "ctr": 0.011627906976744186,
+            "position": 6.52906976744186,
+            "previous": {
+              "query": "how fast do tree roots grow back if you cut them",
+              "clicks": 3,
+              "impressions": 205,
+              "ctr": 0.014634146341463415,
+              "position": 4.302439024390244
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -33,
+              "ctr": -0.0030062393647192296,
+              "position": 2.226630743051616
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "how to burn a stump",
+            "clicks": 4,
+            "impressions": 161,
+            "ctr": 0.024844720496894408,
+            "position": 4.304347826086957,
+            "previous": {
+              "query": "how to burn a stump",
+              "clicks": 3,
+              "impressions": 352,
+              "ctr": 0.008522727272727272,
+              "position": 2.84375
+            },
+            "delta": {
+              "clicks": 1,
+              "impressions": -191,
+              "ctr": 0.016321993224167136,
+              "position": 1.460597826086957
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "how to stop a tree from growing back after cutting it down",
+            "clicks": 2,
+            "impressions": 141,
+            "ctr": 0.014184397163120567,
+            "position": 7.078014184397163,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "how to burn a tree stump",
+            "clicks": 2,
+            "impressions": 130,
+            "ctr": 0.015384615384615385,
+            "position": 3.5307692307692307,
+            "previous": {
+              "query": "how to burn a tree stump",
+              "clicks": 4,
+              "impressions": 201,
+              "ctr": 0.01990049751243781,
+              "position": 2.91044776119403
+            },
+            "delta": {
+              "clicks": -2,
+              "impressions": -71,
+              "ctr": -0.004515882127822425,
+              "position": 0.6203214695752006
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "how to trim clusia hedge",
+            "clicks": 2,
+            "impressions": 89,
+            "ctr": 0.02247191011235955,
+            "position": 7.966292134831461,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "best time of year to trim hedges",
+            "clicks": 1,
+            "impressions": 85,
+            "ctr": 0.011764705882352941,
+            "position": 8.894117647058824,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "will hedges grow back if you cut them down",
+            "clicks": 1,
+            "impressions": 81,
+            "ctr": 0.012345679012345678,
+            "position": 6.753086419753086,
+            "previous": {
+              "query": "will hedges grow back if you cut them down",
+              "clicks": 2,
+              "impressions": 81,
+              "ctr": 0.024691358024691357,
+              "position": 4.407407407407407
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": 0,
+              "ctr": -0.012345679012345678,
+              "position": 2.3456790123456788
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "why is stump burning illegal",
+            "clicks": 1,
+            "impressions": 66,
+            "ctr": 0.015151515151515152,
+            "position": 8.363636363636363,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "what can i put on a tree stump to keep it from growing",
+            "clicks": 1,
+            "impressions": 55,
+            "ctr": 0.01818181818181818,
+            "position": 6.4363636363636365,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "hedge trimmer",
+            "clicks": 1,
+            "impressions": 400,
+            "ctr": 0.0025,
+            "position": 6.0475,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "how fast do tree roots grow back if you cut them",
+            "clicks": 2,
+            "impressions": 172,
+            "ctr": 0.011627906976744186,
+            "position": 6.52906976744186,
+            "previous": {
+              "query": "how fast do tree roots grow back if you cut them",
+              "clicks": 3,
+              "impressions": 205,
+              "ctr": 0.014634146341463415,
+              "position": 4.302439024390244
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -33,
+              "ctr": -0.0030062393647192296,
+              "position": 2.226630743051616
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "how to stop a tree from growing back after cutting it down",
+            "clicks": 2,
+            "impressions": 141,
+            "ctr": 0.014184397163120567,
+            "position": 7.078014184397163,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "how to burn a tree stump",
+            "clicks": 2,
+            "impressions": 130,
+            "ctr": 0.015384615384615385,
+            "position": 3.5307692307692307,
+            "previous": {
+              "query": "how to burn a tree stump",
+              "clicks": 4,
+              "impressions": 201,
+              "ctr": 0.01990049751243781,
+              "position": 2.91044776119403
+            },
+            "delta": {
+              "clicks": -2,
+              "impressions": -71,
+              "ctr": -0.004515882127822425,
+              "position": 0.6203214695752006
+            },
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.08821292775665399
+      },
+      "analysis": "Aquí tienes el análisis y las recomendaciones para sc-domain:rgtreecare.com, actuando como tu estratega de contenido SEO:\n\nRESUMEN DE OPORTUNIDADES\nEl sitio sc-domain:rgtreecare.com no cuenta actualmente con un blog, lo que representa una enorme oportunidad para capturar tráfico orgánico cualificado. La data de Search Console muestra una clara demanda de contenido informativo y de \"how-to\" que el sitio no está aprovechando. Al crear y optimizar un blog, se puede atraer a usuarios en etapas tempranas de su ciclo de compra y establecer la marca como una autoridad en el cuidado de árboles y paisajismo.\n\nBLOG TOPICS RECOMENDADOS (top 7)\n\n1.  **Título sugerido:** Guía Completa: Cómo Quemar un Tocón de Árbol de Forma Segura y Efectiva\n    *   **Keyword principal:** how to burn a stump\n    *   **Impresiones actuales:** 161 (para \"how to burn a stump\"), 130 (para \"how to burn a tree stump\"), 43 (para \"burning tree stumps\") = 334+\n    *   **Dificultad estimada:** Media (posiciones 3.5 a 12.4, indica que el tema tiene demanda y hay oportunidad de superar a la competencia con buen contenido).\n    *   **Ángulo editorial:** Guía práctica paso a paso, con consejos de seguridad y consideraciones legales.\n\n2.  **Título sugerido:** ¿Qué tan Rápido Crecen las Raíces de los Árboles Después de Cortarlos?\n    *   **Keyword principal:** how fast do tree roots grow back if you cut them\n    *   **Impresiones actuales:** 172\n    *   **Dificultad estimada:** Media (posición 6.5, señal de que hay interés y con una respuesta directa se puede mejorar).\n    *   **Ángulo editorial:** Artículo informativo y educativo, respondiendo la pregunta directamente y expandiendo sobre factores que influyen.\n\n3.  **Título sugerido:** Cómo Evitar que un Árbol Vuelva a Crecer Después de Cortarlo: Métodos Efectivos\n    *   **Keyword principal:** how to stop a tree from growing back after cutting it down\n    *   **Impresiones actuales:** 141\n    *   **Dificultad estimada:** Media (posición 7.1, clara intención de búsqueda para soluciones).\n    *   **Ángulo editorial:** Guía de soluciones prácticas y duraderas, desde métodos químicos hasta extracción completa.\n\n4.  **Título sugerido:** Guía para Elegir el Mejor Cortasetos: Tipos, Usos y Mantenimiento\n    *   **Keyword principal:** hedge trimmer\n    *   **Impresiones actuales:** 400\n    *   **Dificultad estimada:** Media (posición 6, pero el bajo CTR indica que la página actual no satisface la intención de búsqueda de una guía de compra o información detallada del producto).\n    *   **Ángulo editorial:** Guía comparativa, consejos de compra y uso para diferentes tipos de cortasetos.\n\n5.  **Título sugerido:** Poda de Setos de Clusia: Guía Paso a Paso para un Crecimiento Saludable\n    *   **Keyword principal:** how to trim clusia hedge\n    *   **Impresiones actuales:** 89\n    *   **Dificultad estimada:** Baja (posición 8, nicho específico con buena oportunidad).\n    *   **Ángulo editorial:** Tutorial detallado con imágenes o videos sobre la poda específica de este tipo de seto.\n\n6.  **Título sugerido:** ¿Cuál es la Mejor Época del Año para Podar Setos? Calendario y Consejos\n    *   **Keyword principal:** best time of year to trim hedges\n    *   **Impresiones actuales:** 85\n    *   **Dificultad estimada:** Baja (posición 8.9, respuesta estacional clara y de alta demanda).\n    *   **Ángulo editorial:** Artículo educativo sobre la estacionalidad de la poda, con un calendario por tipos de setos.\n\n7.  **Título sugerido:** Servicios de Desmonte de Terrenos: Lo Que Necesitas Saber Antes de Empezar\n    *   **Keyword principal:** land clearing services\n    *   **Impresiones actuales:** 97\n    *   **Dificultad estimada:** Alta (posición 47.2, indica que hay mucha competencia o la página actual no es relevante en absoluto. Requiere un contenido muy robusto).\n    *   **Ángulo editorial:** Guía exhaustiva sobre los tipos de servicios de desmonte, beneficios, procesos, consideraciones legales y cómo elegir un proveedor.\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)\n\n1.  **Query:** hedge trimmer\n    *   **Problema:** El CTR es extremadamente bajo (0.25%) a pesar de una buena posición (6) y altas impresiones (400), indicando que el título o la meta descripción no coinciden con la intención de búsqueda (que probablemente es de tipo informativo, comparativo o de compra).\n    *   **Acción:** Optimizar el `title tag` y `meta description` para incluir términos como \"Guía\", \"Mejores\", \"Cómo Elegir\" o \"Comparativa\". Ejemplo: `Title: \"Guía Completa de Cortasetos: Tipos, Usos y Cómo Elegir | RG Tree Care\"`\n\n2.  **Query:** how fast do tree roots grow back if you cut them\n    *   **Problema:** CTR bajo (1.16%) para una posición 6.5, sugiere que el título no promete la respuesta clara y concisa que el usuario busca sobre este tema específico.\n    *   **Acción:** Optimizar `title tag` y `meta description` para ser directos y resolver la curiosidad. Ejemplo: `Title: \"¿Qué tan Rápido Crecen las Raíces de los Árboles? Guía Completa de Recuperación | RG Tree Care\"`\n\n3.  **Query:** how to stop a tree from growing back after cutting it down\n    *   **Problema:** CTR bajo (1.42%) para una posición 7.1, la meta description o el título no están prometiendo una solución efectiva o un proceso claro.\n    *   **Acción:** Optimizar `title tag` y `meta description` para ofrecer \"soluciones definitivas\" o \"métodos probados\". Ejemplo: `Title: \"Cómo Evitar que un Árbol Vuelva a Crecer Después de Cortarlo (Métodos Efectivos) | RG Tree Care\"`\n\nALERTA CTR BAJO\n\n1.  **Query:** hedge trimmer\n    *   **Problema:** El CTR es alarmantemente bajo (0.25%) a pesar de 400 impresiones y posición 6. La página actual claramente no satisface la intención de búsqueda, sea esta de compra, comparativa o informativa.\n    *   **Acción:** Reestructurar el contenido de la página existente para abordar la intención de búsqueda principal, o crear un blog post detallado sobre el tema (como se sugiere en \"Blog Topics Recomendados\"), optimizando título y meta para reflejar una guía completa o comparativa de productos.\n\n2.  **Query:** how fast do tree roots grow back if you cut them\n    *   **Problema:** Con 172 impresiones y posición 6.5, el CTR de 1.16% indica que el título y la meta no responden directamente a la pregunta del usuario o no generan suficiente curiosidad para hacer clic.\n    *   **Acción:** Reescribir el `title tag` y `meta description` para ser más directos, prometedores en la respuesta y atractivos, por ejemplo, resaltando la rapidez de la información o la exhaustividad de la guía.\n\nPRÓXIMOS PASOS\n\n1.  **Implementar la Sección de Blog:** La acción más crítica es establecer y lanzar una sección de blog en rgtreecare.com, ya que actualmente no existe. Esto es fundamental para alojar todo el nuevo contenido estratégico y aprovechar las oportunidades detectadas.\n2.  **Creación de Contenido Estratégico:** Priorizar la redacción de los artículos de blog recomendados, comenzando por aquellos con mayor volumen de impresiones y menor dificultad (ej., \"Guía completa para la quema de tocones\" y \"¿Qué tan rápido crecen las raíces de los árboles?\"), enfocándose en la calidad y la autoridad.\n3.  **Optimización On-Page y CTR:** Revisar y optimizar los `title tags` y `meta descriptions` de las páginas existentes que rankean para las queries con bajo CTR (especialmente \"hedge trimmer\"), para mejorar su atractivo y relevancia, impulsando un aumento inmediato en los clics."
+    },
+    {
+      "siteUrl": "sc-domain:mesafp.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [
+          {
+            "query": "doctors in mesa az",
+            "clicks": 2,
+            "impressions": 44,
+            "ctr": 0.045454545454545456,
+            "position": 12.068181818181818,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          }
+        ],
+        "quickWins": [
+          {
+            "query": "pain behind ear",
+            "clicks": 204,
+            "impressions": 24440,
+            "ctr": 0.00834697217675941,
+            "position": 2.837438625204583,
+            "previous": {
+              "query": "pain behind ear",
+              "clicks": 160,
+              "impressions": 10195,
+              "ctr": 0.01569396763119176,
+              "position": 2.1962726826875922
+            },
+            "delta": {
+              "clicks": 44,
+              "impressions": 14245,
+              "ctr": -0.007346995454432351,
+              "position": 0.6411659425169907
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "can allergies cause body aches",
+            "clicks": 10,
+            "impressions": 2541,
+            "ctr": 0.003935458480913027,
+            "position": 8.45336481700118,
+            "previous": {
+              "query": "can allergies cause body aches",
+              "clicks": 5,
+              "impressions": 2329,
+              "ctr": 0.0021468441391155,
+              "position": 4.573636753971662
+            },
+            "delta": {
+              "clicks": 5,
+              "impressions": 212,
+              "ctr": 0.0017886143417975265,
+              "position": 3.8797280630295186
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "pain behind left ear",
+            "clicks": 9,
+            "impressions": 1675,
+            "ctr": 0.005373134328358209,
+            "position": 5.583283582089552,
+            "previous": {
+              "query": "pain behind left ear",
+              "clicks": 14,
+              "impressions": 1692,
+              "ctr": 0.008274231678486997,
+              "position": 2.58806146572104
+            },
+            "delta": {
+              "clicks": -5,
+              "impressions": -17,
+              "ctr": -0.002901097350128789,
+              "position": 2.995222116368512
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "pain behind the ear",
+            "clicks": 20,
+            "impressions": 1548,
+            "ctr": 0.012919896640826873,
+            "position": 6.267441860465116,
+            "previous": {
+              "query": "pain behind the ear",
+              "clicks": 26,
+              "impressions": 1483,
+              "ctr": 0.01753202966958867,
+              "position": 2.2683749157113957
+            },
+            "delta": {
+              "clicks": -6,
+              "impressions": 65,
+              "ctr": -0.004612133028761798,
+              "position": 3.99906694475372
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "pain behind right ear",
+            "clicks": 14,
+            "impressions": 1352,
+            "ctr": 0.010355029585798817,
+            "position": 5.997781065088757,
+            "previous": {
+              "query": "pain behind right ear",
+              "clicks": 14,
+              "impressions": 1301,
+              "ctr": 0.010760953112990008,
+              "position": 2.5380476556495006
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 51,
+              "ctr": -0.00040592352719119075,
+              "position": 3.4597334094392567
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "pain behind ears",
+            "clicks": 5,
+            "impressions": 819,
+            "ctr": 0.006105006105006105,
+            "position": 6.355311355311355,
+            "previous": {
+              "query": "pain behind ears",
+              "clicks": 15,
+              "impressions": 810,
+              "ctr": 0.018518518518518517,
+              "position": 2.974074074074074
+            },
+            "delta": {
+              "clicks": -10,
+              "impressions": 9,
+              "ctr": -0.012413512413512413,
+              "position": 3.381237281237281
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "pain behind ear on head",
+            "clicks": 8,
+            "impressions": 733,
+            "ctr": 0.010914051841746248,
+            "position": 7.452933151432469,
+            "previous": {
+              "query": "pain behind ear on head",
+              "clicks": 9,
+              "impressions": 657,
+              "ctr": 0.0136986301369863,
+              "position": 3.780821917808219
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": 76,
+              "ctr": -0.0027845782952400523,
+              "position": 3.67211123362425
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "behind ear pain",
+            "clicks": 5,
+            "impressions": 730,
+            "ctr": 0.00684931506849315,
+            "position": 5.267123287671233,
+            "previous": {
+              "query": "behind ear pain",
+              "clicks": 14,
+              "impressions": 798,
+              "ctr": 0.017543859649122806,
+              "position": 2.3233082706766917
+            },
+            "delta": {
+              "clicks": -9,
+              "impressions": -68,
+              "ctr": -0.010694544580629656,
+              "position": 2.9438150169945416
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "annual physical exam checklist by age",
+            "clicks": 5,
+            "impressions": 718,
+            "ctr": 0.006963788300835654,
+            "position": 5.433147632311978,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "pain behind left ear on skull",
+            "clicks": 6,
+            "impressions": 686,
+            "ctr": 0.008746355685131196,
+            "position": 6.341107871720117,
+            "previous": {
+              "query": "pain behind left ear on skull",
+              "clicks": 4,
+              "impressions": 388,
+              "ctr": 0.010309278350515464,
+              "position": 4.360824742268042
+            },
+            "delta": {
+              "clicks": 2,
+              "impressions": 298,
+              "ctr": -0.001562922665384268,
+              "position": 1.9802831294520749
+            },
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "pain behind ear",
+            "clicks": 204,
+            "impressions": 24440,
+            "ctr": 0.00834697217675941,
+            "position": 2.837438625204583,
+            "previous": {
+              "query": "pain behind ear",
+              "clicks": 160,
+              "impressions": 10195,
+              "ctr": 0.01569396763119176,
+              "position": 2.1962726826875922
+            },
+            "delta": {
+              "clicks": 44,
+              "impressions": 14245,
+              "ctr": -0.007346995454432351,
+              "position": 0.6411659425169907
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "can allergies cause body aches",
+            "clicks": 10,
+            "impressions": 2541,
+            "ctr": 0.003935458480913027,
+            "position": 8.45336481700118,
+            "previous": {
+              "query": "can allergies cause body aches",
+              "clicks": 5,
+              "impressions": 2329,
+              "ctr": 0.0021468441391155,
+              "position": 4.573636753971662
+            },
+            "delta": {
+              "clicks": 5,
+              "impressions": 212,
+              "ctr": 0.0017886143417975265,
+              "position": 3.8797280630295186
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "pain behind left ear",
+            "clicks": 9,
+            "impressions": 1675,
+            "ctr": 0.005373134328358209,
+            "position": 5.583283582089552,
+            "previous": {
+              "query": "pain behind left ear",
+              "clicks": 14,
+              "impressions": 1692,
+              "ctr": 0.008274231678486997,
+              "position": 2.58806146572104
+            },
+            "delta": {
+              "clicks": -5,
+              "impressions": -17,
+              "ctr": -0.002901097350128789,
+              "position": 2.995222116368512
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "pain behind the ear",
+            "clicks": 20,
+            "impressions": 1548,
+            "ctr": 0.012919896640826873,
+            "position": 6.267441860465116,
+            "previous": {
+              "query": "pain behind the ear",
+              "clicks": 26,
+              "impressions": 1483,
+              "ctr": 0.01753202966958867,
+              "position": 2.2683749157113957
+            },
+            "delta": {
+              "clicks": -6,
+              "impressions": 65,
+              "ctr": -0.004612133028761798,
+              "position": 3.99906694475372
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "pain behind right ear",
+            "clicks": 14,
+            "impressions": 1352,
+            "ctr": 0.010355029585798817,
+            "position": 5.997781065088757,
+            "previous": {
+              "query": "pain behind right ear",
+              "clicks": 14,
+              "impressions": 1301,
+              "ctr": 0.010760953112990008,
+              "position": 2.5380476556495006
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 51,
+              "ctr": -0.00040592352719119075,
+              "position": 3.4597334094392567
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "pain behind ears",
+            "clicks": 5,
+            "impressions": 819,
+            "ctr": 0.006105006105006105,
+            "position": 6.355311355311355,
+            "previous": {
+              "query": "pain behind ears",
+              "clicks": 15,
+              "impressions": 810,
+              "ctr": 0.018518518518518517,
+              "position": 2.974074074074074
+            },
+            "delta": {
+              "clicks": -10,
+              "impressions": 9,
+              "ctr": -0.012413512413512413,
+              "position": 3.381237281237281
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "pain behind ear on head",
+            "clicks": 8,
+            "impressions": 733,
+            "ctr": 0.010914051841746248,
+            "position": 7.452933151432469,
+            "previous": {
+              "query": "pain behind ear on head",
+              "clicks": 9,
+              "impressions": 657,
+              "ctr": 0.0136986301369863,
+              "position": 3.780821917808219
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": 76,
+              "ctr": -0.0027845782952400523,
+              "position": 3.67211123362425
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "behind ear pain",
+            "clicks": 5,
+            "impressions": 730,
+            "ctr": 0.00684931506849315,
+            "position": 5.267123287671233,
+            "previous": {
+              "query": "behind ear pain",
+              "clicks": 14,
+              "impressions": 798,
+              "ctr": 0.017543859649122806,
+              "position": 2.3233082706766917
+            },
+            "delta": {
+              "clicks": -9,
+              "impressions": -68,
+              "ctr": -0.010694544580629656,
+              "position": 2.9438150169945416
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "annual physical exam checklist by age",
+            "clicks": 5,
+            "impressions": 718,
+            "ctr": 0.006963788300835654,
+            "position": 5.433147632311978,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "pain behind left ear on skull",
+            "clicks": 6,
+            "impressions": 686,
+            "ctr": 0.008746355685131196,
+            "position": 6.341107871720117,
+            "previous": {
+              "query": "pain behind left ear on skull",
+              "clicks": 4,
+              "impressions": 388,
+              "ctr": 0.010309278350515464,
+              "position": 4.360824742268042
+            },
+            "delta": {
+              "clicks": 2,
+              "impressions": 298,
+              "ctr": -0.001562922665384268,
+              "position": 1.9802831294520749
+            },
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.024561025530539696
+      },
+      "analysis": "**RESUMEN DE OPORTUNIDADES**\nEl sitio mesafp.com presenta una clara oportunidad para capitalizar su presencia en la primera y segunda página de Google. El desafío principal es mejorar el Click-Through Rate (CTR) de su contenido existente, que actualmente está por debajo del promedio del sitio (2.46%) en búsquedas con alta exposición. Además, hay una oportunidad directa para crear contenido nuevo que aborde búsquedas con intención comercial y local.\n\n**BLOG TOPICS RECOMENDADOS**\n*   **Título sugerido:** Cómo Elegir los Mejores Doctores de Atención Primaria en Mesa, AZ | Tu Guía Completa de MesaFP\n*   **Keyword principal:** doctors in mesa az\n*   **Impresiones actuales:** 44\n*   **Dificultad estimada:** Media (Aunque la posición actual es 12.1, la naturaleza local y de alta intención comercial de la query sugiere que un contenido optimizado y enfocado tiene un potencial significativo para alcanzar la primera página. La competencia local específica será el factor principal.)\n*   **Ángulo editorial:** Guía completa que ayuda a los usuarios a seleccionar un proveedor de atención primaria en Mesa, destacando los servicios, la filosofía de cuidado y los beneficios de elegir a MesaFP, con llamados a la acción para la reserva de citas.\n\n**QUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)**\n\n*   **Query:** pain behind ear\n*   **Problema:** A pesar de una excelente posición (2.8) y un volumen de impresiones masivo (24,440), el CTR de 0.83% es extremadamente bajo, indicando que el título o la meta descripción actual del artículo `/blog/pain-behind-ear-causes-treatment/` no son lo suficientemente atractivos o relevantes para el usuario en los resultados de búsqueda.\n*   **Acción:** Optimizar el `title tag` y `meta description` para generar mayor intriga y valor.\n    *   **Título sugerido:** Dolor Detrás de la Oreja: 7 Causas Comunes y ¿Cuándo Buscar Ayuda Médica?\n    *   **Meta Description sugerida:** ¿Experimentas dolor detrás de la oreja? Descubre las posibles razones, desde leves a serias, y cuándo es crucial consultar a un profesional. Guía completa de MesaFP.\n\n*   **Query:** can allergies cause body aches\n*   **Problema:** Con una posición de 8.5 y 2,541 impresiones, el CTR de 0.39% es alarmantemente bajo. Esto sugiere que el `snippet` actual para el artículo `/blog/4-signs-your-allergies-are-getting-worse/` no está conectando eficazmente con la pregunta específica del usuario.\n*   **Acción:** Reestructurar el `title tag` y `meta description` para responder directamente a la pregunta o prometer una solución clara.\n    *   **Título sugerido:** ¿Las Alergias Pueden Causar Dolores Musculares? Descubre la Conexión Aquí\n    *   **Meta Description sugerida:** ¿Sufres de alergias y sientes dolores corporales inexplicables? Explora cómo las alergias afectan tu cuerpo y encuentra las respuestas que buscas en nuestro blog.\n\n*   **Query:** pain behind the ear\n*   **Problema:** Aunque la posición es buena (6.3) y las impresiones son significativas (1,548), el CTR del 1.29% está por debajo del promedio del sitio. Esto indica que las variaciones de la keyword principal de dolor detrás de la oreja también necesitan ser abordadas para el artículo `/blog/pain-behind-ear-causes-treatment/`.\n*   **Acción:** Refinar el `title tag` y `meta description` para ser más explícito y empático, cubriendo variaciones comunes de la búsqueda.\n    *   **Título sugerido:** ¿Dolor Persistente Detrás de la Oreja? Conoce las Causas y Soluciones Rápidas\n    *   **Meta Description sugerida:** No ignores el dolor detrás de tu oreja. Te explicamos qué lo causa y qué tratamientos existen para aliviar tu molestia de forma efectiva.\n\n**ALERTA CTR BAJO**\n\n*   **Query:** pain behind ear (24,440 impresiones, 0.83% CTR, Posición 2.8)\n    *   **Acción:** Esta es la oportunidad de mayor impacto y urgencia. Se debe realizar una prueba A/B de diferentes `title tags` y `meta descriptions` para el artículo `/blog/pain-behind-ear-causes-treatment/`, enfocándose en claridad, promesa de alivio, la inclusión de números o preguntas para generar intriga, y un lenguaje que invite al clic. Es vital monitorear el CTR diariamente después de los cambios.\n\n*   **Query:** can allergies cause body aches (2,541 impresiones, 0.39% CTR, Posición 8.5)\n    *   **Acción:** Es crítico optimizar el `title tag` y `meta description` del artículo `/blog/4-signs-your-allergies-are-getting-worse/`. El título debe ser una respuesta directa o un fuerte indicador de que la respuesta está dentro del contenido. La meta descripción debe destacar los síntomas, las causas y los posibles tratamientos que el usuario encontrará en la página.\n\n**PRÓXIMOS PASOS**\n\n1.  **Ejecución Prioritaria de Quick Wins de CTR:** Implementar inmediatamente las optimizaciones de `title tag` y `meta description` para los artículos relacionados con \"pain behind ear\" y \"can allergies cause body aches\". Monitorear el rendimiento en Google Search Console diariamente durante las primeras dos semanas para evaluar el impacto de los cambios.\n2.  **Creación de Contenido Estratégico Local:** Desarrollar el nuevo artículo \"Cómo Elegir los Mejores Doctores de Atención Primaria en Mesa, AZ\". Asegurar que este contenido sea exhaustivo, optimizado localmente y contenga llamados a la acción claros para la conversión de pacientes.\n3.  **Investigación de Palabras Clave Ampliada:** Realizar un análisis más profundo de palabras clave relacionadas con los servicios de atención primaria y especialidades que ofrece MesaFP, para identificar más oportunidades de contenido blog con intención comercial o informativa que puedan atraer a nuevos pacientes."
+    },
+    {
+      "siteUrl": "sc-domain:nwcontinence.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [
+          {
+            "query": "axonics therapy",
+            "clicks": 1,
+            "impressions": 708,
+            "ctr": 0.0014124293785310734,
+            "position": 10.457627118644067,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          },
+          {
+            "query": "herbal remedies for incontinence",
+            "clicks": 1,
+            "impressions": 44,
+            "ctr": 0.022727272727272728,
+            "position": 12.5,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          },
+          {
+            "query": "herbs for overactive bladder",
+            "clicks": 1,
+            "impressions": 41,
+            "ctr": 0.024390243902439025,
+            "position": 18.24390243902439,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          }
+        ],
+        "quickWins": [
+          {
+            "query": "leaky butt",
+            "clicks": 2,
+            "impressions": 1198,
+            "ctr": 0.001669449081803005,
+            "position": 9.259599332220366,
+            "previous": {
+              "query": "leaky butt",
+              "clicks": 3,
+              "impressions": 915,
+              "ctr": 0.003278688524590164,
+              "position": 7.021857923497268
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": 283,
+              "ctr": -0.0016092394427871589,
+              "position": 2.2377414087230987
+            },
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "homeopathic remedy for overactive bladder",
+            "clicks": 1,
+            "impressions": 5576,
+            "ctr": 0.0001793400286944046,
+            "position": 1.9989239598278337,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "leaky butt",
+            "clicks": 2,
+            "impressions": 1198,
+            "ctr": 0.001669449081803005,
+            "position": 9.259599332220366,
+            "previous": {
+              "query": "leaky butt",
+              "clicks": 3,
+              "impressions": 915,
+              "ctr": 0.003278688524590164,
+              "position": 7.021857923497268
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": 283,
+              "ctr": -0.0016092394427871589,
+              "position": 2.2377414087230987
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "my anus smells even after washing female",
+            "clicks": 8,
+            "impressions": 951,
+            "ctr": 0.008412197686645636,
+            "position": 5.799158780231336,
+            "previous": {
+              "query": "my anus smells even after washing female",
+              "clicks": 13,
+              "impressions": 946,
+              "ctr": 0.013742071881606765,
+              "position": 1.7283298097251585
+            },
+            "delta": {
+              "clicks": -5,
+              "impressions": 5,
+              "ctr": -0.005329874194961129,
+              "position": 4.070828970506177
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "axonics therapy",
+            "clicks": 1,
+            "impressions": 708,
+            "ctr": 0.0014124293785310734,
+            "position": 10.457627118644067,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "my anus smells even after washing",
+            "clicks": 5,
+            "impressions": 494,
+            "ctr": 0.010121457489878543,
+            "position": 5.406882591093117,
+            "previous": {
+              "query": "my anus smells even after washing",
+              "clicks": 2,
+              "impressions": 579,
+              "ctr": 0.0034542314335060447,
+              "position": 2.4162348877374784
+            },
+            "delta": {
+              "clicks": 3,
+              "impressions": -85,
+              "ctr": 0.006667226056372498,
+              "position": 2.9906477033556387
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "why does my butt stink",
+            "clicks": 6,
+            "impressions": 384,
+            "ctr": 0.015625,
+            "position": 6.3359375,
+            "previous": {
+              "query": "why does my butt stink",
+              "clicks": 3,
+              "impressions": 457,
+              "ctr": 0.006564551422319475,
+              "position": 3.3544857768052516
+            },
+            "delta": {
+              "clicks": 3,
+              "impressions": -73,
+              "ctr": 0.009060448577680525,
+              "position": 2.9814517231947484
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "my anus smells even after washing male",
+            "clicks": 6,
+            "impressions": 373,
+            "ctr": 0.0160857908847185,
+            "position": 7.174262734584451,
+            "previous": {
+              "query": "my anus smells even after washing male",
+              "clicks": 4,
+              "impressions": 480,
+              "ctr": 0.008333333333333333,
+              "position": 3.408333333333333
+            },
+            "delta": {
+              "clicks": 2,
+              "impressions": -107,
+              "ctr": 0.007752457551385166,
+              "position": 3.7659294012511175
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "why does my butt leak",
+            "clicks": 5,
+            "impressions": 347,
+            "ctr": 0.01440922190201729,
+            "position": 8.322766570605188,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "butt leaking",
+            "clicks": 2,
+            "impressions": 263,
+            "ctr": 0.0076045627376425855,
+            "position": 7.749049429657795,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "why does my butt smell",
+            "clicks": 2,
+            "impressions": 262,
+            "ctr": 0.007633587786259542,
+            "position": 5.8396946564885495,
+            "previous": {
+              "query": "why does my butt smell",
+              "clicks": 2,
+              "impressions": 344,
+              "ctr": 0.005813953488372093,
+              "position": 3.4767441860465116
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -82,
+              "ctr": 0.0018196342978874487,
+              "position": 2.362950470442038
+            },
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.010793092420850655
+      },
+      "analysis": "Aquí tienes el análisis y las recomendaciones para tu blog:\n\nRESUMEN DE OPORTUNIDADES\nEl sitio nwcontinence.com muestra un CTR promedio bajo (1.08%), lo que sugiere que hay un margen considerable para mejorar la conexión entre las consultas de búsqueda y la oferta de contenido. Las principales oportunidades residen en la creación de contenido nuevo para consultas de alto valor actualmente desatendidas y en la optimización urgente de títulos y meta descripciones para páginas existentes que ya rankean bien pero tienen un CTR muy bajo.\n\nBLOG TOPICS RECOMENDADOS (top 3)\n\n*   **Título sugerido**: Terapia Axonics: Una Solución Avanzada para la Incontinencia y Vejiga Hiperactiva\n*   **Keyword principal**: axonics therapy\n*   **Impresiones actuales**: 708\n*   **Dificultad estimada**: Media (El sitio ya está en la primera página de Google para esta query. Un artículo de blog dedicado y bien optimizado puede mejorar su posición y capturar significativamente más clics).\n*   **Ángulo editorial**: Educativo y comparativo, explicando en profundidad qué es Axonics, cómo funciona, sus beneficios, quiénes son candidatos y cómo se compara con otras opciones de tratamiento.\n\n*   **Título sugerido**: Remedios Naturales y Complementarios para la Incontinencia Urinaria\n*   **Keyword principal**: herbal remedies for incontinence\n*   **Impresiones actuales**: 44\n*   **Dificultad estimada**: Baja a Media (Aunque el volumen de impresiones es menor, el CTR inicial del 2.27% para una query sin un blog específico es muy prometedor, indicando una fuerte intención de búsqueda por parte del usuario).\n*   **Ángulo editorial**: Informativo y de soluciones complementarias, explorando opciones herbarias validadas y consejos para el manejo de la incontinencia.\n\n*   **Título sugerido**: Hierbas y Suplementos Naturales para la Vejiga Hiperactiva: Guía Completa\n*   **Keyword principal**: herbs for overactive bladder\n*   **Impresiones actuales**: 41\n*   **Dificultad estimada**: Baja a Media (Similar a la anterior, es un nicho específico con una clara intención de búsqueda. Un artículo bien investigado y presentado puede posicionar al sitio como una fuente confiable).\n*   **Ángulo editorial**: Educativo y de opciones alternativas, detallando hierbas específicas y su uso potencial para aliviar los síntomas de la vejiga hiperactiva.\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 1)\n\n*   **Query**: leaky butt\n*   **Problema**: Posición 9.3 con un CTR alarmantemente bajo (0.17%). Esto indica que, a pesar de estar en la primera página de resultados, el título o la meta descripción actual no son lo suficientemente atractivos o relevantes para la intención de búsqueda, o no transmiten que el contenido ofrece una solución clara.\n*   **Acción**: Optimizar el `title tag` y `meta description` para ser más directos, empáticos y orientados a la solución.\n    *   **Título sugerido**: \"Escape Anal ('Leaky Butt'): Causas Comunes, Síntomas y Tratamientos Efectivos\"\n    *   **Meta Description sugerida**: \"¿Experimentas 'leaky butt' o escape anal? Descubre las causas, cómo manejarlo y cuándo buscar ayuda profesional para recuperar tu bienestar.\"\n\nALERTA CTR BAJO\n\n*   **Query**: homeopathic remedy for overactive bladder\n    *   **Impresiones**: 5576\n    *   **Posición**: 2\n    *   **CTR**: 0.02%\n    *   **Acción específica**: Esta es la OPORTUNIDAD MÁS CRÍTICA Y URGENTE. Ocupar la posición 2 con un CTR casi nulo significa que la página actual no está satisfaciendo la intención del usuario en absoluto. Se debe realizar una auditoría exhaustiva de la página que rankea:\n        *   **Revisar Título y Meta Descripción**: Asegurarse de que el snippet sea explícito sobre lo que el usuario encontrará. Si la clínica no ofrece homeopatía, el título debe comunicar esto claramente o redirigir a soluciones que sí ofrece, presentando la homeopatía desde una perspectiva informativa y basada en evidencia (o su ausencia).\n        *   **Evaluar Contenido**: ¿El contenido es relevante para \"remedios homeopáticos\"? Si no, ¿por qué rankea? Si lo es, ¿es creíble, exhaustivo y responde a las preguntas del usuario? Si el sitio no respalda la homeopatía, el contenido debe educar con cautela, quizás contrastando con tratamientos convencionales.\n        *   **Intención del Usuario**: Entender si el usuario busca información, pros y contras, o dónde conseguir tratamientos.\n\n*   **Query**: my anus smells even after washing female\n    *   **Impresiones**: 951\n    *   **Posición**: 5.8\n    *   **CTR**: 0.84% (por debajo del promedio del sitio)\n    *   **Acción específica**: Es una consulta muy personal y sensible. El título y la meta descripción deben ser optimizados para ofrecer una solución o una guía empática y autorizada.\n        *   **Título sugerido**: \"¿Por qué mi zona anal huele mal incluso después de lavarme (mujeres)? Causas y Soluciones\"\n        *   **Meta Description sugerida**: \"Si experimentas mal olor anal persistente, incluso después de la higiene, podrías tener una condición tratable. Descubre las causas y soluciones para sentirte fresca.\"\n        *   El contenido debe abordar la preocupación con tacto, ofreciendo información clara sobre causas, cuándo buscar ayuda médica y opciones de tratamiento.\n\nPRÓXIMOS PASOS\n\n1.  **Auditoría y Optimización Urgente de la Página en Posición 2**: Invertir tiempo de inmediato en la página que rankea para \"homeopathic remedy for overactive bladder\". Analizar su contenido y la relevancia de su título/meta descripción para la intención de búsqueda. Ajustar para mejorar drásticamente el CTR, ya sea alineando el contenido con la expectativa del usuario o reorientando el snippet para guiar al usuario a soluciones que la clínica sí ofrece, si es el caso.\n2.  **Creación Estratégica de Nuevo Contenido**: Desarrollar los tres artículos de blog recomendados (\"Axonics Therapy\", \"Remedios Naturales...\", \"Hierbas y Suplementos...\"). Estos abordarán directamente consultas de alto valor y ayudarán a establecer la autoridad del sitio en temas clave, atrayendo tráfico cualificado.\n3.  **Optimización Continua de Snippets y Auditoría de Contenido Existente**: Implementar las optimizaciones de título y meta descripción para \"leaky butt\" y \"my anus smells even after washing female\". Además, realizar una auditoría periódica de otras páginas que rankean en posiciones 2-10 con CTRs inferiores al promedio del sitio para identificar más \"quick wins\" y asegurar que el contenido existente esté funcionando a su máximo potencial."
+    },
+    {
+      "siteUrl": "sc-domain:parkavendo.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [],
+        "quickWins": [
+          {
+            "query": "how to cure pcos permanently",
+            "clicks": 26,
+            "impressions": 10067,
+            "ctr": 0.0025826959372206217,
+            "position": 9.129035462401907,
+            "previous": {
+              "query": "how to cure pcos permanently",
+              "clicks": 21,
+              "impressions": 6823,
+              "ctr": 0.0030778250036640775,
+              "position": 5.255459475304119
+            },
+            "delta": {
+              "clicks": 5,
+              "impressions": 3244,
+              "ctr": -0.0004951290664434557,
+              "position": 3.873575987097788
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "does hrt help with weight loss",
+            "clicks": 6,
+            "impressions": 3318,
+            "ctr": 0.0018083182640144665,
+            "position": 9.060578661844485,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "endocrinologist",
+            "clicks": 8,
+            "impressions": 2830,
+            "ctr": 0.0028268551236749115,
+            "position": 5.713427561837456,
+            "previous": {
+              "query": "endocrinologist",
+              "clicks": 4,
+              "impressions": 8446,
+              "ctr": 0.0004735969689793985,
+              "position": 2.0724603362538483
+            },
+            "delta": {
+              "clicks": 4,
+              "impressions": -5616,
+              "ctr": 0.002353258154695513,
+              "position": 3.6409672255836076
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "metastatic thyroid cancer",
+            "clicks": 5,
+            "impressions": 1246,
+            "ctr": 0.0040128410914927765,
+            "position": 8.313804173354736,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "when should a woman see an endocrinologist",
+            "clicks": 7,
+            "impressions": 1045,
+            "ctr": 0.0066985645933014355,
+            "position": 7.039234449760766,
+            "previous": {
+              "query": "when should a woman see an endocrinologist",
+              "clicks": 9,
+              "impressions": 1235,
+              "ctr": 0.0072874493927125505,
+              "position": 2.694736842105263
+            },
+            "delta": {
+              "clicks": -2,
+              "impressions": -190,
+              "ctr": -0.000588884799411115,
+              "position": 4.344497607655503
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "best thyroid supplements for weight loss",
+            "clicks": 5,
+            "impressions": 1029,
+            "ctr": 0.004859086491739553,
+            "position": 9.078717201166182,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "thyroid nodule size chart",
+            "clicks": 6,
+            "impressions": 1018,
+            "ctr": 0.005893909626719057,
+            "position": 7.4636542239685655,
+            "previous": {
+              "query": "thyroid nodule size chart",
+              "clicks": 11,
+              "impressions": 1088,
+              "ctr": 0.01011029411764706,
+              "position": 2.5799632352941178
+            },
+            "delta": {
+              "clicks": -5,
+              "impressions": -70,
+              "ctr": -0.004216384490928002,
+              "position": 4.883690988674448
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "thyroid ultrasound normal vs abnormal",
+            "clicks": 5,
+            "impressions": 1005,
+            "ctr": 0.004975124378109453,
+            "position": 7.843781094527364,
+            "previous": {
+              "query": "thyroid ultrasound normal vs abnormal",
+              "clicks": 10,
+              "impressions": 952,
+              "ctr": 0.01050420168067227,
+              "position": 2.303571428571429
+            },
+            "delta": {
+              "clicks": -5,
+              "impressions": 53,
+              "ctr": -0.005529077302562817,
+              "position": 5.540209665955935
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "do i need a referral to see an endocrinologist",
+            "clicks": 6,
+            "impressions": 925,
+            "ctr": 0.006486486486486486,
+            "position": 6.860540540540541,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "zepbound benefits",
+            "clicks": 4,
+            "impressions": 708,
+            "ctr": 0.005649717514124294,
+            "position": 7.19774011299435,
+            "previous": {
+              "query": "zepbound benefits",
+              "clicks": 9,
+              "impressions": 1435,
+              "ctr": 0.0062717770034843206,
+              "position": 2.639024390243902
+            },
+            "delta": {
+              "clicks": -5,
+              "impressions": -727,
+              "ctr": -0.0006220594893600268,
+              "position": 4.558715722750448
+            },
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "how to cure pcos permanently",
+            "clicks": 26,
+            "impressions": 10067,
+            "ctr": 0.0025826959372206217,
+            "position": 9.129035462401907,
+            "previous": {
+              "query": "how to cure pcos permanently",
+              "clicks": 21,
+              "impressions": 6823,
+              "ctr": 0.0030778250036640775,
+              "position": 5.255459475304119
+            },
+            "delta": {
+              "clicks": 5,
+              "impressions": 3244,
+              "ctr": -0.0004951290664434557,
+              "position": 3.873575987097788
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "tirzepatide",
+            "clicks": 4,
+            "impressions": 8726,
+            "ctr": 0.00045840018336007336,
+            "position": 11.44567957827183,
+            "previous": {
+              "query": "tirzepatide",
+              "clicks": 5,
+              "impressions": 19552,
+              "ctr": 0.00025572831423895256,
+              "position": 4.86436170212766
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -10826,
+              "ctr": 0.0002026718691211208,
+              "position": 6.581317876144171
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "enlarged thyroid",
+            "clicks": 18,
+            "impressions": 7681,
+            "ctr": 0.0023434448639500067,
+            "position": 11.281473766436662,
+            "previous": {
+              "query": "enlarged thyroid",
+              "clicks": 8,
+              "impressions": 3270,
+              "ctr": 0.0024464831804281344,
+              "position": 8.877981651376146
+            },
+            "delta": {
+              "clicks": 10,
+              "impressions": 4411,
+              "ctr": -0.00010303831647812773,
+              "position": 2.4034921150605157
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "what does an endocrinologist do",
+            "clicks": 8,
+            "impressions": 7615,
+            "ctr": 0.001050558108995404,
+            "position": 11.798292843072883,
+            "previous": {
+              "query": "what does an endocrinologist do",
+              "clicks": 6,
+              "impressions": 5131,
+              "ctr": 0.0011693626973299552,
+              "position": 8.64139543948548
+            },
+            "delta": {
+              "clicks": 2,
+              "impressions": 2484,
+              "ctr": -0.00011880458833455135,
+              "position": 3.1568974035874025
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "what is an endocrinologist",
+            "clicks": 6,
+            "impressions": 5897,
+            "ctr": 0.0010174665083940986,
+            "position": 10.5000847888757,
+            "previous": {
+              "query": "what is an endocrinologist",
+              "clicks": 7,
+              "impressions": 6635,
+              "ctr": 0.0010550113036925397,
+              "position": 5.453805576488319
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -738,
+              "ctr": -0.00003754479529844107,
+              "position": 5.046279212387381
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "endocrine system function",
+            "clicks": 6,
+            "impressions": 5624,
+            "ctr": 0.0010668563300142249,
+            "position": 11.677809388335705,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "does hrt help with weight loss",
+            "clicks": 6,
+            "impressions": 3318,
+            "ctr": 0.0018083182640144665,
+            "position": 9.060578661844485,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "thyroid nodule symptoms",
+            "clicks": 8,
+            "impressions": 3088,
+            "ctr": 0.0025906735751295338,
+            "position": 11.680699481865284,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "endocrinologist",
+            "clicks": 8,
+            "impressions": 2830,
+            "ctr": 0.0028268551236749115,
+            "position": 5.713427561837456,
+            "previous": {
+              "query": "endocrinologist",
+              "clicks": 4,
+              "impressions": 8446,
+              "ctr": 0.0004735969689793985,
+              "position": 2.0724603362538483
+            },
+            "delta": {
+              "clicks": 4,
+              "impressions": -5616,
+              "ctr": 0.002353258154695513,
+              "position": 3.6409672255836076
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "fast metabolism",
+            "clicks": 4,
+            "impressions": 2753,
+            "ctr": 0.001452960406828914,
+            "position": 1.0076280421358519,
+            "previous": {
+              "query": "fast metabolism",
+              "clicks": 5,
+              "impressions": 6691,
+              "ctr": 0.0007472724555372889,
+              "position": 1.0787625168136303
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -3938,
+              "ctr": 0.0007056879512916251,
+              "position": -0.07113447467777845
+            },
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.011758577888110648
+      },
+      "analysis": "¡Excelente! Analicemos los datos de Google Search Console para impulsar el blog de Parkavendo.\n\n---\n\nRESUMEN DE OPORTUNIDADES\nEl sitio parkavendo.com tiene un CTR promedio bajo (1.18%) a pesar de la significativa exposición que ya tiene su contenido en Google. Esto indica una gran oportunidad para mejorar la visibilidad y el tráfico del blog tanto a través de la optimización de títulos y meta descripciones de contenido existente, como mediante la creación de artículos nuevos y más específicos para queries con alto volumen de búsqueda pero baja conversión.\n\n---\n\nBLOG TOPICS RECOMENDADOS (top 5)\n\n-   **Título sugerido**: Guía Completa: ¿Qué es un Endocrinólogo y Cuándo Deberías Consultarlo?\n    *   **Keyword principal**: what is an endocrinologist / endocrinologist\n    *   **Impresiones actuales**: ~16,342 (combinado: 7615 \"what does...\", 5897 \"what is...\", 2830 \"endocrinologist\")\n    *   **Dificultad estimada**: Media (las posiciones 5.7, 10.5 y 11.8 indican relevancia pero falta de contenido lo suficientemente competitivo o específico para estas búsquedas fundamentales).\n    *   **Ángulo editorial**: Educativo, exhaustivo, respondiendo a todas las preguntas esenciales sobre la especialidad.\n\n-   **Título sugerido**: Los Mejores Suplementos para la Tiroides y la Pérdida de Peso: ¿Funcionan?\n    *   **Keyword principal**: best thyroid supplements for weight loss\n    *   **Impresiones actuales**: 1029\n    *   **Dificultad estimada**: Baja (la posición 9.1 para una query con intención comercial sugiere que un artículo enfocado y bien investigado podría escalar rápidamente).\n    *   **Ángulo editorial**: Comparativo, basado en evidencia, recomendativo con enfoque en la seguridad.\n\n-   **Título sugerido**: Tabla de Tamaño de Nódulos Tiroideos: ¿Qué Significan tus Resultados de Ultrasonido?\n    *   **Keyword principal**: thyroid nodule size chart\n    *   **Impresiones actuales**: 1018\n    *   **Dificultad estimada**: Baja (la posición 7.5 indica que hay una oportunidad clara para proveer una herramienta visual y explicativa que satisfaga directamente esta intención de búsqueda).\n    *   **Ángulo editorial**: Informativo, práctico, con gráficos y explicaciones claras para autoevaluación.\n\n-   **Título sugerido**: Tirzepatida: Guía Completa sobre Usos, Beneficios, Dosis y Efectos Secundarios\n    *   **Keyword principal**: tirzepatide\n    *   **Impresiones actuales**: 8726\n    *   **Dificultad estimada**: Media (posición 11.4 para una palabra clave de alto volumen sugiere que el contenido existente \"what is tirzepatide\" es insuficiente o no lo bastante atractivo para captar el clic).\n    *   **Ángulo editorial**: Detallado, informativo, cubriendo todas las facetas de este compuesto de forma exhaustiva.\n\n-   **Título sugerido**: ¿Ayuda la Terapia de Reemplazo Hormonal (TRH) a la Pérdida de Peso? La Verdad Científica\n    *   **Keyword principal**: does hrt help with weight loss\n    *   **Impresiones actuales**: 3318\n    *   **Dificultad estimada**: Media (la posición 9.1 indica que, si bien hay contenido relacionado, una respuesta directa y autorizada a esta pregunta específica podría captar muchos más clics).\n    *   **Ángulo editorial**: Directo, basado en evidencia, desmintiendo mitos y explicando la relación hormonal con el peso.\n\n---\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)\n\n-   **Query**: how to cure pcos permanently\n    *   **Problema**: El CTR del 0.26% en posición 9.1 sugiere que el título actual, aunque directo, no genera suficiente confianza o curiosidad. \"Cura\" es una palabra fuerte y el enfoque podría ser más sobre manejo o remisión.\n    *   **Acción**: Modificar el `title tag` y `meta description` del artículo `/how-to-cure-pcos-permanently/` a algo como: \"**SOP: ¿Es Posible Revertirlo Permanentemente? Estrategias de Manejo y Bienestar**\". La meta description debe ofrecer esperanza y soluciones prácticas.\n\n-   **Query**: when should a woman see an endocrinologist\n    *   **Problema**: El CTR del 0.67% en posición 7 indica que la página `/when-to-see-an-endocrinologist/` no está diferenciando suficientemente el contenido para la búsqueda específica de una mujer, o el título no resalta los beneficios claros.\n    *   **Acción**: Actualizar el `title tag` y `meta description` para enfocarse en la audiencia femenina: \"**Mujeres: ¿Cuándo Visitar a un Endocrinólogo? Señales Clave para tu Salud Hormonal**\". La meta description debe mencionar problemas comunes en mujeres que un endocrinólogo puede tratar.\n\n-   **Query**: metastatic thyroid cancer\n    *   **Problema**: Con un CTR del 0.40% en posición 8.3, la página `/thyroid-cancer-metastasis-sites-what-you-need-to-know/` no atrae clics a pesar de su relevancia. El título podría ser más urgente o educativo.\n    *   **Acción**: Optimizar el `title tag` a: \"**Cáncer de Tiroides Metastásico: Lo Esencial sobre Sitios, Síntomas y Tratamientos**\". La meta description debe destacar la información crítica y la importancia de la detección temprana.\n\n---\n\nALERTA CTR BAJO\n\n-   **Query**: tirzepatide\n    *   **Posición**: 11.4, CTR: 0.05%, Impresiones: 8726\n    *   **Acción**: La página `/what-is-tirzepatide/` tiene una visibilidad alta pero un CTR casi inexistente. Además de considerar un nuevo artículo más completo (como sugerido arriba), es URGENTE revisar y reescribir su `title tag` y `meta description` para que sean mucho más atractivos y respondan a la curiosidad o necesidad del usuario. Por ejemplo: \"**Tirzepatida: ¿Qué es, Para Quién es y Cómo Podría Beneficiarte?**\"\n\n-   **Query**: what does an endocrinologist do\n    *   **Posición**: 11.8, CTR: 0.11%, Impresiones: 7615\n    *   **Acción**: Aunque se ha propuesto un nuevo artículo, si la intención actual está siendo parcialmente cubierta por `/when-to-see-an-endocrinologist/` o `/understanding-endocrine-conditions/`, se debe optimizar el `title tag` y `meta description` de la página que rankea para intentar captar este tráfico. Ejemplo: \"**Endocrinólogo: ¿Qué Hace este Especialista y Cómo Impacta tu Salud?**\".\n\n-   **Query**: enlarged thyroid\n    *   **Posición**: 11.3, CTR: 0.23%, Impresiones: 7681\n    *   **Acción**: La página `/understanding-an-enlarged-thyroid/` tiene un gran potencial de impresiones. Su `title tag` y `meta description` deben ser revisados para ser más clickbait y directos. Por ejemplo: \"**Tiroides Agrandada: Síntomas, Causas y Cuándo Buscar Atención Médica Urgente**\".\n\n---\n\nPRÓXIMOS PASOS\n\n1.  **Priorizar la Re-optimización de Títulos y Meta Descripciones**: Enfocarse en las 5-7 queries identificadas en \"Quick Wins\" y \"Alerta CTR Bajo\" con mayor volumen de impresiones y menor CTR. Esta es una acción de bajo esfuerzo y alto impacto potencial en el CTR y tráfico orgánico.\n2.  **Creación de Contenido Fundacional y Específico**: Desarrollar los nuevos artículos recomendados, especialmente aquellos para las keywords \"endocrinologist\" y \"tirzepatide\", ya que abordan temas de alto volumen y la cobertura actual del sitio es insuficiente para captar ese tráfico.\n3.  **Auditoría y Mejora de Contenido Existente**: Realizar una auditoría más profunda de los artículos relacionados con PCOS, HRT y cáncer de tiroides. Esto incluye actualizar la información, añadir enlaces internos relevantes y asegurar que el contenido responde de manera exhaustiva a las últimas intenciones de búsqueda, complementando así las optimizaciones de títulos."
+    },
+    {
+      "siteUrl": "sc-domain:bmismartcloud.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [],
+        "quickWins": [
+          {
+            "query": "bmi cloud",
+            "clicks": 1,
+            "impressions": 257,
+            "ctr": 0.0038910505836575876,
+            "position": 5.961089494163424,
+            "previous": {
+              "query": "bmi cloud",
+              "clicks": 1,
+              "impressions": 218,
+              "ctr": 0.0045871559633027525,
+              "position": 5.472477064220183
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 39,
+              "ctr": -0.0006961053796451649,
+              "position": 0.48861242994324083
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "your system administrator does not allow the use of saved credentials",
+            "clicks": 0,
+            "impressions": 47,
+            "ctr": 0,
+            "position": 8.063829787234042,
+            "previous": {
+              "query": "your system administrator does not allow the use of saved credentials",
+              "clicks": 0,
+              "impressions": 45,
+              "ctr": 0,
+              "position": 5.177777777777778
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 2,
+              "ctr": 0,
+              "position": 2.8860520094562636
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "termsrv credential manager",
+            "clicks": 0,
+            "impressions": 14,
+            "ctr": 0,
+            "position": 8.214285714285715,
+            "previous": {
+              "query": "termsrv credential manager",
+              "clicks": 0,
+              "impressions": 13,
+              "ctr": 0,
+              "position": 5.923076923076923
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 1,
+              "ctr": 0,
+              "position": 2.291208791208792
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "allow delegating default credentials",
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 4.909090909090909,
+            "previous": {
+              "query": "allow delegating default credentials",
+              "clicks": 0,
+              "impressions": 11,
+              "ctr": 0,
+              "position": 4.545454545454545
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 0,
+              "ctr": 0,
+              "position": 0.3636363636363642
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "smartcloud",
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 8.222222222222221,
+            "previous": {
+              "query": "smartcloud",
+              "clicks": 0,
+              "impressions": 8,
+              "ctr": 0,
+              "position": 13.375
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 1,
+              "ctr": 0,
+              "position": -5.152777777777779
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "cloud bmi",
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 5.428571428571429,
+            "previous": {
+              "query": "cloud bmi",
+              "clicks": 0,
+              "impressions": 8,
+              "ctr": 0,
+              "position": 4.25
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -1,
+              "ctr": 0,
+              "position": 1.1785714285714288
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "your system administrator does not allow the use of saved credentials to log on to the remote computer because its identity is not fully verified",
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 9.714285714285714,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "rdp saved credentials",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 8.2,
+            "previous": {
+              "query": "rdp saved credentials",
+              "clicks": 0,
+              "impressions": 6,
+              "ctr": 0,
+              "position": 9.166666666666666
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -1,
+              "ctr": 0,
+              "position": -0.9666666666666668
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "termsrv/*",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 8.6,
+            "previous": {
+              "query": "termsrv/*",
+              "clicks": 0,
+              "impressions": 10,
+              "ctr": 0,
+              "position": 6.5
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -5,
+              "ctr": 0,
+              "position": 2.0999999999999996
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "your system administrator does not allow saved credentials",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 3,
+            "previous": {
+              "query": "your system administrator does not allow saved credentials",
+              "clicks": 0,
+              "impressions": 6,
+              "ctr": 0,
+              "position": 7.166666666666667
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -3,
+              "ctr": 0,
+              "position": -4.166666666666667
+            },
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "bmi cloud",
+            "clicks": 1,
+            "impressions": 257,
+            "ctr": 0.0038910505836575876,
+            "position": 5.961089494163424,
+            "previous": {
+              "query": "bmi cloud",
+              "clicks": 1,
+              "impressions": 218,
+              "ctr": 0.0045871559633027525,
+              "position": 5.472477064220183
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 39,
+              "ctr": -0.0006961053796451649,
+              "position": 0.48861242994324083
+            },
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.02394106813996317
+      },
+      "analysis": "Como estratega de contenido SEO especializado en blogs de negocios, he analizado los datos proporcionados para bmismartcloud.com. La ausencia de un blog detectado es una oportunidad masiva para el crecimiento orgánico.\n\n---\n\nRESUMEN DE OPORTUNIDADES\nEl sitio web bmismartcloud.com, a pesar de no tener un blog, ya está obteniendo impresiones en Google Search para diversas queries, incluyendo términos de marca/producto y búsquedas técnicas de solución de problemas. La principal oportunidad radica en establecer un blog para capitalizar estas impresiones, mejorar el CTR y posicionarse como autoridad en la industria de soluciones en la nube, especialmente en áreas de soporte técnico.\n\n---\n\nBLOG TOPICS RECOMENDADOS (top 7)\n\n-   **Título sugerido:** BMI Cloud: La Plataforma Inteligente para la Gestión de Datos en la Nube\n    -   **Keyword principal:** bmi cloud\n    -   **Impresiones actuales:** 257\n    -   **Dificultad estimada:** Baja (Ya se tienen impresiones en posición 6, lo que indica que Google considera el sitio relevante. Un blog post enfocado podría mejorar drásticamente la posición y el CTR).\n    -   **Ángulo editorial:** Educativo y persuasivo, explicando qué es BMI Cloud, sus características, beneficios y casos de uso para empresas.\n\n-   **Título sugerido:** Solución Definitiva al Error: \"El administrador del sistema no permite el uso de credenciales guardadas\"\n    -   **Keyword principal:** your system administrator does not allow the use of saved credentials\n    -   **Impresiones actuales:** 47\n    -   **Dificultad estimada:** Baja (Posición 8.1 con impresiones notables para una long-tail; un contenido exhaustivo y útil tiene gran potencial de rankear bien).\n    -   **Ángulo editorial:** Guía de solución de problemas paso a paso, orientada a administradores de sistemas y usuarios finales.\n\n-   **Título sugerido:** SmartCloud: ¿Qué es y Cómo Impulsa la Transformación Digital de tu Negocio?\n    -   **Keyword principal:** smartcloud\n    -   **Impresiones actuales:** 9\n    -   **Dificultad estimada:** Media (Keyword más general, pero directamente relacionada con la marca. Oportunidad de definir el propio SmartCloud de BMI).\n    -   **Ángulo editorial:** Informativo y comparativo, destacando la propuesta de valor de BMI SmartCloud frente a otras soluciones.\n\n-   **Título sugerido:** Guía para Configurar TermSrv Credential Manager: Optimización y Solución de Errores\n    -   **Keyword principal:** termsrv credential manager\n    -   **Impresiones actuales:** 14\n    -   **Dificultad estimada:** Baja (Posición 8.2 en un nicho técnico, un artículo bien estructurado podría captar fácilmente la atención de usuarios buscando esta información específica).\n    -   **Ángulo editorial:** Tutorial técnico y explicativo para usuarios avanzados y administradores.\n\n-   **Título sugerido:** Cómo Habilitar la Delegación de Credenciales Predeterminadas (Default Credentials) de Forma Segura\n    -   **Keyword principal:** allow delegating default credentials\n    -   **Impresiones actuales:** 11\n    -   **Dificultad estimada:** Baja (Excelente posición inicial 4.9. Un artículo dedicado a esta configuración específica podría consolidar la autoridad).\n    -   **Ángulo editorial:** Guía técnica detallada sobre la configuración y las implicaciones de seguridad.\n\n-   **Título sugerido:** Cloud BMI: Las Ventajas de la Computación en la Nube para el Índice de Masa Corporal (BMI)\n    -   **Keyword principal:** cloud bmi\n    -   **Impresiones actuales:** 7\n    -   **Dificultad estimada:** Baja (Similar a \"bmi cloud\", pero con un orden de palabras diferente. Reafirma la relevancia del término central).\n    -   **Ángulo editorial:** Educativo, explorando las aplicaciones de la nube para el análisis y gestión de datos de salud, si es relevante para el negocio (o, si BMI se refiere a la marca, enfocado en \"BMI Cloud\").\n\n-   **Título sugerido:** Gestión Segura de Credenciales Guardadas en RDP: Evita Problemas y Mejora tu Seguridad\n    -   **Keyword principal:** rdp saved credentials\n    -   **Impresiones actuales:** 5\n    -   **Dificultad estimada:** Baja (Posición 8.2, un artículo de buenas prácticas y consejos de seguridad es muy valorado por los usuarios).\n    -   **Ángulo editorial:** Guía de seguridad y mejores prácticas para administradores y usuarios de RDP.\n\n---\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)\nDado que no hay páginas de blog existentes, estas queries están llegando a otras páginas del sitio. La acción aquí es optimizar los títulos y meta descripciones de esas *páginas existentes* para mejorar el CTR, mientras se planifica la creación de contenido de blog dedicado.\n\n-   **Query:** bmi cloud\n    -   **Problema:** CTR extremadamente bajo (0.39%) a pesar de tener la mayor cantidad de impresiones y una posición decente (6). La página actual no está comunicando efectivamente su valor en el resultado de búsqueda.\n    -   **Acción:** Identificar la página que rankea para esta query y actualizar su `<title>` a algo como: \"BMI SmartCloud: Soluciones Cloud Inteligentes para tu Empresa | bmismartcloud.com\". La `<meta description>` debe resaltar un beneficio clave o una diferenciación.\n\n-   **Query:** your system administrator does not allow the use of saved credentials\n    -   **Problema:** Posición 8.1 con 0.00% CTR. La intención es resolver un problema técnico específico, y la página actual no está atrayendo clics, probablemente por un título genérico o irrelevante.\n    -   **Acción:** Si existe una página de soporte o FAQ que aborda este tipo de problemas, modificar su `<title>` y `<meta description>` para incluir la frase exacta del error y prometer una solución, por ejemplo: \"Error RDP: 'El administrador no permite credenciales guardadas' - Solución\".\n\n-   **Query:** allow delegating default credentials\n    -   **Problema:** Muy buena posición (4.9) pero 0.00% CTR. La página actual está siendo mostrada en los resultados, pero su título y/o descripción no invitan al clic, perdiendo una oportunidad valiosa.\n    -   **Acción:** Optimizar el `<title>` de la página que rankea para incluir la keyword y una promesa clara de cómo se puede lograr esto, por ejemplo: \"Guía: Cómo Habilitar la Delegación de Credenciales por Defecto de forma Segura | [Tu Empresa]\". La meta descripción debe complementar con un resumen del contenido de la guía.\n\n---\n\nALERTA CTR BAJO\n\n-   **Query:** bmi cloud\n-   **Impresiones:** 257\n-   **CTR:** 0.39%\n-   **Acción específica:** Esta es la query más crítica. La baja tasa de clics en la posición 6 sugiere una desconexión entre la expectativa del usuario y lo que el resultado de búsqueda de bmismartcloud.com ofrece visualmente. La acción urgente es optimizar inmediatamente el `<title>` y la `<meta description>` de la página que rankea para esta query. Paralelamente, la creación de un artículo de blog robusto y bien estructurado sobre \"BMI Cloud\" debe ser la máxima prioridad para capturar esta demanda de forma efectiva.\n\n---\n\nPRÓXIMOS PASOS\n\n1.  **Lanzamiento y Estrategia de Contenido Fundacional del Blog:** Priorizar la creación de una sección de blog en el sitio web. Desarrollar inmediatamente el contenido para las queries de mayor impacto y relevancia directa para el negocio, como \"bmi cloud\" y \"smartcloud\", con el objetivo de establecer una base de autoridad y capturar el tráfico existente y nuevo.\n2.  **Optimización Inmediata de Páginas Existentes Clave:** Implementar sin demora las optimizaciones de títulos y meta descripciones sugeridas en la sección \"QUICK WINS\" para las queries con bajo CTR y buena exposición. Esto buscará mejorar el rendimiento de clics a corto plazo en las páginas que ya están rankeando.\n3.  **Desarrollo Continuo de Contenido Técnico de Soporte:** Establecer un calendario editorial para abordar las queries técnicas de \"long-tail\" con problemas específicos (ej. \"your system administrator...\", \"termsrv credential manager\"). Este contenido no solo atraerá tráfico de nicho, sino que también posicionará a BMI SmartCloud como un recurso experto y confiable en la resolución de problemas, generando confianza y potenciales leads cualificados."
+    },
+    {
+      "siteUrl": "sc-domain:spinaldx.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [],
+        "quickWins": [
+          {
+            "query": "gabapentin",
+            "clicks": 16,
+            "impressions": 556,
+            "ctr": 0.02877697841726619,
+            "position": 2.7625899280575537,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "shoulder pain after bench press",
+            "clicks": 2,
+            "impressions": 364,
+            "ctr": 0.005494505494505495,
+            "position": 7.59065934065934,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "adult tummy time",
+            "clicks": 2,
+            "impressions": 357,
+            "ctr": 0.0056022408963585435,
+            "position": 9.285714285714286,
+            "previous": {
+              "query": "adult tummy time",
+              "clicks": 1,
+              "impressions": 134,
+              "ctr": 0.007462686567164179,
+              "position": 6.656716417910448
+            },
+            "delta": {
+              "clicks": 1,
+              "impressions": 223,
+              "ctr": -0.0018604456708056355,
+              "position": 2.6289978678038386
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "gabapentin side effects",
+            "clicks": 7,
+            "impressions": 286,
+            "ctr": 0.024475524475524476,
+            "position": 2.6013986013986017,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "tummy time for adults",
+            "clicks": 2,
+            "impressions": 271,
+            "ctr": 0.007380073800738007,
+            "position": 9.92619926199262,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "gabapentina para que sirve",
+            "clicks": 6,
+            "impressions": 182,
+            "ctr": 0.03296703296703297,
+            "position": 2.7362637362637363,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "diagnosa kecelakaan motor",
+            "clicks": 1,
+            "impressions": 156,
+            "ctr": 0.00641025641025641,
+            "position": 7.769230769230769,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "gabapentin nebenwirkungen",
+            "clicks": 5,
+            "impressions": 101,
+            "ctr": 0.04950495049504951,
+            "position": 2.9603960396039604,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "close grip bench press",
+            "clicks": 1,
+            "impressions": 94,
+            "ctr": 0.010638297872340425,
+            "position": 2.074468085106383,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "gabapentine",
+            "clicks": 2,
+            "impressions": 90,
+            "ctr": 0.022222222222222223,
+            "position": 2.6555555555555554,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "shoulder pain after bench press",
+            "clicks": 2,
+            "impressions": 364,
+            "ctr": 0.005494505494505495,
+            "position": 7.59065934065934,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "adult tummy time",
+            "clicks": 2,
+            "impressions": 357,
+            "ctr": 0.0056022408963585435,
+            "position": 9.285714285714286,
+            "previous": {
+              "query": "adult tummy time",
+              "clicks": 1,
+              "impressions": 134,
+              "ctr": 0.007462686567164179,
+              "position": 6.656716417910448
+            },
+            "delta": {
+              "clicks": 1,
+              "impressions": 223,
+              "ctr": -0.0018604456708056355,
+              "position": 2.6289978678038386
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "tummy time for adults",
+            "clicks": 2,
+            "impressions": 271,
+            "ctr": 0.007380073800738007,
+            "position": 9.92619926199262,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          },
+          {
+            "query": "diagnosa kecelakaan motor",
+            "clicks": 1,
+            "impressions": 156,
+            "ctr": 0.00641025641025641,
+            "position": 7.769230769230769,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.08511837655016911
+      },
+      "analysis": "¡Excelente análisis! Como estratega de contenido SEO para blogs de negocios, he revisado los datos de Google Search Console para spinaldx.com. Aquí te presento las oportunidades clave y las acciones recomendadas:\n\nRESUMEN DE OPORTUNIDADES\nEl sitio spinaldx.com muestra un rendimiento sólido en posicionamiento para diversas queries relevantes, con un CTR promedio general saludable del 8.51%. Sin embargo, existen oportunidades claras para capitalizar este posicionamiento, especialmente en temas de alto interés donde el CTR es significativamente bajo. La ausencia de \"QUERIES SIN BLOG\" en los datos sugiere que ya se está tocando una amplia gama de temas, pero la clave ahora es profundizar y optimizar el contenido existente.\n\nBLOG TOPICS RECOMENDADOS (top 5)\n\n*   **Título sugerido**: Guía Completa de Gabapentina: Usos, Dosis y Beneficios en el Manejo del Dolor Crónico\n    *   **Keyword principal**: gabapentin\n    *   **Impresiones actuales**: 556\n    *   **Dificultad estimada**: Baja (La alta posición para esta y otras queries relacionadas sugiere que el sitio ya tiene autoridad en el tema. Un contenido dedicado podría capturar la posición #1).\n    *   **Ángulo editorial**: Educativo, exhaustivo, proporcionando información médica fiable y enfocada en cómo la gabapentina se utiliza en el manejo del dolor.\n\n*   **Título sugerido**: Efectos Secundarios de la Gabapentina y Estrategias para Manejarlos\n    *   **Keyword principal**: gabapentin side effects\n    *   **Impresiones actuales**: 286\n    *   **Dificultad estimada**: Baja (Similar al anterior, ya existe una relevancia reconocida. Un artículo enfocado en los efectos secundarios ayudaría a responder una intención de búsqueda específica).\n    *   **Ángulo editorial**: Informativo, ofreciendo soluciones prácticas y consejos para mitigar los efectos no deseados del medicamento.\n\n*   **Título sugerido**: Dolor de Hombro después del Press de Banca: Causas, Prevención y Estrategias de Recuperación\n    *   **Keyword principal**: shoulder pain after bench press\n    *   **Impresiones actuales**: 364\n    *   **Dificultad estimada**: Media (Aunque la posición es 7.6, la query es muy específica y el CTR bajo indica que el contenido actual no está satisfaciendo completamente la intención. Un artículo muy enfocado tiene potencial).\n    *   **Ángulo editorial**: Guía práctica orientada a deportistas, con consejos de diagnóstico, tratamiento y prevención de este dolor específico.\n\n*   **Título sugerido**: Tummy Time para Adultos: Técnicas Avanzadas para Aliviar el Dolor de Cuello y Espalda\n    *   **Keyword principal**: adult tummy time\n    *   **Impresiones actuales**: 357\n    *   **Dificultad estimada**: Media (La posición es 9.3 y el CTR bajo sugiere que, a pesar de existir un artículo, una versión más completa o con un ángulo \"avanzado\" podría superar a la competencia).\n    *   **Ángulo editorial**: Guía detallada con variantes, beneficios terapéuticos y cómo integrar el tummy time en la rutina diaria de adultos.\n\n*   **Título sugerido**: ¿Para Qué Sirve la Gabapentina? Usos y Consideraciones en Español\n    *   **Keyword principal**: gabapentina para que sirve\n    *   **Impresiones actuales**: 182\n    *   **Dificultad estimada**: Baja (La alta posición actual sugiere que ya hay relevancia. Crear contenido dedicado en español para esta query específica podría capturar un público hispanohablante valioso).\n    *   **Ángulo editorial**: Contenido localizado y educativo en español, explicando los usos y beneficios de la gabapentina de manera accesible.\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)\n\n*   **Query**: shoulder pain after bench press\n    *   **Problema**: CTR muy bajo (0.55%) para una posición 7.6. El título actual de la página existente (`/blog/shoulder-injury-prevention-when-lifting/`) probablemente se enfoca demasiado en la \"prevención\" y no en el \"alivio o solución\" al dolor que ya experimenta el usuario.\n    *   **Acción**: Modificar el `title` y la `meta description` para abordar directamente el dolor y la recuperación. Sugerencia de título: \"Dolor de Hombro por Press de Banca: Alivio, Tratamiento y Prevención | SpinalDX\".\n\n*   **Query**: adult tummy time\n    *   **Problema**: CTR extremadamente bajo (0.56%) para una posición 9.3. La página actual (`/blog/adult-tummy-time-explained-a-simple-approach-to-neck-and-back-pain/`) no está atrayendo clics a pesar de estar posicionada.\n    *   **Acción**: Optimizar el `title` y la `meta description` para enfatizar los beneficios *específicos* para adultos y la solución a problemas comunes. Sugerencia de título: \"Tummy Time para Adultos: Alivia tu Dolor de Cuello y Espalda | Guía Fácil SpinalDX\".\n\n*   **Query**: tummy time for adults\n    *   **Problema**: CTR bajo (0.74%) en posición 9.9. Es una variación de la consulta anterior y refuerza la necesidad de optimizar el mismo artículo.\n    *   **Acción**: Asegurarse de que el `meta description` del artículo sobre `adult tummy time` incluya explícitamente \"tummy time for adults\" y resalte la simplicidad o efectividad de la práctica. Considerar A/B testing con títulos que enfaticen la palabra clave en el contexto de \"para adultos\".\n\nALERTA CTR BAJO\n\n*   **Query**: diagnosa kecelakaan motor\n    *   **Acción**: Esta consulta en indonesio, con un CTR de 0.64% y posición 7.8, es una anomalía significativa. Es crucial investigar la procedencia geográfica de estas impresiones. Si el público objetivo es principalmente anglófono o hispanohablante, este tráfico es irrelevante y no se debe invertir en optimización de contenido. Si, por otro lado, existe una estrategia de expansión internacional, se debería considerar la creación de contenido localizado específico para ese mercado. Por ahora, no se recomienda optimización activa para esta query en el contenido actual.\n\nPRÓXIMOS PASOS\n\n1.  **Desarrollar contenido prioritario sobre Gabapentina**: Crear la \"Guía Completa de Gabapentina\" y el artículo sobre \"Efectos Secundarios\" para consolidar la autoridad en un tema con alta intención de búsqueda y múltiples queries relacionadas, atrayendo tráfico cualificado y potenciales pacientes.\n2.  **Ejecutar optimizaciones de títulos y meta descripciones en \"Quick Wins\"**: Implementar los cambios sugeridos para las queries de \"shoulder pain after bench press\" y \"adult tummy time\" (y sus variantes) con el objetivo de aumentar el CTR de forma inmediata y capitalizar el posicionamiento actual.\n3.  **Auditar la audiencia multilingüe y definir estrategia de localización**: Investigar la relevancia de las búsquedas en idiomas como indonesio y alemán. Si se identifican oportunidades, desarrollar un plan para contenido localizado. Si no son relevantes, asegurar que el sitio no esté atrayendo tráfico no deseado o configurar `hreflang` adecuadamente."
+    },
+    {
+      "siteUrl": "sc-domain:superiorequipmentrepair.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [
+          {
+            "query": "progressive reimbursement",
+            "clicks": 1,
+            "impressions": 84,
+            "ctr": 0.011904761904761904,
+            "position": 10.30952380952381,
+            "previous": null,
+            "delta": null,
+            "type": "blog_topic"
+          }
+        ],
+        "quickWins": [
+          {
+            "query": "does oil brand matter",
+            "clicks": 1,
+            "impressions": 299,
+            "ctr": 0.0033444816053511705,
+            "position": 6.454849498327759,
+            "previous": {
+              "query": "does oil brand matter",
+              "clicks": 2,
+              "impressions": 316,
+              "ctr": 0.006329113924050633,
+              "position": 2.240506329113924
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -17,
+              "ctr": -0.0029846323186994623,
+              "position": 4.214343169213835
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "does motor oil brand matter",
+            "clicks": 1,
+            "impressions": 79,
+            "ctr": 0.012658227848101266,
+            "position": 4.556962025316455,
+            "previous": {
+              "query": "does motor oil brand matter",
+              "clicks": 2,
+              "impressions": 77,
+              "ctr": 0.025974025974025976,
+              "position": 2
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": 2,
+              "ctr": -0.01331579812592471,
+              "position": 2.556962025316455
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "does it matter what brand of oil i use",
+            "clicks": 1,
+            "impressions": 66,
+            "ctr": 0.015151515151515152,
+            "position": 5.378787878787879,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "superior truck fleet services",
+            "clicks": 1,
+            "impressions": 62,
+            "ctr": 0.016129032258064516,
+            "position": 4.161290322580645,
+            "previous": {
+              "query": "superior truck fleet services",
+              "clicks": 1,
+              "impressions": 59,
+              "ctr": 0.01694915254237288,
+              "position": 8.694915254237287
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": 3,
+              "ctr": -0.0008201202843083656,
+              "position": -4.533624931656642
+            },
+            "type": "quick_win"
+          },
+          {
+            "query": "1905 aviation blvd lincoln ca",
+            "clicks": 0,
+            "impressions": 51,
+            "ctr": 0,
+            "position": 8.705882352941178,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "class 2b trucks",
+            "clicks": 1,
+            "impressions": 43,
+            "ctr": 0.023255813953488372,
+            "position": 8.25581395348837,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "does the brand of oil matter for your car",
+            "clicks": 1,
+            "impressions": 42,
+            "ctr": 0.023809523809523808,
+            "position": 5.214285714285714,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "progressive roadside assistance reimbursement",
+            "clicks": 1,
+            "impressions": 42,
+            "ctr": 0.023809523809523808,
+            "position": 7.238095238095238,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "does car oil brand matter",
+            "clicks": 1,
+            "impressions": 38,
+            "ctr": 0.02631578947368421,
+            "position": 4.789473684210526,
+            "previous": null,
+            "delta": null,
+            "type": "quick_win"
+          },
+          {
+            "query": "superior equipment repair inc",
+            "clicks": 1,
+            "impressions": 36,
+            "ctr": 0.027777777777777776,
+            "position": 4.083333333333334,
+            "previous": {
+              "query": "superior equipment repair inc",
+              "clicks": 2,
+              "impressions": 63,
+              "ctr": 0.031746031746031744,
+              "position": 6.7936507936507935
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -27,
+              "ctr": -0.003968253968253968,
+              "position": -2.7103174603174596
+            },
+            "type": "quick_win"
+          }
+        ],
+        "lowCtr": [
+          {
+            "query": "does oil brand matter",
+            "clicks": 1,
+            "impressions": 299,
+            "ctr": 0.0033444816053511705,
+            "position": 6.454849498327759,
+            "previous": {
+              "query": "does oil brand matter",
+              "clicks": 2,
+              "impressions": 316,
+              "ctr": 0.006329113924050633,
+              "position": 2.240506329113924
+            },
+            "delta": {
+              "clicks": -1,
+              "impressions": -17,
+              "ctr": -0.0029846323186994623,
+              "position": 4.214343169213835
+            },
+            "type": "low_ctr"
+          },
+          {
+            "query": "api sn plus",
+            "clicks": 1,
+            "impressions": 106,
+            "ctr": 0.009433962264150943,
+            "position": 11.518867924528301,
+            "previous": null,
+            "delta": null,
+            "type": "low_ctr"
+          }
+        ],
+        "siteCtr": 0.06016260162601626
+      },
+      "analysis": "¡Excelente iniciativa! Como estratega de contenido SEO, he analizado los datos proporcionados para Superior Equipment Repair y aquí están mis recomendaciones detalladas para potenciar la visibilidad y el rendimiento de su blog.\n\n---\n\n**RESUMEN DE OPORTUNIDADES**\nEl sitio mantiene una base sólida de contenido relevante para su nicho, reflejado en un CTR promedio del 6.02%. Sin embargo, existe un potencial significativo para mejorar el tráfico orgánico. Principalmente, al optimizar títulos y metadescripciones para queries ya bien posicionadas y con bajo CTR, y al crear contenido nuevo dirigido a consultas de alta intención que ya generan impresiones.\n\n**BLOG TOPICS RECOMENDADOS (top 5-7)**\n\n*   **Título sugerido:** Guía Completa: Cómo Solicitar el Reembolso de Asistencia en Carretera de Progressive con Superior Equipment Repair\n*   **Keyword principal:** progressive reimbursement\n*   **Impresiones actuales:** 84\n*   **Dificultad estimada:** Baja (la query ya genera impresiones y está en la posición 10.3, lo que indica que Google ya asocia el tema con el dominio. Un artículo dedicado puede catapultarlo a la primera página rápidamente).\n*   **Ángulo editorial:** Guía práctica y paso a paso para los clientes sobre cómo gestionar y solicitar reembolsos de servicios de asistencia en carretera con Progressive, destacando cómo Superior Equipment Repair puede facilitar este proceso.\n\n**QUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)**\n\n1.  **Query:** does oil brand matter (y sus variantes como \"does motor oil brand matter\", \"does it matter what brand of oil i use\", etc.)\n    *   **Problema:** La query \"does oil brand matter\" tiene 299 impresiones y está en posición 6.5, pero su CTR es de apenas 0.33%. Esto indica que, a pesar de rankear bien, el título y/o la meta descripción actuales para la URL `/blog/does-the-brands-of-motor-oil-really-matter/` no son lo suficientemente atractivos o claros.\n    *   **Acción:**\n        *   **Título sugerido:** ¿Importa la Marca de Aceite de Motor? La Verdad Revelada para la Vida Útil de Tu Vehículo\n        *   **Meta descripción sugerida:** Descubre si la marca de aceite realmente afecta el rendimiento y la durabilidad de tu motor diésel o gasolina. Mitos vs. Realidad: ¿Cuál elegir?\n\n2.  **Query:** superior truck fleet services\n    *   **Problema:** Con una posición envidiable de 4.2 y 62 impresiones, un CTR de 1.61% es bajo para una búsqueda tan específica y de intención comercial directa relacionada con el nombre de su negocio. La página (presumiblemente `/blog/truck-fleet-repair-includes/` o `/blog/preventive-fleet-maintenance/` o una de servicios) no comunica el valor de manera efectiva en el SERP.\n    *   **Acción:**\n        *   **Título sugerido:** Superior Truck Fleet Services: Mantenimiento y Reparación Integral para Tu Flota\n        *   **Meta descripción sugerida:** Maximiza la operatividad de tu flota con los servicios expertos de Superior Equipment Repair. Soluciones de mantenimiento preventivo y reparación de camiones.\n\n3.  **Query:** progressive roadside assistance reimbursement\n    *   **Problema:** Aunque con menos impresiones (42) y en posición 7.2, el CTR de 2.38% aún tiene espacio para mejorar, especialmente dado que los usuarios que buscan esto tienen una necesidad muy clara. La página (probablemente `/blog/what-is-roadside-assistance-and-how-does-it-work/`) debe responder a esta necesidad de forma más explícita desde el título.\n    *   **Acción:**\n        *   **Título sugerido:** Reembolso de Asistencia en Carretera Progressive: Guía Práctica de Superior Equipment Repair\n        *   **Meta descripción sugerida:** ¿Necesitas un reembolso de Progressive por asistencia en carretera? Conoce los pasos clave y cómo podemos ayudarte con tus reparaciones.\n\n**ALERTA CTR BAJO**\n\n1.  **Query:** does oil brand matter\n    *   **Página afectada:** `/blog/does-the-brands-of-motor-oil-really-matter/`\n    *   **Impresiones:** 299\n    *   **CTR:** 0.33%\n    *   **Acción específica:** Además de las optimizaciones de título y meta descripción mencionadas en \"Quick Wins\", es crucial revisar la introducción del artículo para asegurar que responda directamente a la pregunta \"si importa la marca de aceite\" de forma concisa y persuasiva en los primeros párrafos. Considerar usar un formato de \"sí/no\" o \"depende\" claro, seguido de la explicación, para captar la atención.\n\n2.  **Query:** api sn plus\n    *   **Página afectada:** `/blog/api-sn-plus-oils/` (también relevante `/blog/how-api-sn-plus-oil-boosts-protection-and-prevents-lspi/`)\n    *   **Impresiones:** 106\n    *   **CTR:** 0.94%\n    *   **Acción específica:** A pesar de estar en posición 11.5 (segunda página), las 106 impresiones en 30 días son valiosas.\n        *   **Título sugerido:** Aceites API SN PLUS: Protección Superior contra LSPI para Tu Motor\n        *   **Meta descripción sugerida:** Descubre por qué los aceites API SN PLUS son esenciales para motores modernos. Aprende cómo previenen el LSPI y prolongan la vida útil.\n        *   Es vital no solo optimizar el título y la meta, sino también revisar y enriquecer el contenido del artículo. Asegúrese de que responda a preguntas comunes sobre API SN PLUS, sus beneficios específicos (especialmente la prevención de LSPI), y para qué tipos de vehículos es más relevante. Use listas, subtítulos y negritas para mejorar la legibilidad y aumentar las posibilidades de obtener un featured snippet.\n\n**PRÓXIMOS PASOS**\n\n1.  **Implementar Optimización Rápida (Quick Wins):** Priorizar y ejecutar de inmediato los cambios en los `title tags` y `meta descriptions` para las 3 queries identificadas en \"Quick Wins\". Monitorear de cerca su rendimiento en Google Search Console durante las próximas 2-4 semanas para evaluar el impacto en el CTR.\n2.  **Desarrollar Contenido Estratégico \"Progressive Reimbursement\":** Crear un artículo nuevo y exhaustivo sobre el \"Reembolso de Asistencia en Carretera de Progressive\". Este contenido debe posicionar a Superior Equipment Repair no solo como un proveedor de servicios, sino como un recurso de confianza y apoyo para sus clientes.\n3.  **Auditoría y Profundización del Contenido Existente:** Realizar una auditoría de contenido más profunda para los artículos sobre \"Aceites API SN PLUS\" y otros temas técnicos de aceites (dado que hay varias oportunidades en torno a ello). El objetivo es expandir su alcance semántico, añadir secciones de Preguntas Frecuentes (FAQ), y asegurar que sean los recursos más completos y autoritarios disponibles, atrayendo así tráfico de cola larga y reforzando la credibilidad del sitio."
+    },
+    {
+      "siteUrl": "sc-domain:laketahoeconsulting.com",
+      "ranges": {
+        "current": {
+          "startDate": "2026-04-16",
+          "endDate": "2026-05-15"
+        },
+        "previous": {
+          "startDate": "2026-03-17",
+          "endDate": "2026-04-15"
+        },
+        "yearOverYear": {
+          "startDate": "2025-04-16",
+          "endDate": "2025-05-15"
+        }
+      },
+      "opportunities": {
+        "blogTopics": [
+          {
+            "query": "marketing company lake tahoe",
+            "clicks": 0,
+            "impressions": 40,
+            "ctr": 0,
+            "position": 22.525,
+            "previous": {
+              "query": "marketing company lake tahoe",
+              "clicks": 0,
+              "impressions": 60,
+              "ctr": 0,
+              "position": 18.183333333333334
+            },
+            "delta": {
+              "clicks": 0,
+              "impressions": -20,
+              "ctr": 0,
+              "position": 4.341666666666665
+            },
+            "type": "blog_topic"
+          }
+        ],
+        "quickWins": [],
+        "lowCtr": [],
+        "siteCtr": 0
+      },
+      "analysis": "RESUMEN DE OPORTUNIDADES\nEl sitio `laketahoeconsulting.com` actualmente no cuenta con un blog detectado y ha registrado un CTR promedio del 0.00% en los últimos 30 días, lo que indica una ausencia total de clics orgánicos en las queries monitoreadas. La principal oportunidad radica en la creación y publicación inmediata de contenido relevante para capturar la demanda existente en Google, donde ya se identifican impresiones para términos clave del negocio.\n\nBLOG TOPICS RECOMENDADOS (top 5-7)\nBasado en los datos proporcionados, solo se ha identificado una query con impresiones que justifica directamente la creación de contenido nuevo. Para un volumen de 5-7 topics, se requeriría una investigación de palabras clave más exhaustiva.\n\n- Título sugerido: Cómo Elegir la Mejor Empresa de Marketing en Lake Tahoe para su Negocio\n- Keyword principal: marketing company lake tahoe\n- Impresiones actuales: 40\n- Dificultad estimada: Media (Aunque la posición actual es 22.5, la intención de búsqueda es clara y específica. Una página de blog dedicada y bien optimizada tiene potencial para escalar, pero la dificultad no es \"baja\" al no haber contenido existente que la respalde.)\n- Ángulo editorial: Educativo y comparativo, ayudando a las empresas de la región a entender qué buscar en un proveedor de servicios de marketing.\n\nQUICK WINS — OPTIMIZACIÓN DE TÍTULOS (top 3)\nNo se detectaron \"Quick Wins\" (páginas en posición 2-10 con CTR bajo) en los datos proporcionados.\n\nALERTA CTR BAJO\nNo se detectaron páginas con alta exposición (muchas impresiones) y un CTR bajo (< 2%) en los datos proporcionados, lo cual es consistente con la ausencia de un blog y un CTR general del 0.00%.\n\nPRÓXIMOS PASOS\n\n1.  **Implementar la sección de blog:** Establecer y activar una sección de blog en el sitio web, asegurando que sea técnicamente correcta (rastreable e indexable por Google) y esté lista para publicar contenido.\n2.  **Crear y publicar el primer artículo de blog:** Redactar y optimizar el artículo sugerido \"Cómo Elegir la Mejor Empresa de Marketing en Lake Tahoe para su Negocio\", centrándose en el keyword principal \"marketing company lake tahoe\" para empezar a capturar clics de las impresiones existentes.\n3.  **Realizar una investigación exhaustiva de palabras clave:** Desarrollar un plan de contenido a largo plazo mediante una investigación profunda de keywords relevantes para \"consultoría\" y \"marketing\" en la región de \"Lake Tahoe\", identificando al menos 5-7 topics adicionales para nutrir el calendario editorial del nuevo blog."
+    }
+  ]
+}
