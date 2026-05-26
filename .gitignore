@@ -5,6 +5,8 @@ node_modules/
 .env
 oauth.json
 token.json
+token*.json
+*.backup.json
 
 # Reportes generados
 report-ads-*.json
