@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { google } = require("googleapis");
-const { getOAuthClient } = require("./oauth-client");
+const { getOAuthClient } = require("../core/oauth-client");
 
 const { GSC_SITE_URL } = process.env;
 

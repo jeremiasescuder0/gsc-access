@@ -9,8 +9,12 @@ token*.json
 *.backup.json
 
 # Reportes generados
+reports/
 report-ads-*.json
 report-ads-*.html
+keyword-opportunities-*.json
+analyze-ads-output.log
+auth.log
 
 # OS / Editor
 .DS_Store

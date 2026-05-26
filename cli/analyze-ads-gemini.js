@@ -1,7 +1,7 @@
 require("dotenv").config();
 const fs = require("fs");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { fetchAllAccountsData } = require("./ads-fetch");
+const { fetchAllAccountsData } = require("../core/ads-fetch");
 const { buildReport } = require("./build-report");
 
 const { GEMINI_API_KEY } = process.env;

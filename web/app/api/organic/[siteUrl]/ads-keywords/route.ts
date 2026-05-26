@@ -32,8 +32,8 @@ export async function GET(
 
   try {
     const [{ getClientByGscSite }, { fetchAccountSearchTerms }] = await Promise.all([
-      loadModule<ClientsModule>("clients.js"),
-      loadModule<AdsFetchModule>("ads-fetch.js"),
+      loadModule<ClientsModule>("core/clients.js"),
+      loadModule<AdsFetchModule>("core/ads-fetch.js"),
     ]);
 
     const client = getClientByGscSite(siteUrl);

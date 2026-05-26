@@ -16,7 +16,7 @@ let adsFetchPromise: Promise<AdsFetchModule> | null = null;
 
 function loadAdsFetch(): Promise<AdsFetchModule> {
   if (adsFetchPromise) return adsFetchPromise;
-  const fileUrl = pathToFileURL(path.resolve(ROOT_DIR, "ads-fetch.js")).href;
+  const fileUrl = pathToFileURL(path.resolve(ROOT_DIR, "core/ads-fetch.js")).href;
   adsFetchPromise = import(/* webpackIgnore: true */ /* turbopackIgnore: true */ fileUrl)
     .then((mod) => (mod.default ?? mod) as AdsFetchModule);
   return adsFetchPromise;

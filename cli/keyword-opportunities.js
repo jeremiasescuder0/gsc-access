@@ -1,9 +1,9 @@
 require("dotenv").config();
 const fs = require("fs");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { listSites, fetchSitePerformance } = require("./gsc-fetch");
-const { fetchAccountSearchTerms } = require("./ads-fetch");
-const { getClientByGscSite } = require("./clients");
+const { listSites, fetchSitePerformance } = require("../core/gsc-fetch");
+const { fetchAccountSearchTerms } = require("../core/ads-fetch");
+const { getClientByGscSite } = require("../core/clients");
 
 // Usage:
 //   node keyword-opportunities.js                   → analiza todos los sitios

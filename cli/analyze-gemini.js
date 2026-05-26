@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { google } = require("googleapis");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { getOAuthClient } = require("./oauth-client");
+const { getOAuthClient } = require("../core/oauth-client");
 
 const { GEMINI_API_KEY, GSC_SITE_URL } = process.env;
 
