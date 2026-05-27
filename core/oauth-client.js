@@ -1,9 +1,9 @@
-require("dotenv").config();
+﻿require("dotenv").config();
 const { google } = require("googleapis");
 const fs = require("fs");
 const path = require("path");
 
-const TOKEN_PATH = path.join(__dirname, "token.json");
+const TOKEN_PATH = path.join(__dirname, "..", "token.json");
 const REFRESH_MARGIN_MS = 5 * 60 * 1000;
 
 function loadToken() {
@@ -29,12 +29,11 @@ function buildClient(token) {
   client.on("tokens", (newTokens) => {
     const current = loadToken();
     const merged = { ...current, ...newTokens };
-    // refresh_token sólo viene en la primera auth; preservarlo si el refresh no lo retorna
     if (!newTokens.refresh_token && current.refresh_token) {
       merged.refresh_token = current.refresh_token;
     }
     saveToken(merged);
-    console.log("🔄 Token OAuth refrescado y guardado en token.json");
+    console.log("Token OAuth refrescado y guardado en token.json");
   });
 
   return client;
@@ -43,7 +42,7 @@ function buildClient(token) {
 async function getOAuthClient() {
   const token = loadToken();
   if (!token.refresh_token) {
-    throw new Error("token.json no tiene refresh_token. Re-autenticá con npm run auth");
+    throw new Error("token.json no tiene refresh_token. Re-autenticate con npm run auth");
   }
 
   const client = buildClient(token);
@@ -55,7 +54,7 @@ async function getOAuthClient() {
     } catch (err) {
       const msg = err?.response?.data?.error || err?.message || String(err);
       throw new Error(
-        `No se pudo refrescar el token OAuth: ${msg}. Re-autenticá con npm run auth`
+        `No se pudo refrescar el token OAuth: ${msg}. Re-autenticate con npm run auth`
       );
     }
   }
@@ -66,7 +65,7 @@ async function getOAuthClient() {
 function getRefreshToken() {
   const token = loadToken();
   if (!token.refresh_token) {
-    throw new Error("token.json no tiene refresh_token. Re-autenticá con npm run auth");
+    throw new Error("token.json no tiene refresh_token. Re-autenticate con npm run auth");
   }
   return token.refresh_token;
 }
