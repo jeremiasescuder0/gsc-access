@@ -23,10 +23,11 @@ export default async function CampaignDetailPage({
 }) {
   const { id, campaignId } = await params;
 
-  const account = await getAccountById(id);
+  const [account, detail] = await Promise.all([
+    getAccountById(id),
+    getCampaignDetail(id, campaignId),
+  ]);
   if (!account) notFound();
-
-  const detail = await getCampaignDetail(id, campaignId);
   if (!detail.campaign) notFound();
 
   const c = detail.campaign;

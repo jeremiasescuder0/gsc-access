@@ -16,6 +16,9 @@ keyword-opportunities-*.json
 analyze-ads-output.log
 auth.log
 
+# Next.js build output
+web/.next/
+
 # OS / Editor
 .DS_Store
 *.log
