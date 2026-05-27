@@ -72,15 +72,16 @@ async function buildCampaignContext(accountId: string, campaignId: string) {
     ? `Cuenta: ${account.account} (${account.accountId}) · Moneda: ${account.currency || "N/A"}\n`
     : "";
 
-  return `\n\nCONTEXTO DE LA CAMPAÑA ACTIVA (zoom-in completo):
-${accountHeader}Campaña: ${detail.campaign.name} (ID ${detail.campaign.id})
-Tipo: ${detail.campaign.channelType} · Puja: ${detail.campaign.biddingStrategyType}
-Budget diario: ${detail.campaign.dailyBudget}
+  const channelType = String(detail.campaign.channelType ?? "");
+  const isPMax = channelType === "PERFORMANCE_MAX" || channelType === "10";
 
-MÉTRICAS DE LA CAMPAÑA:
-${JSON.stringify(detail.campaign, null, 2)}
+  const adsSection = isPMax
+    ? `ASSET GROUPS (Performance Max — reemplazan a los ad groups):
+${JSON.stringify(detail.assetGroups ?? [], null, 2)}
 
-AD GROUPS DE LA CAMPAÑA:
+ASSETS (headlines, descriptions, imágenes, videos, CTAs — agrupados por asset group):
+${JSON.stringify(detail.assets ?? [], null, 2)}`
+    : `AD GROUPS DE LA CAMPAÑA:
 ${JSON.stringify(detail.adGroups, null, 2)}
 
 ADS (headlines, descriptions, paths — cada anuncio con métricas):
@@ -89,13 +90,24 @@ ${JSON.stringify(detail.ads, null, 2)}
 KEYWORDS ACTIVAS (con quality score si aplica, match type, métricas):
 ${JSON.stringify(detail.keywords, null, 2)}
 
+SEARCH TERMS (top 50 por costo):
+${JSON.stringify(detail.searchTerms, null, 2)}`;
+
+  return `\n\nCONTEXTO DE LA CAMPAÑA ACTIVA (zoom-in completo):
+${accountHeader}Campaña: ${detail.campaign.name} (ID ${detail.campaign.id})
+Tipo: ${detail.campaign.channelType}${isPMax ? " (Performance Max)" : ""} · Puja: ${detail.campaign.biddingStrategyType}
+Budget diario: ${detail.campaign.dailyBudget}
+
+MÉTRICAS DE LA CAMPAÑA:
+${JSON.stringify(detail.campaign, null, 2)}
+
+${adsSection}
+
 UBICACIONES GEO (top por costo):
 ${JSON.stringify(detail.geo, null, 2)}
 
-SEARCH TERMS (top 50 por costo):
-${JSON.stringify(detail.searchTerms, null, 2)}
-
-Cuando te pregunten sobre atributos específicos (headlines, keywords, ubicaciones, etc.), respondé con los items concretos del JSON. Para decisiones de optimización (pausar, ajustar puja, agregar negativas, cambiar headlines), justificá con métricas exactas.`;
+Cuando te pregunten sobre atributos específicos (headlines, keywords, assets, ubicaciones, etc.), respondé con los items concretos del JSON. Para decisiones de optimización (pausar, ajustar puja, agregar negativas, cambiar headlines/assets), justificá con métricas exactas.
+${isPMax ? "\nNota: esta campaña es Performance Max. No tiene keywords ni search terms directos — usá assets y asset groups para el análisis de copy." : ""}`;
 }
 
 async function buildPortfolioContext() {
