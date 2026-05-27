@@ -19,7 +19,7 @@ let gscFetchPromise: Promise<GscFetchModule> | null = null;
 
 function loadGscFetch(): Promise<GscFetchModule> {
   if (gscFetchPromise) return gscFetchPromise;
-  const fileUrl = pathToFileURL(path.resolve(ROOT_DIR, "gsc-fetch.js")).href;
+  const fileUrl = pathToFileURL(path.resolve(ROOT_DIR, "core/gsc-fetch.js")).href;
   gscFetchPromise = import(/* webpackIgnore: true */ /* turbopackIgnore: true */ fileUrl)
     .then((mod) => (mod.default ?? mod) as GscFetchModule);
   return gscFetchPromise;
