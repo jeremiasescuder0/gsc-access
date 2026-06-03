@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { getSitePerformance } from "@/lib/gsc-data";
 import { ChatPanelLazy as ChatPanel } from "@/components/ChatPanelLazy";
 import { OrganicTabs } from "@/components/OrganicTabs";
+import { SpamPanel } from "@/components/SpamPanel";
 import { Delta } from "@/components/Delta";
 import { formatNumber, formatPercent, formatPosition } from "@/lib/format";
 
@@ -145,7 +146,8 @@ export default async function OrganicSitePage({
           </Suspense>
         </div>
 
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 space-y-6">
+          <SpamPanel siteUrl={siteUrl} />
           <ChatPanel
             siteUrl={siteUrl}
             contextLabel={`Orgánico · ${siteUrl}`}
