@@ -8,6 +8,7 @@
     "test-connection": "node tests/test.js",
     "analyze": "node cli/analyze-gemini.js",
     "analyze-ads": "node cli/analyze-ads-gemini.js",
+    "digest-ads": "node cli/ads-digest.js",
     "opportunities": "node cli/keyword-opportunities.js",
     "blog-audit": "node cli/blog-audit.js",
     "report": "node cli/build-report.js",
@@ -29,6 +30,7 @@
     "dotenv": "^16.6.1",
     "google-ads-api": "^23.0.0",
     "googleapis": "^171.4.0",
+    "nodemailer": "^9.0.5",
     "open": "^11.0.0",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1"
