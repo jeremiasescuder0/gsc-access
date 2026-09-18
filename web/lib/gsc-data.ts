@@ -1,11 +1,10 @@
-import path from "path";
-import { pathToFileURL } from "url";
-import { config as dotenvConfig } from "dotenv";
+// Import ESTÁTICO (no dynamic import con pathToFileURL) a propósito: Next necesita poder
+// trazar esta dependencia en build time para incluirla en el bundle de cada función serverless.
+// Un import dinámico con path calculado en runtime es invisible para esa traza — confirmado
+// inspeccionando el .nft.json del build: con el patrón viejo, core/ no aparecía en ningún
+// bundle, lo que rompía todas las rutas en Vercel (filesystem no trazado ≠ filesystem local).
+import * as gscFetchModule from "../../core/gsc-fetch.js";
 import type { Site, SitePerformance } from "./gsc-types";
-
-const ROOT_DIR = path.resolve(process.cwd(), "..");
-
-dotenvConfig({ path: path.resolve(ROOT_DIR, ".env") });
 
 type GscFetchModule = {
   listSites: () => Promise<Site[]>;
@@ -15,15 +14,7 @@ type GscFetchModule = {
   ) => Promise<SitePerformance>;
 };
 
-let gscFetchPromise: Promise<GscFetchModule> | null = null;
-
-function loadGscFetch(): Promise<GscFetchModule> {
-  if (gscFetchPromise) return gscFetchPromise;
-  const fileUrl = pathToFileURL(path.resolve(ROOT_DIR, "core/gsc-fetch.js")).href;
-  gscFetchPromise = import(/* webpackIgnore: true */ /* turbopackIgnore: true */ fileUrl)
-    .then((mod) => (mod.default ?? mod) as GscFetchModule);
-  return gscFetchPromise;
-}
+const { listSites, fetchSitePerformance } = gscFetchModule as unknown as GscFetchModule;
 
 const CACHE_TTL_MS = 10 * 60 * 1000;
 
@@ -35,8 +26,7 @@ export async function getSites(force = false): Promise<Site[]> {
     return sitesCache.data;
   }
   if (sitesInflight) return sitesInflight;
-  sitesInflight = loadGscFetch()
-    .then((mod) => mod.listSites())
+  sitesInflight = listSites()
     .then((data) => {
       sitesCache = { data, fetchedAt: Date.now() };
       return data;
@@ -71,8 +61,7 @@ export async function getSitePerformance(
   const existing = performanceInflight.get(key);
   if (existing) return existing;
 
-  const promise = loadGscFetch()
-    .then((mod) => mod.fetchSitePerformance(siteUrl, { periodDays, blogPattern }))
+  const promise = fetchSitePerformance(siteUrl, { periodDays, blogPattern })
     .then((data) => {
       performanceCache.set(key, { data, fetchedAt: Date.now() });
       return data;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, FileText, Target, BookOpen, Lightbulb } from "lucide-react";
+import { Search, FileText, Target, BookOpen, Lightbulb, Archive } from "lucide-react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import type { SitePerformance } from "@/lib/gsc-types";
 import { classifyContentOpportunities } from "@/lib/content-opportunities";
@@ -9,8 +9,9 @@ import { QueriesTable } from "./QueriesTable";
 import { PagesTable } from "./PagesTable";
 import { OpportunitiesTable } from "./OpportunitiesTable";
 import { ContentOpportunitiesTable } from "./ContentOpportunitiesTable";
+import { ContentInventoryPanel } from "./ContentInventoryPanel";
 
-type Tab = "queries" | "pages" | "opportunities" | "blog" | "contenido";
+type Tab = "queries" | "pages" | "opportunities" | "blog" | "contenido" | "inventario";
 
 const TABS: { id: Tab; label: string; icon: typeof Search }[] = [
   { id: "queries", label: "Queries", icon: Search },
@@ -18,6 +19,7 @@ const TABS: { id: Tab; label: string; icon: typeof Search }[] = [
   { id: "opportunities", label: "Oportunidades", icon: Target },
   { id: "blog", label: "Blog", icon: BookOpen },
   { id: "contenido", label: "Contenido", icon: Lightbulb },
+  { id: "inventario", label: "Inventario", icon: Archive },
 ];
 
 export function OrganicTabs({ data }: { data: SitePerformance }) {
@@ -28,7 +30,7 @@ export function OrganicTabs({ data }: { data: SitePerformance }) {
   const contentOps = classifyContentOpportunities(data);
   const contentTotal = contentOps.blogTopics.length + contentOps.quickWins.length + contentOps.lowCtr.length;
 
-  const counts: Record<Tab, number> = {
+  const counts: Partial<Record<Tab, number>> = {
     queries: data.queries.length,
     pages: data.pages.length,
     opportunities: data.opportunities.length,
@@ -65,13 +67,15 @@ export function OrganicTabs({ data }: { data: SitePerformance }) {
             >
               <Icon className="w-4 h-4" />
               {t.label}
-              <span
-                className={`text-xs px-1.5 py-0.5 rounded ${
-                  isActive ? "bg-accent/20 text-accent" : "bg-bg text-muted"
-                }`}
-              >
-                {count}
-              </span>
+              {count !== undefined && (
+                <span
+                  className={`text-xs px-1.5 py-0.5 rounded ${
+                    isActive ? "bg-accent/20 text-accent" : "bg-bg text-muted"
+                  }`}
+                >
+                  {count}
+                </span>
+              )}
             </button>
           );
         })}
@@ -84,6 +88,7 @@ export function OrganicTabs({ data }: { data: SitePerformance }) {
           <OpportunitiesTable opportunities={data.opportunities} />
         )}
         {active === "contenido" && <ContentOpportunitiesTable data={data} />}
+        {active === "inventario" && <ContentInventoryPanel siteUrl={data.siteUrl} />}
         {active === "blog" && (
           <div className="space-y-3">
             <div className="flex items-center gap-2">

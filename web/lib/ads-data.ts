@@ -1,26 +1,14 @@
-import path from "path";
-import { pathToFileURL } from "url";
-import { config as dotenvConfig } from "dotenv";
+// Import estático a propósito — ver la nota en gsc-data.ts sobre por qué el dynamic import con
+// pathToFileURL no se traza en el build de Vercel.
+import * as adsFetchModule from "../../core/ads-fetch.js";
 import type { Account, AccountSummary, CampaignDetail } from "./types";
-
-const ROOT_DIR = path.resolve(process.cwd(), "..");
-
-dotenvConfig({ path: path.resolve(ROOT_DIR, ".env") });
 
 type AdsFetchModule = {
   fetchAllAccountsData: () => Promise<Account[]>;
   fetchCampaignDetail: (customerId: string, campaignId: string) => Promise<CampaignDetail>;
 };
 
-let adsFetchPromise: Promise<AdsFetchModule> | null = null;
-
-function loadAdsFetch(): Promise<AdsFetchModule> {
-  if (adsFetchPromise) return adsFetchPromise;
-  const fileUrl = pathToFileURL(path.resolve(ROOT_DIR, "core/ads-fetch.js")).href;
-  adsFetchPromise = import(/* webpackIgnore: true */ /* turbopackIgnore: true */ fileUrl)
-    .then((mod) => (mod.default ?? mod) as AdsFetchModule);
-  return adsFetchPromise;
-}
+const { fetchAllAccountsData, fetchCampaignDetail } = adsFetchModule as unknown as AdsFetchModule;
 
 type CacheEntry = {
   data: Account[];
@@ -38,8 +26,7 @@ export async function getAllAccounts(force = false): Promise<Account[]> {
   }
   if (inflight) return inflight;
 
-  inflight = loadAdsFetch()
-    .then((mod) => mod.fetchAllAccountsData())
+  inflight = fetchAllAccountsData()
     .then((data) => {
       cache = { data, fetchedAt: Date.now() };
       return data;
@@ -138,8 +125,7 @@ export async function getCampaignDetail(
   const existing = campaignInflight.get(key);
   if (existing) return existing;
 
-  const promise = loadAdsFetch()
-    .then((mod) => mod.fetchCampaignDetail(accountId, campaignId))
+  const promise = fetchCampaignDetail(accountId, campaignId)
     .then((data) => {
       campaignCache.set(key, { data, fetchedAt: Date.now() });
       return data;

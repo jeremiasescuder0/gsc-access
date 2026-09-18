@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("./env");
 const { GoogleAdsApi } = require("google-ads-api");
 const { getOAuthClient, getRefreshToken } = require("./oauth-client");
 

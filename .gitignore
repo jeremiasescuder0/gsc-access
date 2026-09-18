@@ -8,6 +8,9 @@ token.json
 token*.json
 *.backup.json
 
+# Datos de la app (blog projects, perfiles de cliente, inventario de contenido) — JSON store local
+data/
+
 # Reportes generados
 reports/
 report-ads-*.json

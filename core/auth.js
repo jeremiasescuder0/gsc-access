@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("./env");
 const { google } = require("googleapis");
 const http = require("http");
 const fs = require("fs");

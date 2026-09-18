@@ -1,27 +1,23 @@
 import { NextResponse } from "next/server";
-import path from "path";
-import { pathToFileURL } from "url";
-import { config as dotenvConfig } from "dotenv";
+// Import estático a propósito — ver la nota en web/lib/gsc-data.ts.
+import * as clientsModule from "../../../../../../core/clients.js";
+import * as adsFetchModule from "../../../../../../core/ads-fetch.js";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
-
-const ROOT_DIR = path.resolve(process.cwd(), "..");
-dotenvConfig({ path: path.resolve(ROOT_DIR, ".env") });
 
 type ClientsModule = {
   getClientByGscSite: (siteUrl: string) => { name: string; adsCustomerId: string | null; industry: string } | null;
 };
 
 type AdsFetchModule = {
-  fetchAccountSearchTerms: (customerId: string) => Promise<{ searchTerm: string; impressions: number; clicks: number; cost: number; conversions: number }[]>;
+  fetchAccountSearchTerms: (
+    customerId: string
+  ) => Promise<{ searchTerm: string; impressions: number; clicks: number; cost: number; conversions: number }[]>;
 };
 
-async function loadModule<T>(file: string): Promise<T> {
-  const url = pathToFileURL(path.resolve(ROOT_DIR, file)).href;
-  const mod = await import(/* webpackIgnore: true */ /* turbopackIgnore: true */ url);
-  return (mod.default ?? mod) as T;
-}
+const { getClientByGscSite } = clientsModule as unknown as ClientsModule;
+const { fetchAccountSearchTerms } = adsFetchModule as unknown as AdsFetchModule;
 
 export async function GET(
   _req: Request,
@@ -31,11 +27,6 @@ export async function GET(
   const siteUrl = decodeURIComponent(encoded);
 
   try {
-    const [{ getClientByGscSite }, { fetchAccountSearchTerms }] = await Promise.all([
-      loadModule<ClientsModule>("core/clients.js"),
-      loadModule<AdsFetchModule>("core/ads-fetch.js"),
-    ]);
-
     const client = getClientByGscSite(siteUrl);
     if (!client?.adsCustomerId) {
       return NextResponse.json({ searchTerms: [], source: "none", reason: "no_ads_account" });
