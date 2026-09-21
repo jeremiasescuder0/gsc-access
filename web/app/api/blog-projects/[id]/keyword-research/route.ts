@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 import { getBlogProject, updateBlogProject, researchProjectKeywords } from "@/lib/blog-data";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 // El clustering hace 1 llamada a Gemini sobre hasta 50 queries — puede tardar más que el
 // default de Next en instancias frías.
 export const maxDuration = 90;
 
-export async function POST(req: Request, { params }: { params: Promise<{ id: string }> }) {
+export const POST = withAuth(async (req: Request, { params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   try {
     const project = await getBlogProject(id);
@@ -37,4 +38,4 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     // 502: la falla es de un servicio externo (GSC o Gemini), no del pedido en sí.
     return NextResponse.json({ error: message }, { status: 502 });
   }
-}
+});

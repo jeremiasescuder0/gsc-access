@@ -42,6 +42,10 @@ export function ContentInventoryPanel({ siteUrl }: { siteUrl: string }) {
   );
 
   useEffect(() => {
+    // Fetch-on-mount estándar — load() setea loading/error de forma síncrona antes del primer
+    // await, lo cual dispara la regla react-hooks/set-state-in-effect aunque el patrón en sí es
+    // el uso normal y correcto de "cargar datos al montar".
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     load(false);
   }, [load]);
 

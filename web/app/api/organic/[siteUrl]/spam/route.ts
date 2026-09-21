@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText } from "ai";
 import { getSitePerformance } from "@/lib/gsc-data";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -30,10 +31,10 @@ const googleAI = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY,
 });
 
-export async function GET(
+export const GET = withAuth(async (
   req: Request,
   { params }: { params: Promise<{ siteUrl: string }> }
-) {
+) => {
   const { siteUrl: encoded } = await params;
   const siteUrl = decodeURIComponent(encoded);
 
@@ -112,4 +113,4 @@ Respondé en JSON con esta estructura exacta (sin markdown wrapping, solo el JSO
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
-}
+});

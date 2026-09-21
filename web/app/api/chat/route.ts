@@ -7,6 +7,7 @@ import {
   summarizeAccount,
 } from "@/lib/ads-data";
 import { getSitePerformance } from "@/lib/gsc-data";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const maxDuration = 60;
 
@@ -148,7 +149,7 @@ Reglas para análisis SEO:
 - Para identificar patrones en blogs, agrupá por temas/subdirectorios visibles en las URLs.`;
 }
 
-export async function POST(req: Request) {
+export const POST = withAuth(async (req: Request) => {
   try {
     const body = await req.json();
     const messages: CoreMessage[] = body.messages || [];
@@ -192,4 +193,4 @@ export async function POST(req: Request) {
       headers: { "Content-Type": "application/json" },
     });
   }
-}
+});

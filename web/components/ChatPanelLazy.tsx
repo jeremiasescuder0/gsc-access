@@ -15,6 +15,9 @@ export function ChatPanelLazy(props: ChatPanelProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Patrón estándar "recién montado en el cliente" para evitar mismatch de hidratación —
+    // no es un bug, la regla react-hooks/set-state-in-effect no distingue este caso legítimo.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

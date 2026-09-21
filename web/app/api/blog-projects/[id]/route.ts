@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { getBlogProject, updateBlogProject } from "@/lib/blog-data";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 
-export async function GET(_req: Request, { params }: { params: Promise<{ id: string }> }) {
+export const GET = withAuth(async (_req: Request, { params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   try {
     const project = await getBlogProject(id);
@@ -13,9 +14,9 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
-}
+});
 
-export async function PATCH(req: Request, { params }: { params: Promise<{ id: string }> }) {
+export const PATCH = withAuth(async (req: Request, { params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   try {
     const patch = await req.json();
@@ -25,4 +26,4 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 400 });
   }
-}
+});

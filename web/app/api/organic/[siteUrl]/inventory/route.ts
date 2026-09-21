@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { getContentInventory, syncContentInventory, updateContentInventoryItem } from "@/lib/blog-data";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-export async function GET(req: Request, { params }: { params: Promise<{ siteUrl: string }> }) {
+export const GET = withAuth(async (req: Request, { params }: { params: Promise<{ siteUrl: string }> }) => {
   const { siteUrl: encoded } = await params;
   const siteUrl = decodeURIComponent(encoded);
   const url = new URL(req.url);
@@ -17,9 +18,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ siteUrl:
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
-}
+});
 
-export async function PATCH(req: Request, { params }: { params: Promise<{ siteUrl: string }> }) {
+export const PATCH = withAuth(async (req: Request, { params }: { params: Promise<{ siteUrl: string }> }) => {
   const { siteUrl: encoded } = await params;
   const siteUrl = decodeURIComponent(encoded);
   try {
@@ -31,4 +32,4 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ siteUr
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 400 });
   }
-}
+});

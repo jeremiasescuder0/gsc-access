@@ -39,8 +39,20 @@ function slugify(input) {
     .replace(/(^-|-$)/g, "");
 }
 
-const KV_URL = process.env.KV_REST_API_URL;
-const KV_TOKEN = process.env.KV_REST_API_TOKEN;
+// Vercel prefija las env vars que provisiona una integración de Marketplace (Storage → Upstash)
+// con un prefijo derivado del nombre del proyecto, para evitar colisiones si se conectan varias
+// — ej. GSC_ACC_KV_REST_API_URL en vez de KV_REST_API_URL a secas. No hay forma de saber ese
+// prefijo de antemano (ni de copiar el valor: son env vars "sensitive", no se pueden volver a
+// leer una vez creadas), así que además del nombre plano se busca cualquier variable que
+// termine en _KV_REST_API_URL / _KV_REST_API_TOKEN.
+function findKvCredential(suffix) {
+  if (process.env[suffix]) return process.env[suffix];
+  const key = Object.keys(process.env).find((k) => k.endsWith(`_${suffix}`));
+  return key ? process.env[key] : undefined;
+}
+
+const KV_URL = findKvCredential("KV_REST_API_URL");
+const KV_TOKEN = findKvCredential("KV_REST_API_TOKEN");
 const USE_KV = Boolean(KV_URL && KV_TOKEN);
 
 // --- Backend KV ---

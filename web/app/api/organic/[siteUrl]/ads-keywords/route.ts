@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 // Import estático a propósito — ver la nota en web/lib/gsc-data.ts.
 import * as clientsModule from "../../../../../../core/clients.js";
 import * as adsFetchModule from "../../../../../../core/ads-fetch.js";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -19,10 +20,10 @@ type AdsFetchModule = {
 const { getClientByGscSite } = clientsModule as unknown as ClientsModule;
 const { fetchAccountSearchTerms } = adsFetchModule as unknown as AdsFetchModule;
 
-export async function GET(
+export const GET = withAuth(async (
   _req: Request,
   { params }: { params: Promise<{ siteUrl: string }> }
-) {
+) => {
   const { siteUrl: encoded } = await params;
   const siteUrl = decodeURIComponent(encoded);
 
@@ -38,4 +39,4 @@ export async function GET(
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
-}
+});

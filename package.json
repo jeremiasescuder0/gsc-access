@@ -27,6 +27,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.0",
     "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^16.6.1",
     "google-ads-api": "^23.0.0",
     "googleapis": "^171.4.0",

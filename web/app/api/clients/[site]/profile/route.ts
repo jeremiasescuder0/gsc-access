@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { getClientProfile, upsertClientProfile, getGlobalContentRules } from "@/lib/blog-data";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 
-export async function GET(_req: Request, { params }: { params: Promise<{ site: string }> }) {
+export const GET = withAuth(async (_req: Request, { params }: { params: Promise<{ site: string }> }) => {
   const { site: encoded } = await params;
   const gscSite = decodeURIComponent(encoded);
   try {
@@ -14,9 +15,9 @@ export async function GET(_req: Request, { params }: { params: Promise<{ site: s
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
-}
+});
 
-export async function PUT(req: Request, { params }: { params: Promise<{ site: string }> }) {
+export const PUT = withAuth(async (req: Request, { params }: { params: Promise<{ site: string }> }) => {
   const { site: encoded } = await params;
   const gscSite = decodeURIComponent(encoded);
   try {
@@ -27,4 +28,4 @@ export async function PUT(req: Request, { params }: { params: Promise<{ site: st
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 400 });
   }
-}
+});

@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { listBlogProjects, createBlogProject } from "@/lib/blog-data";
 import type { BlogProjectStatus } from "@/lib/blog-types";
+import { withAuth } from "@/lib/auth/with-auth";
 
 export const dynamic = "force-dynamic";
 
-export async function GET(req: Request) {
+export const GET = withAuth(async (req: Request) => {
   const url = new URL(req.url);
   const clientSite = url.searchParams.get("clientSite") || undefined;
   const status = (url.searchParams.get("status") as BlogProjectStatus | null) || undefined;
@@ -16,9 +17,9 @@ export async function GET(req: Request) {
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
-}
+});
 
-export async function POST(req: Request) {
+export const POST = withAuth(async (req: Request) => {
   try {
     const body = await req.json();
     if (!body.clientSite) {
@@ -30,4 +31,4 @@ export async function POST(req: Request) {
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 400 });
   }
-}
+});
