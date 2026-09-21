@@ -63,11 +63,31 @@ export const CONTENT_TYPE_LABELS: Record<ContentType, string> = {
 
 export type StatusHistoryEntry = { status: BlogProjectStatus; at: string; note: string };
 
+// Evidencia de ORIGEN — de dónde salió el proyecto (de una Opportunity escaneada, o cargado a
+// mano). Forma distinta y separada de KeywordResearchGscEvidence/GeminiEvidence (más abajo),
+// que es lo que produce la acción "Investigar keywords" DENTRO del proyecto ya creado — nunca
+// hay que asumir que evidence.gsc/evidence.gemini tienen la forma de una u otra sin chequear,
+// por eso viven en campos separados dentro de EvidenceBlock.
+export type OriginGscEvidence = {
+  queries: { query: string; impressions: number; clicks: number; ctr: number; position: number }[];
+  totalImpressions: number;
+  avgPosition: number;
+};
+
+export type OriginGeminiEvidence = {
+  model: string;
+  generatedAt: string;
+};
+
 export type EvidenceBlock = {
-  gsc: unknown | null;
+  gsc: OriginGscEvidence | null;
   ads: unknown | null;
-  gemini: unknown | null;
+  gemini: OriginGeminiEvidence | null;
   manual: unknown | null;
+  keywordResearch: {
+    gsc: KeywordResearchGscEvidence;
+    gemini: KeywordResearchGeminiEvidence | null;
+  } | null;
 };
 
 export type CannibalizationInfo = {
@@ -307,6 +327,67 @@ export type KeywordResearchGeminiEvidence = {
 
 export type KeywordResearchResult = {
   project: BlogProject;
+  insufficientData: boolean;
+  message: string | null;
+};
+
+// Backlog de oportunidades (secciones 5, 6, 8, 9, 17 del spec) — ver core/opportunity-engine.js
+// y core/store/opportunities.js.
+export type OpportunityStatus = "open" | "converted" | "ignored";
+export type RelevanceLevel = "high" | "medium" | "low";
+export type PriorityLabel = "high" | "medium" | "low";
+export type ContentGapLevel = "none" | "medium" | "high";
+
+export type ContentGap = {
+  level: ContentGapLevel;
+  score: number;
+  competingUrls: string[];
+};
+
+export type ScoreBreakdown = {
+  gscSignal: number;
+  contentGap: number;
+  businessRelevance: number;
+  weights: { gscSignal: number; contentGap: number; businessRelevance: number };
+};
+
+export type OpportunityEvidence = {
+  gsc: {
+    queries: { query: string; impressions: number; clicks: number; ctr: number; position: number }[];
+    totalImpressions: number;
+    avgPosition: number;
+  } | null;
+  gemini: { model: string; generatedAt: string } | null;
+};
+
+export type Opportunity = {
+  id: string;
+  clientSite: string;
+  clusterName: string;
+  suggestedTitle: string | null;
+  topic: string | null;
+  searchIntent: string | null;
+  serviceRelevance: RelevanceLevel | null;
+  recommendedContentType: ContentType | null;
+  reasoningSummary: string;
+  primaryKeyword: string | null;
+  secondaryKeywords: string[];
+  questionKeywords: string[];
+  semanticKeywords: string[];
+  priorityScore: number | null;
+  priorityLabel: PriorityLabel | null;
+  scoreBreakdown: ScoreBreakdown | null;
+  contentGap: ContentGap | null;
+  evidence: OpportunityEvidence;
+  status: OpportunityStatus;
+  convertedToProjectId: string | null;
+  scannedAt: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type OpportunityScanResult = {
+  opportunities: Opportunity[];
   insufficientData: boolean;
   message: string | null;
 };

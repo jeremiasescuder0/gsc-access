@@ -6,6 +6,8 @@ import * as clientProfilesModule from "../../core/store/client-profiles.js";
 import * as contentInventoryModule from "../../core/store/content-inventory.js";
 import * as keywordResearchModule from "../../core/keyword-research.js";
 import * as jsonStoreModule from "../../core/store/json-store.js";
+import * as opportunitiesModule from "../../core/store/opportunities.js";
+import * as opportunityEngineModule from "../../core/opportunity-engine.js";
 import type {
   BlogProject,
   BlogProjectInput,
@@ -15,6 +17,8 @@ import type {
   ContentInventory,
   KeywordResearchGscEvidence,
   KeywordResearchGeminiEvidence,
+  Opportunity,
+  OpportunityStatus,
 } from "./blog-types";
 
 // Todas las funciones del store son async (el backend puede ser Vercel KV, que siempre es
@@ -78,6 +82,31 @@ const {
 } = contentInventoryModule as unknown as ContentInventoryModule;
 
 const { researchKeywordsForProject } = keywordResearchModule as unknown as KeywordResearchModule;
+
+type OpportunitiesModule = {
+  listOpportunities: (filter?: { clientSite?: string; status?: OpportunityStatus }) => Promise<Opportunity[]>;
+  getOpportunity: (id: string) => Promise<Opportunity | null>;
+  markIgnored: (id: string) => Promise<Opportunity>;
+  syncScanResults: (clientSite: string, clusters: unknown[]) => Promise<Opportunity[]>;
+  convertToBlogProject: (id: string) => Promise<BlogProject>;
+};
+
+type OpportunityEngineModule = {
+  scanOpportunities: (
+    clientSite: string,
+    opts?: { periodDays?: number }
+  ) => Promise<{ evidenceGsc: unknown; clusters: unknown[]; insufficientData: boolean; message?: string }>;
+};
+
+const {
+  listOpportunities: _listOpportunities,
+  getOpportunity: _getOpportunity,
+  markIgnored: _markIgnoredOpportunity,
+  syncScanResults,
+  convertToBlogProject: _convertToBlogProject,
+} = opportunitiesModule as unknown as OpportunitiesModule;
+
+const { scanOpportunities } = opportunityEngineModule as unknown as OpportunityEngineModule;
 
 type JsonStoreModule = {
   USE_KV: boolean;
@@ -147,4 +176,33 @@ export async function updateContentInventoryItem(
 
 export async function researchProjectKeywords(project: BlogProject, periodDays?: number) {
   return researchKeywordsForProject(project, { periodDays });
+}
+
+export async function listOpportunities(filter?: { clientSite?: string; status?: OpportunityStatus }) {
+  return _listOpportunities(filter);
+}
+
+export async function getOpportunity(id: string) {
+  return _getOpportunity(id);
+}
+
+export async function ignoreOpportunity(id: string) {
+  return _markIgnoredOpportunity(id);
+}
+
+export async function convertOpportunityToBlogProject(id: string) {
+  return _convertToBlogProject(id);
+}
+
+// Escanea el sitio del cliente y persiste el backlog resultante (con dedupe contra lo que ya
+// estaba abierto) — es lo que trae "la data lista de entrada" en vez de arrancar de un
+// formulario vacío.
+export async function scanClientOpportunities(clientSite: string, periodDays?: number) {
+  const result = await scanOpportunities(clientSite, { periodDays });
+  const opportunities = result.insufficientData ? [] : await syncScanResults(clientSite, result.clusters);
+  return {
+    opportunities,
+    insufficientData: result.insufficientData,
+    message: result.message || null,
+  };
 }

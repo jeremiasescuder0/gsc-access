@@ -17,13 +17,13 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
 
     const result = await researchProjectKeywords(project, periodDays);
 
-    // Guardamos la evidencia (GSC + interpretación de Gemini) aunque el usuario todavía no haya
-    // decidido aplicar las keywords sugeridas — así queda el rastro de qué se investigó y cuándo.
+    // Guardamos en evidence.keywordResearch (NO en evidence.gsc/gemini — esos son la evidencia
+    // de ORIGEN del proyecto, con otra forma, y vienen de convertir una Opportunity si aplica).
+    // Mezclarlos rompía el panel cuando el proyecto nacía de una Opportunity.
     const updated = await updateBlogProject(id, {
       evidence: {
         ...project.evidence,
-        gsc: result.evidenceGsc,
-        gemini: result.evidenceGemini,
+        keywordResearch: { gsc: result.evidenceGsc, gemini: result.evidenceGemini },
       },
     });
 

@@ -56,7 +56,13 @@ function assertValidStatus(status) {
 function emptyEvidence() {
   // Distingue explícitamente de dónde vino cada dato (sección 19 — data provenance):
   // GSC y Ads son hechos de Google, gemini es interpretación, manual es lo que cargó una persona.
-  return { gsc: null, ads: null, gemini: null, manual: null };
+  // gsc/gemini acá son la evidencia de ORIGEN (de una Opportunity, si el proyecto vino de ahí).
+  // keywordResearch es un campo aparte a propósito: lo llena la acción "Investigar keywords"
+  // corrida DESPUÉS, dentro del proyecto — tiene una forma distinta y no debe pisar ni mezclarse
+  // con la evidencia de origen (bug real que causó un crash en la UI: el panel de investigación
+  // asumía que evidence.gsc siempre tenía SU forma, y rompía si el proyecto venía de una
+  // Opportunity con evidence.gsc en la forma del motor de oportunidades).
+  return { gsc: null, ads: null, gemini: null, manual: null, keywordResearch: null };
 }
 
 async function createBlogProject(input = {}) {

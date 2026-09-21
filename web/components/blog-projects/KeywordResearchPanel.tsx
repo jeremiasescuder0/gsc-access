@@ -25,10 +25,10 @@ export function KeywordResearchPanel({ project }: { project: BlogProject }) {
   const [showClusters, setShowClusters] = useState(false);
 
   const [gsc, setGsc] = useState<KeywordResearchGscEvidence | null>(
-    (project.evidence?.gsc as KeywordResearchGscEvidence | null) || null
+    project.evidence?.keywordResearch?.gsc || null
   );
   const [gemini, setGemini] = useState<KeywordResearchGeminiEvidence | null>(
-    (project.evidence?.gemini as KeywordResearchGeminiEvidence | null) || null
+    project.evidence?.keywordResearch?.gemini || null
   );
 
   async function runResearch() {
@@ -44,8 +44,8 @@ export function KeywordResearchPanel({ project }: { project: BlogProject }) {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "No se pudo investigar keywords");
-      setGsc(data.project.evidence.gsc);
-      setGemini(data.project.evidence.gemini);
+      setGsc(data.project.evidence.keywordResearch?.gsc || null);
+      setGemini(data.project.evidence.keywordResearch?.gemini || null);
       if (data.insufficientData) setMessage(data.message);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));

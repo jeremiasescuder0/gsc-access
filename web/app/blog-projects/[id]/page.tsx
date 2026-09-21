@@ -4,6 +4,7 @@ import { getBlogProject, getBlogProjectTransitions } from "@/lib/blog-data";
 import { StatusChanger } from "@/components/blog-projects/StatusChanger";
 import { EditBlogProjectForm } from "@/components/blog-projects/EditBlogProjectForm";
 import { KeywordResearchPanel } from "@/components/blog-projects/KeywordResearchPanel";
+import { OriginEvidencePanel } from "@/components/blog-projects/OriginEvidencePanel";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -69,6 +70,8 @@ export default async function BlogProjectDetailPage({
               ))}
             </ul>
           </div>
+
+          <OriginEvidencePanel project={project} />
 
           <KeywordResearchPanel project={project} />
 

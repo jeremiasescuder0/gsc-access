@@ -21,8 +21,12 @@ export default async function NewBlogProjectPage() {
       <div>
         <h1 className="text-2xl font-semibold tracking-tight mb-1">Nuevo Blog Project</h1>
         <p className="text-sm text-muted">
-          Carga manual. El motor de oportunidades (GSC + Ads + clustering con Gemini) para crear
-          proyectos automáticamente se agrega en una fase siguiente.
+          Carga 100% manual, sin keywords ni evidencia precargada. Si querés que el sistema traiga
+          la data de Search Console de entrada, mejor arrancá desde{" "}
+          <Link href="/opportunities" className="text-accent hover:underline">
+            Oportunidades
+          </Link>{" "}
+          y convertí una en Blog Project.
         </p>
       </div>
 
