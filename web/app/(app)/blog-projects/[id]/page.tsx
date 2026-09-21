@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { ChevronLeft, FileEdit, ClipboardCheck, LineChart, type LucideIcon } from "lucide-react";
+import { ChevronLeft, ClipboardCheck, LineChart, type LucideIcon } from "lucide-react";
 import { getBlogProject, getBlogProjectTransitions } from "@/lib/blog-data";
 import { StatusChanger } from "@/components/blog-projects/StatusChanger";
 import { EditBlogProjectForm } from "@/components/blog-projects/EditBlogProjectForm";
 import { KeywordResearchPanel } from "@/components/blog-projects/KeywordResearchPanel";
 import { OriginEvidencePanel } from "@/components/blog-projects/OriginEvidencePanel";
+import { DraftPanel } from "@/components/blog-projects/DraftPanel";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -51,7 +52,8 @@ export default async function BlogProjectDetailPage({
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 space-y-6">
+          <DraftPanel project={project} />
           <EditBlogProjectForm project={project} />
         </div>
 
@@ -76,14 +78,9 @@ export default async function BlogProjectDetailPage({
           <KeywordResearchPanel project={project} />
 
           <PhaseNotice
-            icon={FileEdit}
-            title="Brief y Draft (Writer)"
-            body="Generar el brief estructurado y el artículo a partir de las keywords elegidas arriba todavía no está conectado — se agrega en la próxima fase."
-          />
-          <PhaseNotice
             icon={ClipboardCheck}
             title="Auditoría y revisión"
-            body="El auditor independiente (rúbrica de 100 puntos) y el ciclo de revisión automática se agregan junto con el Writer."
+            body="El auditor independiente (rúbrica de 100 puntos) y el ciclo de revisión automática se agregan en la próxima fase. Por ahora el artículo se revisa a mano en la preview editable."
           />
           <PhaseNotice
             icon={LineChart}

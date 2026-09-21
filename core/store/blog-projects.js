@@ -28,10 +28,12 @@ const STATUSES = [
 // spec) con retrocesos válidos: a research si el brief no sirve, a human_review si la
 // revisión automática no alcanza, y de published a refresh_opportunity cuando la performance
 // post-publicación sugiere que el contenido necesita una actualización.
+// El brief formal es opcional: el Writer puede generar el draft directo desde las keywords del
+// proyecto (opportunity/research → draft_ready), que es el flujo que usa el equipo hoy.
 const ALLOWED_TRANSITIONS = {
-  opportunity: ["research", "archived"],
-  research: ["brief_ready", "opportunity", "archived"],
-  brief_ready: ["brief_approved", "research", "archived"],
+  opportunity: ["research", "draft_ready", "archived"],
+  research: ["brief_ready", "draft_ready", "opportunity", "archived"],
+  brief_ready: ["brief_approved", "draft_ready", "research", "archived"],
   brief_approved: ["draft_ready", "brief_ready", "archived"],
   draft_ready: ["audit_required", "archived"],
   audit_required: ["revision_required", "human_review", "archived"],

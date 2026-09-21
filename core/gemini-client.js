@@ -107,4 +107,36 @@ async function generateJsonWithRetry(
   throw lastErr;
 }
 
-module.exports = { generateWithRetry, generateJsonWithRetry, isRetryableError };
+// Como generateJsonWithRetry (lanza, timeout duro, reintentos) pero devuelve el texto crudo.
+// Para respuestas largas de prosa (el Writer de blogs): meter un Markdown de 1000+ palabras
+// adentro de un string JSON es frágil (comillas/saltos de línea sin escapar rompen el parse),
+// así que el caller define su propio formato delimitado y lo parsea.
+async function generateTextWithRetry(
+  prompt,
+  label,
+  { maxAttempts = 3, baseDelayMs = 2000, timeoutMs = DEFAULT_TIMEOUT_MS } = {}
+) {
+  let lastErr;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const result = await withHardTimeout(
+        getModel().generateContent(prompt, { timeout: timeoutMs }),
+        timeoutMs + 5000,
+        label
+      );
+      return result.response.text();
+    } catch (err) {
+      lastErr = err instanceof Error ? err : new Error(String(err));
+      const isLast = attempt === maxAttempts;
+      if (!isRetryableError(err) || isLast) throw lastErr;
+      const delay = baseDelayMs * 2 ** (attempt - 1);
+      console.warn(
+        `⏳ ${label}: error transitorio (intento ${attempt}/${maxAttempts}). Reintentando en ${delay / 1000}s...`
+      );
+      await sleep(delay);
+    }
+  }
+  throw lastErr;
+}
+
+module.exports = { generateWithRetry, generateJsonWithRetry, generateTextWithRetry, isRetryableError };

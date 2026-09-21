@@ -122,13 +122,19 @@ export type ContentBrief = {
 
 export type BlogDraft = {
   version: number;
-  content: string;
+  title: string;
+  content: string; // Markdown, arranca con el H1
   metaTitle: string;
   metaDescription: string;
   slug: string;
   suggestedInternalLinks: { anchor: string; url: string }[];
   suggestedImageConcept: string;
+  wordCount: number;
+  model: string;
   generatedAt: string;
+  // Si una persona editó el draft después de generarlo — se guarda para distinguir texto de
+  // Gemini de texto revisado a mano (sección 19, provenance).
+  editedAt: string | null;
 } | null;
 
 export type AuditCategories = {

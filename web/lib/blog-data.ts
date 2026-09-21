@@ -8,10 +8,12 @@ import * as keywordResearchModule from "../../core/keyword-research.js";
 import * as jsonStoreModule from "../../core/store/json-store.js";
 import * as opportunitiesModule from "../../core/store/opportunities.js";
 import * as opportunityEngineModule from "../../core/opportunity-engine.js";
+import * as writerModule from "../../core/writer.js";
 import type {
   BlogProject,
   BlogProjectInput,
   BlogProjectStatus,
+  BlogDraft,
   ClientContentProfile,
   GlobalContentRules,
   ContentInventory,
@@ -108,6 +110,15 @@ const {
 
 const { scanOpportunities } = opportunityEngineModule as unknown as OpportunityEngineModule;
 
+type WriterModule = {
+  generateBlogDraft: (input: {
+    project: BlogProject;
+    clientProfile: ClientContentProfile | null;
+    globalRules: GlobalContentRules;
+  }) => Promise<Omit<NonNullable<BlogDraft>, "version" | "editedAt">>;
+};
+const { generateBlogDraft } = writerModule as unknown as WriterModule;
+
 type JsonStoreModule = {
   USE_KV: boolean;
   selfTest: () => Promise<{ backend: string; roundTripOk: boolean }>;
@@ -192,6 +203,66 @@ export async function ignoreOpportunity(id: string) {
 
 export async function convertOpportunityToBlogProject(id: string) {
   return _convertToBlogProject(id);
+}
+
+// Genera el artículo con el Writer y lo guarda como project.draft. Si ya había un draft, el
+// anterior pasa a draftHistory (nunca se pierde una versión). Mueve el proyecto a draft_ready
+// si todavía estaba en una etapa previa; si ya estaba más adelante (auditoría, revisión),
+// deja el status como está.
+const PRE_DRAFT_STATUSES: BlogProjectStatus[] = ["opportunity", "research", "brief_ready", "brief_approved"];
+
+export async function generateProjectDraft(id: string): Promise<BlogProject> {
+  const project = await _getBlogProject(id);
+  if (!project) throw new Error("Blog Project no encontrado");
+
+  const [clientProfile] = await Promise.all([_getClientProfile(project.clientSite)]);
+  const generated = await generateBlogDraft({ project, clientProfile, globalRules: GLOBAL_CONTENT_RULES });
+
+  const previous = project.draft;
+  const draft: NonNullable<BlogDraft> = {
+    ...generated,
+    version: (previous?.version || 0) + 1,
+    editedAt: null,
+  };
+
+  await _updateBlogProject(id, {
+    draft,
+    draftHistory: previous ? [...(project.draftHistory || []), previous] : project.draftHistory || [],
+    // El título final del proyecto se alinea con el H1 generado si todavía no tenía uno.
+    title: project.title || draft.title,
+  });
+
+  if (PRE_DRAFT_STATUSES.includes(project.status)) {
+    await _transitionStatus(id, "draft_ready", `Borrador v${draft.version} generado con Gemini`);
+  }
+
+  const updated = await _getBlogProject(id);
+  if (!updated) throw new Error("Blog Project no encontrado después de generar el draft");
+  return updated;
+}
+
+// Guarda ediciones manuales del draft (contenido, meta, slug). Marca editedAt para distinguir
+// texto revisado a mano del texto tal cual salió de Gemini.
+export async function saveProjectDraft(
+  id: string,
+  patch: Partial<Pick<NonNullable<BlogDraft>, "content" | "title" | "metaTitle" | "metaDescription" | "slug" | "suggestedImageConcept">>
+): Promise<BlogProject> {
+  const project = await _getBlogProject(id);
+  if (!project) throw new Error("Blog Project no encontrado");
+  if (!project.draft) throw new Error("El proyecto no tiene un draft para editar");
+
+  const content = typeof patch.content === "string" ? patch.content : project.draft.content;
+  const draft: NonNullable<BlogDraft> = {
+    ...project.draft,
+    ...patch,
+    content,
+    wordCount: content
+      .replace(/^#+\s+/gm, "")
+      .split(/\s+/)
+      .filter(Boolean).length,
+    editedAt: new Date().toISOString(),
+  };
+  return _updateBlogProject(id, { draft, title: draft.title });
 }
 
 // Escanea el sitio del cliente y persiste el backlog resultante (con dedupe contra lo que ya
