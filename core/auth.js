@@ -22,10 +22,12 @@ const url = oauth2Client.generateAuthUrl({
   scope: [
     "https://www.googleapis.com/auth/webmasters.readonly",
     "https://www.googleapis.com/auth/adwords",
+    // GA4 Data API (reportes) + Admin API (listar propiedades) — ambos cubiertos por readonly.
+    "https://www.googleapis.com/auth/analytics.readonly",
   ],
 });
 
-console.log("\n⚠️  Vas a ver dos pantallas de permisos: aceptá AMBOS (Search Console y Google Ads).\n");
+console.log("\n⚠️  Vas a ver varias pantallas de permisos: aceptá TODOS (Search Console, Google Ads y Google Analytics).\n");
 console.log("🔗 Abrí este link en tu navegador:\n");
 console.log(url);
 

@@ -39,6 +39,7 @@ type Props = {
   accountId?: string;
   campaignId?: string;
   siteUrl?: string;
+  ga4PropertyId?: string;
   contextLabel: string;
   suggestions?: string[];
 };
@@ -47,6 +48,7 @@ export default function ChatPanel({
   accountId,
   campaignId,
   siteUrl,
+  ga4PropertyId,
   contextLabel,
   suggestions = [],
 }: Props) {
@@ -62,7 +64,7 @@ export default function ChatPanel({
     reload,
   } = useChat({
     api: "/api/chat",
-    body: { accountId, campaignId, siteUrl },
+    body: { accountId, campaignId, siteUrl, ga4PropertyId },
   });
 
   const isLoading = status === "submitted" || status === "streaming";
@@ -98,7 +100,9 @@ export default function ChatPanel({
           <div className="space-y-3">
             <p className="text-sm text-muted">
               Preguntá lo que quieras sobre la data cargada. El modelo ya tiene contexto de{" "}
-              {siteUrl
+              {ga4PropertyId && siteUrl
+                ? "este cliente: Google Analytics (sesiones, engagement, key events, canales, landing pages) cruzado con Search Console (queries, páginas)"
+                : siteUrl
                 ? "este sitio (queries, páginas, oportunidades, comparativas MoM/YoY)"
                 : campaignId
                 ? "esta campaña (ad groups, keywords, ads, ubicaciones, search terms)"

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { getClientProfile, getGlobalContentRules } from "@/lib/blog-data";
+import { getGa4Properties } from "@/lib/ga4-data";
 import { ClientProfileForm } from "@/components/clients/ClientProfileForm";
+import type { Ga4Property } from "@/lib/ga4-types";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -15,6 +17,16 @@ export default async function ClientProfilePage({
   const gscSite = decodeURIComponent(encoded);
 
   const [profile, globalRules] = await Promise.all([getClientProfile(gscSite), getGlobalContentRules()]);
+
+  // El listado de propiedades GA4 es opcional: si la cuenta todavía no tiene el scope de
+  // Analytics (o falla la API), el perfil sigue siendo editable y se muestra el motivo.
+  let ga4Properties: Ga4Property[] = [];
+  let ga4Error: string | null = null;
+  try {
+    ga4Properties = await getGa4Properties();
+  } catch (err) {
+    ga4Error = err instanceof Error ? err.message : String(err);
+  }
 
   if (!profile) {
     return (
@@ -42,7 +54,7 @@ export default async function ClientProfilePage({
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <ClientProfileForm profile={profile} />
+          <ClientProfileForm profile={profile} ga4Properties={ga4Properties} ga4Error={ga4Error} />
         </div>
 
         <div className="rounded-lg border border-border bg-surface p-4 space-y-3 h-fit">

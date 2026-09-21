@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, Check } from "lucide-react";
 import type { ClientContentProfile } from "@/lib/blog-types";
+import type { Ga4Property } from "@/lib/ga4-types";
 
 function splitList(value: string): string[] {
   return value
@@ -12,12 +13,22 @@ function splitList(value: string): string[] {
     .filter(Boolean);
 }
 
-export function ClientProfileForm({ profile }: { profile: ClientContentProfile }) {
+export function ClientProfileForm({
+  profile,
+  ga4Properties,
+  ga4Error,
+}: {
+  profile: ClientContentProfile;
+  ga4Properties: Ga4Property[];
+  ga4Error: string | null;
+}) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const [ga4PropertyId, setGa4PropertyId] = useState(profile.ga4PropertyId || "");
+  const [ga4ConversionEvents, setGa4ConversionEvents] = useState((profile.ga4ConversionEvents || []).join(", "));
   const [brandName, setBrandName] = useState(profile.brandName);
   const [website, setWebsite] = useState(profile.website || "");
   const [primaryServices, setPrimaryServices] = useState(profile.primaryServices.join(", "));
@@ -60,6 +71,8 @@ export function ClientProfileForm({ profile }: { profile: ClientContentProfile }
           contentRestrictions: splitList(contentRestrictions),
           internalServicePages: splitList(internalServicePages),
           otherInstructions: otherInstructions || null,
+          ga4PropertyId: ga4PropertyId || null,
+          ga4ConversionEvents: splitList(ga4ConversionEvents),
         }),
       });
       const data = await res.json();
@@ -76,6 +89,37 @@ export function ClientProfileForm({ profile }: { profile: ClientContentProfile }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="rounded-lg border border-border bg-bg/40 p-4 space-y-4">
+        <div className="text-xs font-medium text-muted uppercase tracking-wide">Google Analytics 4</div>
+        <Field
+          label="Propiedad GA4"
+          hint={
+            ga4Error
+              ? `No se pudieron listar las propiedades: ${ga4Error}`
+              : "Propiedades a las que tiene acceso la cuenta autenticada de la app"
+          }
+        >
+          <select
+            value={ga4PropertyId}
+            onChange={(e) => setGa4PropertyId(e.target.value)}
+            className="w-full bg-bg border border-border rounded px-3 py-2 text-sm text-text focus:outline-none focus:border-accent"
+          >
+            <option value="">Sin asignar</option>
+            {ga4Properties.map((p) => (
+              <option key={p.propertyId} value={p.propertyId}>
+                {p.accountName} › {p.propertyName} ({p.propertyId})
+              </option>
+            ))}
+            {ga4PropertyId && !ga4Properties.some((p) => p.propertyId === ga4PropertyId) && (
+              <option value={ga4PropertyId}>{ga4PropertyId} (asignada, no visible en el listado actual)</option>
+            )}
+          </select>
+        </Field>
+        <Field label="Key events que cuentan como conversión" hint="nombres exactos de GA4 separados por coma, ej: generate_lead, form_submit, phone_click. Vacío = todos los key events">
+          <Input value={ga4ConversionEvents} onChange={setGa4ConversionEvents} placeholder="generate_lead, form_submit" />
+        </Field>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Field label="Nombre de marca">
           <Input value={brandName} onChange={setBrandName} />

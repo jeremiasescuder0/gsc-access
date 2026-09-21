@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Search, FileText, Users, Sparkles } from "lucide-react";
+import { BarChart3, Search, FileText, Users, Sparkles, Activity } from "lucide-react";
 
 const ITEMS = [
   { href: "/", label: "Ads", icon: BarChart3, prefix: "/accounts" },
   { href: "/organic", label: "Orgánico", icon: Search, prefix: "/organic" },
+  { href: "/analytics", label: "Analytics", icon: Activity, prefix: "/analytics" },
   { href: "/opportunities", label: "Oportunidades", icon: Sparkles, prefix: "/opportunities" },
   { href: "/blog-projects", label: "Blog Projects", icon: FileText, prefix: "/blog-projects" },
   { href: "/clients", label: "Clientes", icon: Users, prefix: "/clients" },

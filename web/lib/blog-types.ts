@@ -258,6 +258,8 @@ export type ClientContentProfile = {
   contentRestrictions: string[];
   internalServicePages: string[];
   otherInstructions: string | null;
+  ga4PropertyId: string | null;
+  ga4ConversionEvents: string[];
   updatedAt: string | null;
   isConfigured: boolean;
 };

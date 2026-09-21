@@ -53,6 +53,12 @@ function defaultProfile(client) {
     contentRestrictions: [],
     internalServicePages: [],
     otherInstructions: null,
+    // Propiedad GA4 del cliente (sólo el número, ej. "123456789"). Se asigna desde la UI del
+    // perfil eligiendo entre las propiedades a las que la cuenta autenticada tiene acceso.
+    ga4PropertyId: null,
+    // Nombres de key events de GA4 que cuentan como conversión para este cliente (cada cliente
+    // los nombra distinto: generate_lead, form_submit, phone_click...). Vacío = usar keyEvents total.
+    ga4ConversionEvents: [],
     updatedAt: null,
   };
 }

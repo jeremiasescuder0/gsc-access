@@ -7,6 +7,7 @@ type ChatPanelProps = {
   accountId?: string;
   campaignId?: string;
   siteUrl?: string;
+  ga4PropertyId?: string;
   contextLabel: string;
   suggestions?: string[];
 };

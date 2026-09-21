@@ -7,6 +7,7 @@ import {
   summarizeAccount,
 } from "@/lib/ads-data";
 import { getSitePerformance } from "@/lib/gsc-data";
+import { getGa4Overview } from "@/lib/ga4-data";
 import { withAuth } from "@/lib/auth/with-auth";
 
 export const maxDuration = 60;
@@ -15,7 +16,7 @@ const googleAI = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY,
 });
 
-const SYSTEM_BASE = `Sos un senior Google Ads strategist con 10+ años de experiencia analizando cuentas de agencia. Respondés SIEMPRE en español rioplatense, sin emojis, con tono directo y profesional.
+const SYSTEM_BASE = `Sos un estratega senior de marketing digital (Google Ads, SEO y Google Analytics) con 10+ años de experiencia analizando cuentas de agencia. Respondés SIEMPRE en español rioplatense, sin emojis, con tono directo y profesional.
 
 Reglas de contenido:
 - Citá números concretos extraídos del JSON, nunca inventes métricas.
@@ -149,6 +150,76 @@ Reglas para análisis SEO:
 - Para identificar patrones en blogs, agrupá por temas/subdirectorios visibles en las URLs.`;
 }
 
+// Contexto de Google Analytics 4. Cuando además hay siteUrl, se agrega el cruce con Search
+// Console: GSC dice "Google mostró la página", GA4 dice "qué hizo la gente que entró".
+async function buildAnalyticsContext(ga4PropertyId: string, siteUrl?: string) {
+  const [ga4, gsc] = await Promise.all([
+    getGa4Overview(ga4PropertyId, { periodDays: 30 }),
+    siteUrl ? getSitePerformance(siteUrl).catch(() => null) : Promise.resolve(null),
+  ]);
+
+  let crossSection = "";
+  if (gsc) {
+    // Join por path: GSC devuelve URLs completas, GA4 devuelve paths (landingPagePlusQueryString).
+    const toPath = (url: string) => {
+      try {
+        const u = new URL(url);
+        return u.pathname + u.search;
+      } catch {
+        return url;
+      }
+    };
+    const gscByPath = new Map(gsc.pages.map((p) => [toPath(p.page), p]));
+    const joined = ga4.landingPages.map((lp) => {
+      const g = gscByPath.get(lp.page);
+      return {
+        page: lp.page,
+        gsc: g ? { impressions: g.impressions, clicks: g.clicks, ctr: g.ctr, position: g.position } : null,
+        ga4: {
+          sessions: lp.sessions,
+          engagementRate: lp.engagementRate,
+          avgEngagementTimeSec: Math.round(lp.avgEngagementTime),
+          keyEvents: lp.keyEvents,
+        },
+      };
+    });
+    crossSection = `
+
+CRUCE SEARCH CONSOLE ↔ ANALYTICS POR LANDING PAGE (mismo path; gsc=null significa que GSC no tiene esa página en su top 100 del período):
+${JSON.stringify(joined, null, 2)}
+
+TOTALES ORGÁNICOS DE SEARCH CONSOLE (para dimensionar la visibilidad): ${JSON.stringify(gsc.totals.current)}
+
+Usá el cruce para detectar: páginas con impresiones/clicks pero sin key events (problema de conversión o intención), páginas con alto engagement pero pocas impresiones (oportunidad SEO), y desajustes entre clicks de GSC y sesiones orgánicas de GA4.`;
+  }
+
+  return `\n\nCONTEXTO DE GOOGLE ANALYTICS 4 (propiedad ${ga4PropertyId}):
+Período actual: ${ga4.ranges.current.startDate} → ${ga4.ranges.current.endDate}
+Período previo: ${ga4.ranges.previous.startDate} → ${ga4.ranges.previous.endDate}
+
+TOTALES (current vs previous vs year-over-year + deltas; engagementRate es decimal 0-1; avgEngagementTime en segundos por sesión):
+${JSON.stringify(ga4.totals, null, 2)}
+
+CANALES (sessionDefaultChannelGroup):
+${JSON.stringify(ga4.channels, null, 2)}
+
+LANDING PAGES TOP (por sesiones):
+${JSON.stringify(ga4.landingPages.slice(0, 30), null, 2)}
+
+DISPOSITIVOS:
+${JSON.stringify(ga4.devices, null, 2)}
+
+KEY EVENTS POR NOMBRE (conversiones configuradas en GA4):
+${JSON.stringify(ga4.keyEventsByName, null, 2)}
+${crossSection}
+
+Reglas para análisis de Analytics:
+- "Key events" son las conversiones configuradas por el cliente en GA4. Si la lista por nombre está vacía, decí que no hay key events configurados en vez de asumir conversiones.
+- Una tasa de engagement baja con muchas sesiones suele indicar tráfico poco calificado o una landing que no responde a la intención.
+- Al recomendar, priorizá por impacto en key events y sesiones con engagement, no por sesiones brutas.
+- GA4 tiene 24-48 h de demora; no interpretes los últimos 1-2 días como caída.`;
+}
+
 export const POST = withAuth(async (req: Request) => {
   try {
     const body = await req.json();
@@ -156,9 +227,13 @@ export const POST = withAuth(async (req: Request) => {
     const accountId: string | undefined = body.accountId;
     const campaignId: string | undefined = body.campaignId;
     const siteUrl: string | undefined = body.siteUrl;
+    const ga4PropertyId: string | undefined =
+      typeof body.ga4PropertyId === "string" && /^\d+$/.test(body.ga4PropertyId) ? body.ga4PropertyId : undefined;
 
     let context = "";
-    if (siteUrl) {
+    if (ga4PropertyId) {
+      context = await buildAnalyticsContext(ga4PropertyId, siteUrl);
+    } else if (siteUrl) {
       context = await buildOrganicContext(siteUrl);
     } else if (accountId && campaignId) {
       context = await buildCampaignContext(accountId, campaignId);
