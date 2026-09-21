@@ -39,13 +39,14 @@ ${JSON.stringify(overview.landingPages.slice(0, 25), null, 2)}
 ${
   crossRows?.length
     ? `
-CRUCE POR LANDING PAGE CON SEARCH CONSOLE (gsc = visibilidad en Google: impresiones/clicks/posición; ga4 = comportamiento al entrar; flags = señales calculadas de forma determinística por la app):
+CRUCE POR LANDING PAGE CON SEARCH CONSOLE (gsc = visibilidad en Google: impresiones/clicks/posición, ctr es DECIMAL 0-1, o sea 0.0011 = 0.11%; ga4 = comportamiento al entrar; flags = señales calculadas de forma determinística por la app):
 ${JSON.stringify(crossRows.slice(0, 40), null, 2)}`
     : ""
 }
 
 Instrucciones:
-- NO inventes métricas ni porcentajes que no se puedan calcular con la data de arriba. Cada insight cita los números concretos en "evidence".
+- NO inventes métricas ni porcentajes que no se puedan calcular con la data de arriba. Cada insight cita los números concretos en "evidence". Las tasas (engagementRate, ctr) vienen como decimal 0-1: expresalas como porcentaje correctamente (0.336 = 33.6%).
+- Canales de GA4: "Cross-network" es Performance Max / Demand Gen de Google Ads (tráfico pago). "Paid Search" es sólo campañas de búsqueda tradicionales. No trates la ausencia de "Paid Search" como falta de inversión en pago si "Cross-network" tiene volumen.
 - Ignorá variaciones chicas con volumen bajo (menos de ~20 sesiones no alcanza para concluir nada).
 - Priorizá por impacto en conversiones (key events) y sesiones con engagement, no por sesiones brutas.
 - Si keyEvents total es 0 o no hay key events por nombre, el primer insight tiene que ser de type "tracking": sin conversiones medidas no se puede optimizar hacia conversión.
