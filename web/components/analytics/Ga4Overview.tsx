@@ -1,26 +1,30 @@
 "use client";
 
 import { useState } from "react";
-import { Globe, MousePointerClick, Smartphone, Activity } from "lucide-react";
+import { Globe, MousePointerClick, Smartphone, Activity, GitMerge } from "lucide-react";
 import type { Ga4Overview as Ga4OverviewData } from "@/lib/ga4-types";
+import type { CrossSourceRow } from "@/lib/cross-source";
+import { CrossSourceTable } from "./CrossSourceTable";
 import { Delta } from "@/components/Delta";
 import { formatNumber, formatPercent } from "@/lib/format";
 import { formatDuration, shortenPath, formatGa4Date } from "@/lib/ga4-format";
 
-type Tab = "landing" | "channels" | "devices" | "events";
+type Tab = "cross" | "landing" | "channels" | "devices" | "events";
 
 const TABS: { id: Tab; label: string; icon: typeof Globe }[] = [
+  { id: "cross", label: "GSC ↔ GA4", icon: GitMerge },
   { id: "landing", label: "Landing pages", icon: Globe },
   { id: "channels", label: "Canales", icon: Activity },
   { id: "devices", label: "Dispositivos", icon: Smartphone },
   { id: "events", label: "Key events", icon: MousePointerClick },
 ];
 
-export function Ga4Overview({ data }: { data: Ga4OverviewData }) {
-  const [tab, setTab] = useState<Tab>("landing");
+export function Ga4Overview({ data, crossRows }: { data: Ga4OverviewData; crossRows: CrossSourceRow[] }) {
+  const [tab, setTab] = useState<Tab>(crossRows.length > 0 ? "cross" : "landing");
   const t = data.totals;
 
   const counts: Record<Tab, number> = {
+    cross: crossRows.length,
     landing: data.landingPages.length,
     channels: data.channels.length,
     devices: data.devices.length,
@@ -99,6 +103,7 @@ export function Ga4Overview({ data }: { data: Ga4OverviewData }) {
           })}
         </div>
 
+        {tab === "cross" && <CrossSourceTable rows={crossRows} />}
         {tab === "landing" && (
           <Table
             headers={["Landing page", "Sesiones", "Engagement", "Tasa", "Tiempo", "Key events"]}

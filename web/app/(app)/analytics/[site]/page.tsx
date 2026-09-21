@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { getClientProfile } from "@/lib/blog-data";
-import { getGa4Overview } from "@/lib/ga4-data";
+import { getGa4Overview, getGa4Insights } from "@/lib/ga4-data";
+import { getSitePerformance } from "@/lib/gsc-data";
+import { buildCrossSource } from "@/lib/cross-source";
 import { Ga4Overview } from "@/components/analytics/Ga4Overview";
+import { InsightsPanel } from "@/components/analytics/InsightsPanel";
 import { ChatPanelLazy as ChatPanel } from "@/components/ChatPanelLazy";
 
 export const dynamic = "force-dynamic";
@@ -63,6 +66,14 @@ export default async function AnalyticsClientPage({
     error = err instanceof Error ? err.message : String(err);
   }
 
+  // GSC es opcional acá: si falla (permisos, cuota) el dashboard de GA4 igual se muestra, sólo
+  // sin la pestaña de cruce. Los insights guardados tampoco bloquean nada si no existen.
+  const [gsc, storedInsights] = await Promise.all([
+    getSitePerformance(gscSite, { periodDays }).catch(() => null),
+    getGa4Insights(gscSite).catch(() => null),
+  ]);
+  const crossRows = data ? buildCrossSource(gsc, data) : [];
+
   if (error || !data) {
     const isPermission = /permission|403|does not have|insufficient/i.test(error || "");
     return (
@@ -115,9 +126,10 @@ export default async function AnalyticsClientPage({
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <Ga4Overview data={data} />
+          <Ga4Overview data={data} crossRows={crossRows} />
         </div>
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 space-y-6">
+          <InsightsPanel clientSite={gscSite} initial={storedInsights} periodDays={periodDays} />
           <ChatPanel
             siteUrl={gscSite}
             ga4PropertyId={profile.ga4PropertyId}

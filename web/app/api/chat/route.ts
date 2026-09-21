@@ -8,6 +8,7 @@ import {
 } from "@/lib/ads-data";
 import { getSitePerformance } from "@/lib/gsc-data";
 import { getGa4Overview } from "@/lib/ga4-data";
+import { buildCrossSource } from "@/lib/cross-source";
 import { withAuth } from "@/lib/auth/with-auth";
 
 export const maxDuration = 60;
@@ -160,32 +161,10 @@ async function buildAnalyticsContext(ga4PropertyId: string, siteUrl?: string) {
 
   let crossSection = "";
   if (gsc) {
-    // Join por path: GSC devuelve URLs completas, GA4 devuelve paths (landingPagePlusQueryString).
-    const toPath = (url: string) => {
-      try {
-        const u = new URL(url);
-        return u.pathname + u.search;
-      } catch {
-        return url;
-      }
-    };
-    const gscByPath = new Map(gsc.pages.map((p) => [toPath(p.page), p]));
-    const joined = ga4.landingPages.map((lp) => {
-      const g = gscByPath.get(lp.page);
-      return {
-        page: lp.page,
-        gsc: g ? { impressions: g.impressions, clicks: g.clicks, ctr: g.ctr, position: g.position } : null,
-        ga4: {
-          sessions: lp.sessions,
-          engagementRate: lp.engagementRate,
-          avgEngagementTimeSec: Math.round(lp.avgEngagementTime),
-          keyEvents: lp.keyEvents,
-        },
-      };
-    });
+    const joined = buildCrossSource(gsc, ga4).slice(0, 40);
     crossSection = `
 
-CRUCE SEARCH CONSOLE ↔ ANALYTICS POR LANDING PAGE (mismo path; gsc=null significa que GSC no tiene esa página en su top 100 del período):
+CRUCE SEARCH CONSOLE ↔ ANALYTICS POR LANDING PAGE (mismo path; gsc=null: GSC no tiene esa página en su top 100 del período; ga4=null: Google la muestra pero no registra entradas; flags = señales calculadas por la app, no por vos):
 ${JSON.stringify(joined, null, 2)}
 
 TOTALES ORGÁNICOS DE SEARCH CONSOLE (para dimensionar la visibilidad): ${JSON.stringify(gsc.totals.current)}

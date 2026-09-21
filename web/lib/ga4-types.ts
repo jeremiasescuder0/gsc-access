@@ -43,6 +43,43 @@ export type Ga4Overview = {
   keyEventsByName: { eventName: string; count: number }[];
 };
 
+export type Ga4InsightType =
+  | "drop"
+  | "growth"
+  | "conversion_gap"
+  | "engagement"
+  | "channel"
+  | "device"
+  | "seo_opportunity"
+  | "tracking";
+
+export type Ga4Insight = {
+  type: Ga4InsightType;
+  severity: "high" | "medium" | "low";
+  title: string;
+  evidence: string;
+  recommendation: string;
+  source: "ga4" | "gsc" | "cross";
+  pages: string[];
+};
+
+export type Ga4InsightsRecord = {
+  clientSite: string;
+  propertyId: string;
+  periodDays: number;
+  range: Ga4DateRange;
+  generatedAt: string;
+  model: string;
+  summary: string;
+  insights: Ga4Insight[];
+  evidenceSnapshot: {
+    totals: Ga4Totals;
+    deltaPrev: Ga4Totals;
+    keyEventsByName: { eventName: string; count: number }[];
+    crossRowsCount: number;
+  };
+};
+
 export type Ga4PagePerformance = {
   sessions: number;
   totalUsers: number;

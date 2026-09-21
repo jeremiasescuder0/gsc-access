@@ -2,7 +2,10 @@
 // (la GA4 Data API tiene cuotas por propiedad/hora — no repetir llamadas idénticas).
 // Import estático a propósito — ver la nota en gsc-data.ts.
 import * as ga4FetchModule from "../../core/ga4-fetch.js";
-import type { Ga4Property, Ga4Overview, Ga4PagePerformance, Ga4DateRange } from "./ga4-types";
+import * as ga4InsightsModule from "../../core/ga4-insights.js";
+import type { Ga4Property, Ga4Overview, Ga4PagePerformance, Ga4DateRange, Ga4InsightsRecord } from "./ga4-types";
+import type { ClientContentProfile } from "./blog-types";
+import type { CrossSourceRow } from "./cross-source";
 
 type Ga4FetchModule = {
   listGa4Properties: () => Promise<Ga4Property[]>;
@@ -15,6 +18,20 @@ const { listGa4Properties, fetchPropertyOverview, fetchPagePerformance, buildRan
   ga4FetchModule as unknown as Ga4FetchModule;
 
 export { buildRanges as buildGa4Ranges, fetchPagePerformance as fetchGa4PagePerformance };
+
+type Ga4InsightsModule = {
+  getStoredInsights: (clientSite: string) => Promise<Ga4InsightsRecord | null>;
+  generateInsights: (input: {
+    clientSite: string;
+    clientProfile: ClientContentProfile | null;
+    overview: Ga4Overview;
+    crossRows: CrossSourceRow[];
+    periodDays?: number;
+  }) => Promise<Ga4InsightsRecord>;
+};
+const { getStoredInsights, generateInsights } = ga4InsightsModule as unknown as Ga4InsightsModule;
+
+export { getStoredInsights as getGa4Insights, generateInsights as generateGa4Insights };
 
 const CACHE_TTL_MS = 10 * 60 * 1000;
 
